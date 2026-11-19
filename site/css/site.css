@@ -591,6 +591,7 @@ a.passo__img:hover img { scale: 1.03; }
 .duvida summary .i { width: 26px; height: 26px; padding: 3px; border-radius: 50%; background: var(--papel); transition: rotate .2s ease, background-color .2s ease; }
 .duvida[open] summary .i { rotate: 45deg; background: var(--verde); }
 .duvida p { padding: 0 44px 22px 2px; color: var(--tinta-2); max-width: 62ch; }
+.duvida p a { color: var(--verde-fundo); font-weight: 700; }
 
 /* ---------- Orçamento ---------- */
 .pedido { display: grid; gap: clamp(36px, 6vw, 72px); align-items: start; }

@@ -1,6 +1,6 @@
 # Site do BC Fichas
 
-Site de uma página do **BC Fichas**: locação de máquinas de fichas para festas juninas, quermesses e eventos.
+Site de uma página do **BC Fichas**: aluguel de máquinas de fichas para festas juninas, quermesses e eventos.
 O objetivo é o organizador entender o serviço e pedir o orçamento pelo WhatsApp.
 
 Endereço previsto: **https://bcfichas.balancass.com**
@@ -77,9 +77,9 @@ As perguntas e respostas também estão repetidas no bloco `application/ld+json`
 
 Só entrou no site o que está confirmado nos materiais do projeto:
 
-- textos do BC Fichas já publicados no site da Balanças.com (locação por diária, manual e bobinas, treinamento, fichas com logo, combos, relatórios e sangrias);
+- textos do BC Fichas já publicados no site da Balanças.com (fichas com logo, combos, relatórios e sangrias). O que lá aparece como "locação por diária" e "bobinas inclusas" foi corrigido pelo responsável: o site fala em aluguel e em bobinas consignadas;
 - o README do sistema BC Fichas 3.11.7 (formas de pagamento, modelos de ficha, controle de caixa, senha, estoque, devolução) e o código (funciona sem internet);
 - os dados da empresa do site da Balanças.com (telefone, endereço, horário, razão social e CNPJ).
-- as respostas do responsável em 19/11/2026 (maquininha por conta do cliente, máquina que já vai programada, rodapé das fichas personalizável, WhatsApp, horário e endereço).
+- as respostas do responsável em 19/11/2026 (lista completa em `docs/PENDENCIAS.md`, item 3).
 
 Não há preços, depoimentos nem números de clientes. O que precisa de confirmação está em [`docs/PENDENCIAS.md`](docs/PENDENCIAS.md).

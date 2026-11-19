@@ -1,7 +1,7 @@
 {
   "name": "BC Fichas",
   "short_name": "BC Fichas",
-  "description": "Locação de máquinas de fichas para festas e eventos.",
+  "description": "Aluguel de máquinas de fichas para festas e eventos.",
   "lang": "pt-BR",
   "start_url": "/",
   "display": "browser",
