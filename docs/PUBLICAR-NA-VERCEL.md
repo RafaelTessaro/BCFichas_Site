@@ -50,7 +50,7 @@ Antes de enviar, rode:
 python3 ferramentas/conferir.py
 ```
 
-**Cache.** As fotos ficam guardadas no navegador do visitante por 30 dias. Se trocar uma foto mantendo o mesmo nome de arquivo, mude o nome (ou acrescente `?v=2` no `index.html`). O mesmo vale para `site.css` e `site.js`: troque o `?v=1`.
+**Cache.** As fotos ficam guardadas no navegador do visitante por 30 dias. Se trocar uma foto mantendo o mesmo nome de arquivo, mude o nome (ou acrescente `?v=2` no `index.html`). O mesmo vale para `site.css` e `site.js`: aumente o número do `?v=2`.
 
 ## Plano B: cPanel
 

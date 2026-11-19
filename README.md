@@ -62,13 +62,13 @@ As perguntas e respostas também estão repetidas no bloco `application/ld+json`
 
 **Fotos da máquina.** Ponha a foto nova em `materiais/fotos-originais/`, ajuste a lista `FOTOS` em `ferramentas/processar-fotos.py` e rode o script. Ele recorta o fundo, apaga etiquetas marcadas, monta a tela do sistema no visor e grava os arquivos em `site/img/maquina/`. As instruções estão no começo do script.
 
-**Depois de mudar o CSS ou o JavaScript**, troque `?v=1` por `?v=2` nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
+**Depois de mudar o CSS ou o JavaScript**, aumente o número do `?v=2` (para `?v=3`, e assim por diante) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
 
 ## Como as imagens foram feitas
 
 - **Fotos da máquina:** são as fotos reais enviadas. O fundo (mesa) foi recortado, a etiqueta "CAIXA 2" e os dois furinhos ao lado dela foram apagados, e a tela do sistema foi aplicada sobre o visor, que estava desligado nas fotos. O site avisa isso na seção da máquina.
 - **Telas do sistema e comprovante de fechamento:** capturas reais do BC Fichas 3.11.7, com dados de teste.
-- **Fichas de exemplo:** desenhadas em HTML seguindo quatro dos sete modelos reais do sistema. O nome do evento muda quando o visitante digita. No lugar do logotipo aparece "SEU LOGO".
+- **Fichas de exemplo:** desenhadas em HTML seguindo quatro dos sete modelos reais do sistema. O nome do evento e a frase do rodapé mudam quando o visitante digita. No lugar do logotipo aparece "SEU LOGO".
 
 ## De onde vieram as informações
 
@@ -77,5 +77,6 @@ Só entrou no site o que está confirmado nos materiais do projeto:
 - textos do BC Fichas já publicados no site da Balanças.com (locação por diária, manual e bobinas, treinamento, fichas com logo, combos, relatórios e sangrias);
 - o README do sistema BC Fichas 3.11.7 (formas de pagamento, modelos de ficha, controle de caixa, senha, estoque, devolução) e o código (funciona sem internet);
 - os dados da empresa do site da Balanças.com (telefone, endereço, horário, razão social e CNPJ).
+- as respostas do responsável em 19/11/2026 (maquininha por conta do cliente, máquina que já vai programada, rodapé das fichas personalizável, WhatsApp, horário e endereço).
 
 Não há preços, depoimentos nem números de clientes. O que precisa de confirmação está em [`docs/PENDENCIAS.md`](docs/PENDENCIAS.md).

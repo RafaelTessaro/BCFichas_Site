@@ -29,7 +29,7 @@
 <link rel="preload" as="image" type="image/webp" fetchpriority="high"
       imagesrcset="img/maquina/maquina-frente-520.webp 520w, img/maquina/maquina-frente-800.webp 800w, img/maquina/maquina-frente-1200.webp 1200w"
       imagesizes="(min-width: 1000px) 50vw, 92vw">
-<link rel="stylesheet" href="css/site.css?v=1">
+<link rel="stylesheet" href="css/site.css?v=2">
 
 <script type="application/ld+json">
 {
@@ -47,7 +47,7 @@
       "@id": "https://bcfichas.balancass.com/#servico",
       "name": "BC Fichas: locação de máquinas de fichas para eventos",
       "serviceType": "Locação de terminais emissores de fichas",
-      "description": "Locação por diária de máquinas de fichas para festas juninas, quermesses e eventos, com manual, bobinas e treinamento da equipe.",
+      "description": "Locação por diária de máquinas de fichas para festas juninas, quermesses e eventos. A máquina vai programada com os produtos, os preços e o logotipo do evento, com manual, bobinas e treinamento da equipe.",
       "url": "https://bcfichas.balancass.com/",
       "image": "https://bcfichas.balancass.com/img/compartilhar.jpg",
       "provider": {
@@ -71,12 +71,22 @@
         {
           "@type": "Question",
           "name": "Como funciona a locação?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A locação é por diária. Você informa a data, a cidade e como é o evento, e recebe o orçamento pelo WhatsApp." }
+          "acceptedAnswer": { "@type": "Answer", "text": "A locação é por diária. Você informa a data, a cidade e como é o evento, e recebe o orçamento pelo WhatsApp. Depois envia a programação (produtos, preços, logotipo e rodapé das fichas) e a máquina já vai pronta." }
         },
         {
           "@type": "Question",
           "name": "O que está incluído?",
           "acceptedAnswer": { "@type": "Answer", "text": "O manual e as bobinas de papel. Se precisar, a equipe que vai operar os caixas também recebe treinamento." }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso cadastrar os produtos na máquina?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Não. Você envia a lista de produtos, os preços, o logotipo e a frase do rodapé das fichas. A máquina já vai programada para o seu evento." }
+        },
+        {
+          "@type": "Question",
+          "name": "A maquininha de cartão está incluída?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Não. A maquininha de cartão é por conta do cliente. Você usa a sua, e o caixa registra se a venda foi no débito, no crédito ou no PIX." }
         },
         {
           "@type": "Question",
@@ -91,7 +101,7 @@
         {
           "@type": "Question",
           "name": "As fichas saem com o nome do meu evento?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sim. As fichas saem com o nome e o logotipo do evento, além do produto, do valor, da data e da hora." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. As fichas saem com o nome e o logotipo do evento, além do produto, do valor, da data e da hora. O rodapé também é personalizado: uma frase que sai no pé de todas as fichas." }
         }
       ]
     }
@@ -202,7 +212,7 @@
     <header class="cabeca">
       <p class="rotulo">O equipamento</p>
       <h2 id="t-maquina">Tela, impressora e gaveta em uma máquina só.</h2>
-      <p class="lide">Cada máquina é um caixa completo. É colocar no balcão e ligar na tomada: o sistema do caixa abre sozinho.</p>
+      <p class="lide">Cada máquina é um caixa completo e já vai programada com os produtos e os preços do seu evento. É colocar no balcão e ligar na tomada: o sistema do caixa abre sozinho.</p>
     </header>
 
     <div class="anatomia">
@@ -242,6 +252,10 @@
     </div>
 
     <ul class="fatos" role="list">
+      <li>
+        <h3>Vai pronta para o seu evento</h3>
+        <p>Você envia os produtos, os preços e o logotipo. A máquina já vai programada.</p>
+      </li>
       <li>
         <h3>Funciona sem internet</h3>
         <p>A venda e a impressão das fichas não dependem de conexão.</p>
@@ -308,7 +322,7 @@
         <div class="passo__texto">
           <span class="passo__n" aria-hidden="true">2</span>
           <h3>Escolha a forma de pagamento</h3>
-          <p>Dinheiro, PIX, débito ou crédito. No dinheiro, a tela calcula o troco. No cartão e no PIX, a cobrança é feita na maquininha e o caixa registra como foi pago.</p>
+          <p>Dinheiro, PIX, débito ou crédito. No dinheiro, a tela calcula o troco. No cartão e no PIX, a cobrança é feita na sua maquininha e o caixa registra como foi pago.</p>
         </div>
       </li>
 
@@ -362,14 +376,19 @@
   <div class="miolo">
     <header class="cabeca">
       <p class="rotulo">As fichas</p>
-      <h2 id="t-fichas">Fichas com o nome e o logotipo do seu evento.</h2>
-      <p class="lide">Cada ficha sai com o produto em letras grandes, o valor, a data e a hora, o número do pedido, a forma de pagamento e o número do caixa. São 7 modelos de ficha para escolher.</p>
+      <h2 id="t-fichas">Fichas com o nome, o logotipo e o rodapé do seu evento.</h2>
+      <p class="lide">Cada ficha sai com o produto em letras grandes, o valor, a data e a hora, o número do pedido, a forma de pagamento e o número do caixa. O nome do evento, o logotipo e a frase do rodapé são os seus. São 7 modelos de ficha para escolher.</p>
     </header>
 
     <div class="monte" id="monte" role="group" aria-label="Monte a ficha do seu evento">
+      <p class="monte__dica">Escreva o nome do seu evento e a frase do rodapé para ver como ficam nas fichas.</p>
       <div class="campo">
-        <label for="monte-evento">Escreva o nome do seu evento e veja nas fichas</label>
+        <label for="monte-evento">Nome do evento</label>
         <input id="monte-evento" name="evento" type="text" maxlength="22" placeholder="FESTA JUNINA" enterkeyhint="done" spellcheck="false" autocomplete="off">
+      </div>
+      <div class="campo">
+        <label for="monte-recado">Frase do rodapé <span>(opcional)</span></label>
+        <input id="monte-recado" name="recado" type="text" maxlength="80" placeholder="OBRIGADO E VOLTE SEMPRE!" enterkeyhint="done" spellcheck="false" autocomplete="off">
       </div>
       <fieldset class="chips">
         <legend>Produto de exemplo</legend>
@@ -389,6 +408,7 @@
           <p class="f-selo"><span data-valor>R$ 10,00</span></p>
           <p class="f-par"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span></p>
           <p class="f-par"><span>FORMA: DINHEIRO</span><span>CAIXA: 01</span></p>
+          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
           <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
         </div>
       </article>
@@ -403,6 +423,7 @@
             <span class="f-logo">SEU<br>LOGO</span>
             <p class="f-valor"><b data-valor>R$ 10,00</b><span>FORMA: PIX</span></p>
           </div>
+          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
           <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
         </div>
       </article>
@@ -418,6 +439,7 @@
           <hr class="f-pontilhado">
           <p class="f-par"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span></p>
           <p class="f-par"><span>FORMA: DÉBITO</span><span>CAIXA: 02</span></p>
+          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
           <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
         </div>
       </article>
@@ -428,11 +450,12 @@
           <p class="f-evento" data-evento>FESTA JUNINA</p>
           <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
           <p class="f-resumo"><span data-valor>R$ 10,00</span> • PED: 9 • <span data-agora="curta">02/10 18:49</span> • CAIXA: 01</p>
+          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
           <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
         </div>
       </article>
     </div>
-    <p class="nota nota--verde">Quatro dos sete modelos. Exemplos ilustrativos: os produtos, os preços e o logotipo são os do seu evento.</p>
+    <p class="nota nota--verde">Quatro dos sete modelos. Exemplos ilustrativos: os produtos, os preços, o logotipo e o rodapé são os do seu evento. A linha com o telefone da BC Fichas sai em todas as fichas.</p>
 
     <ul class="fatos fatos--verde" role="list">
       <li>
@@ -442,6 +465,10 @@
       <li>
         <h3>Combos</h3>
         <p>Um preço só que imprime várias fichas. Serve para um combo de bebidas ou um pacote de vales.</p>
+      </li>
+      <li>
+        <h3>Rodapé com a sua frase</h3>
+        <p>Um agradecimento ou um aviso do evento, impresso no pé de todas as fichas.</p>
       </li>
       <li>
         <h3>Data, hora e caixa</h3>
@@ -509,11 +536,15 @@
     <div class="duvidas__lista">
       <details class="duvida">
         <summary><h3>Como funciona a locação?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>A locação é por diária. Você informa a data, a cidade e como é o evento, e recebe o orçamento pelo WhatsApp.</p>
+        <p>A locação é por diária. Você informa a data, a cidade e como é o evento, e recebe o orçamento pelo WhatsApp. Depois envia a programação (produtos, preços, logotipo e rodapé das fichas) e a máquina já vai pronta.</p>
       </details>
       <details class="duvida">
         <summary><h3>O que está incluído?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
         <p>O manual e as bobinas de papel. Se precisar, a equipe que vai operar os caixas também recebe treinamento.</p>
+      </details>
+      <details class="duvida">
+        <summary><h3>Preciso cadastrar os produtos na máquina?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <p>Não. Você envia a lista de produtos, os preços, o logotipo e a frase do rodapé das fichas. A máquina já vai programada para o seu evento.</p>
       </details>
       <details class="duvida">
         <summary><h3>Quantas máquinas eu preciso?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -524,12 +555,16 @@
         <p>Dinheiro, PIX, débito e crédito. No dinheiro, a tela calcula o troco. No cartão e no PIX, a cobrança é feita na maquininha e o caixa registra a forma de pagamento para o relatório.</p>
       </details>
       <details class="duvida">
+        <summary><h3>A maquininha de cartão está incluída?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
+        <p>Não. A maquininha de cartão é por conta do cliente. Você usa a sua, e o caixa registra se a venda foi no débito, no crédito ou no PIX.</p>
+      </details>
+      <details class="duvida">
         <summary><h3>A máquina precisa de internet?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
         <p>Não. A venda e a impressão das fichas funcionam sem internet.</p>
       </details>
       <details class="duvida">
         <summary><h3>As fichas saem com o nome do meu evento?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>Sim. As fichas saem com o nome e o logotipo do evento, além do produto, do valor, da data e da hora.</p>
+        <p>Sim. As fichas saem com o nome e o logotipo do evento, além do produto, do valor, da data e da hora. O rodapé também é seu: uma frase que sai no pé de todas as fichas.</p>
       </details>
       <details class="duvida">
         <summary><h3>Dá para vender combos e vales?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -555,6 +590,30 @@
       <h2 id="t-orcamento">Conte como é o seu evento.</h2>
       <p class="lide">Com a data, a cidade e o tamanho da festa, a gente prepara o orçamento. Preencha o que souber e envie pelo WhatsApp.</p>
     </header>
+
+    <ol class="contratar" role="list" aria-label="Como contratar">
+      <li>
+        <span class="marco" aria-hidden="true">1</span>
+        <div>
+          <h3>Peça o orçamento</h3>
+          <p>Informe a data, a cidade e como é o evento.</p>
+        </div>
+      </li>
+      <li>
+        <span class="marco" aria-hidden="true">2</span>
+        <div>
+          <h3>Envie a programação</h3>
+          <p>Produtos, preços, logotipo e a frase do rodapé das fichas.</p>
+        </div>
+      </li>
+      <li>
+        <span class="marco" aria-hidden="true">3</span>
+        <div>
+          <h3>A máquina vai pronta</h3>
+          <p>Programada para o seu evento, com manual e bobinas.</p>
+        </div>
+      </li>
+    </ol>
 
     <form class="ficha-form" id="orc" novalidate>
       <p class="ficha-form__faixa">Pedido de orçamento</p>
@@ -661,6 +720,6 @@
   </a>
 </div>
 
-<script src="js/site.js?v=1" defer></script>
+<script src="js/site.js?v=2" defer></script>
 </body>
 </html>

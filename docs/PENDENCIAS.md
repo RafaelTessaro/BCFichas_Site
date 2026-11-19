@@ -1,39 +1,43 @@
 # Pendências
 
-Situação em 19/11/2026. O site está completo e funcionando com o que estava confirmado nos materiais. O que segue depende de resposta ou de ação sua.
+Situação em 19/11/2026. O site está completo, com as respostas do responsável já aplicadas. O briefing usado foi o texto do pedido; não chegou nenhum arquivo separado além das fotos.
 
-O briefing usado foi o texto do pedido. Não chegou nenhum arquivo separado além das fotos; se existir um documento à parte, é só enviar para eu conferir o site com ele.
+## 1. Confirmado em 19/11/2026 (já está no site)
 
-## 1. Para confirmar (informação)
+| Assunto | Resposta | Onde aparece |
+|---|---|---|
+| WhatsApp dos orçamentos | (19) 3023-9050, mantido | Todos os botões e o formulário |
+| Versão do sistema | As máquinas alugadas saem com a 3.11.7 | Textos sobre PIX, modelos de ficha, senha, estoque e devolução |
+| Maquininha de cartão | Por conta do cliente | Passo 2 de "Como funciona" e pergunta própria nas dúvidas |
+| Região atendida | Manter "consulte a disponibilidade" | Dúvidas |
+| Programação | O cliente envia a programação e a máquina já vai pronta | Seção da máquina, "Como contratar" e dúvidas |
+| Rodapé das fichas | É personalizável | Seção das fichas (texto, simulador e exemplos) e dúvidas |
+| Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
+| Horário e endereço | Os da Balanças.com valem | Seção de orçamento |
+
+## 2. Ainda para confirmar
 
 | # | Assunto | Como está no site | O que preciso saber |
 |---|---|---|---|
-| 1 | **WhatsApp dos orçamentos** | (19) 3023-9050: o do site da Balanças e o impresso no pé das fichas. | É este o número que recebe os pedidos do BC Fichas? |
-| 2 | **Versão do sistema nas máquinas** | Os textos sobre o sistema (PIX, abas, 7 modelos de ficha, senha, estoque, devolução) vêm do BC Fichas 3.11.7. | As máquinas alugadas já saem com essa versão? |
-| 3 | **Maquininha de cartão** | Diz só que "a cobrança é feita na maquininha e o caixa registra a forma de pagamento". | Quem leva a maquininha: o cliente ou a BC Fichas? |
-| 4 | **Cidades atendidas** | "A BC Fichas fica em Rio Claro-SP. Consulte a disponibilidade." | Região atendida e como é a entrega, a retirada e a montagem. |
-| 5 | **Quantas máquinas** | "Conte como é o seu evento para a gente separar as máquinas no orçamento." | Está certo? Existe uma regra prática (ex.: por público)? |
-| 6 | **Programação das máquinas** | Não é citada. | A máquina vai com os produtos, preços e logotipo do evento já cadastrados? Vale dizer isso no site. |
-| 7 | **Horário e endereço** | Os da Balanças.com (seg. a sex. 8h–11h e 13h–18h; sáb. 8h–12h; Rua 13, 650). | Valem para o atendimento do BC Fichas? |
-| 8 | **Logotipo oficial** | Símbolo da ficha usado no sistema + o nome "BC Fichas". | Existe um logotipo oficial em arquivo? |
-| 9 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos na locação? Se sim, entram no site. |
+| 1 | **Quantas máquinas** | "Cada máquina funciona como um caixa. Conte como é o seu evento para a gente separar as máquinas no orçamento." | Está certo? Existe uma regra prática (por público, por barraca)? |
+| 2 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos na locação? Se sim, entram no site. |
 
-## 2. Imagens
+## 3. Imagens
 
 - **Tela montada nas fotos.** O visor estava desligado; a tela do sistema foi aplicada sobre a foto, e o site avisa. O ideal é fotografar a máquina **ligada**.
 - **Fotos que fariam diferença:** a ficha saindo da impressora, a máquina em uso num evento e a gaveta com dinheiro. Com elas eu troco as montagens por fotos diretas.
 - **Etiqueta "CAIXA 2" e furinhos:** apagados das três fotos usadas, como pedido.
 - **Fotos usadas:** 3 das 10 inteiras (frente, de cima com a gaveta, lado da impressora) e 1 recortada (impressora aberta). As demais estão em `materiais/fotos-originais/`.
-- **Fichas de exemplo:** ilustrações fiéis a 4 dos 7 modelos, com "SEU LOGO" no lugar do logotipo. Se preferir, troco por fichas impressas fotografadas.
+- **Fichas de exemplo:** ilustrações fiéis a 4 dos 7 modelos, com "SEU LOGO" no lugar do logotipo e uma frase de exemplo no rodapé. Se preferir, troco por fichas impressas fotografadas.
 
-## 3. Publicação
+## 4. Publicação
 
 - [ ] Importar o repositório na Vercel e apontar `bcfichas.balancass.com` (guia: `docs/PUBLICAR-NA-VERCEL.md`).
 - [ ] Testar o botão do WhatsApp em um celular real.
 - [ ] Enviar o `sitemap.xml` no Google Search Console.
 - [ ] No site da Balanças.com, os links do BC Fichas ainda apontam para `bcfichas.com.br`, que está fora do ar (erro 503). Trocar para o endereço novo quando ele estiver publicado.
 
-## 4. Ficou de fora de propósito
+## 5. Ficou de fora de propósito
 
 Sem informação confirmada, não entraram: preços, depoimentos, quantidade de clientes ou de eventos atendidos, fotos de eventos e prazos de reserva.
 

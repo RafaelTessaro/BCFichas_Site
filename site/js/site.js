@@ -3,7 +3,7 @@
    Sem bibliotecas e sem rastreadores. A página funciona inteira sem este
    arquivo; ele só acrescenta:
      1. o número do WhatsApp num lugar só (CONTATO);
-     2. as fichas de exemplo com o nome do evento e a data de agora;
+     2. as fichas de exemplo com o nome do evento, o rodapé e a data de agora;
      3. o formulário de orçamento, que vira mensagem de WhatsApp;
      4. a barra fixa do celular e o menu.
    ===================================================================== */
@@ -67,20 +67,26 @@
   var monte = $("#monte");
   if (monte) {
     var campoEvento = $("#monte-evento");
+    var campoRecado = $("#monte-recado");
     var padrao = campoEvento.getAttribute("placeholder") || "FESTA JUNINA";
+    var recadoPadrao = (campoRecado && campoRecado.getAttribute("placeholder")) || "";
 
     var pintar = function () {
       var evento = (campoEvento.value || "").trim().toUpperCase() || padrao;
       var escolhido = $('input[name="produto"]:checked', monte);
       var partes = (escolhido ? escolhido.value : "PASTEL|10,00").split("|");
+      var recado = ((campoRecado && campoRecado.value) || "").trim().toUpperCase() || recadoPadrao;
       $$("#rolo [data-evento]").forEach(function (el) { el.textContent = evento; });
+      $$("#rolo [data-recado]").forEach(function (el) { el.textContent = recado; });
       $$("#rolo [data-valor]").forEach(function (el) { el.textContent = "R$ " + partes[1]; });
       $$("#rolo [data-produto]").forEach(function (el) { el.textContent = partes[0]; ajustarProduto(el); });
     };
 
     monte.addEventListener("input", pintar);
     monte.addEventListener("change", pintar);
-    campoEvento.addEventListener("keydown", function (e) { if (e.key === "Enter") campoEvento.blur(); });
+    [campoEvento, campoRecado].forEach(function (campo) {
+      if (campo) campo.addEventListener("keydown", function (e) { if (e.key === "Enter") campo.blur(); });
+    });
   }
 
   /* ---------- 3. Orçamento pelo WhatsApp ---------- */
