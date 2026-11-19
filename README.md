@@ -9,6 +9,7 @@ Endereço previsto: **https://bcfichas.balancass.com**
 |---|---|
 | **Publicar** | [`docs/PUBLICAR-NA-VERCEL.md`](docs/PUBLICAR-NA-VERCEL.md) |
 | **O que falta confirmar** | [`docs/PENDENCIAS.md`](docs/PENDENCIAS.md) |
+| **O que foi testado** | [`docs/TESTES.md`](docs/TESTES.md) |
 | **Mudar textos, número e fotos** | mais abaixo, em "Como mudar" |
 
 ## O que tem
@@ -55,6 +56,8 @@ Depois abra `http://localhost:8000`.
 
 Rode `python3 ferramentas/conferir.py`: ele avisa se sobrou algum link com o número antigo.
 
+**Botões.** "Solicitar orçamento" leva sempre ao formulário do fim da página (`#orcamento`); "Falar no WhatsApp" abre a conversa direta. Mantenha essa regra ao criar botões novos.
+
 **Textos.** Estão todos em `site/index.html`, em português, na ordem em que aparecem na página.
 As perguntas e respostas também estão repetidas no bloco `application/ld+json` do começo do arquivo (é o que o Google lê): se mudar uma, mude a outra.
 
@@ -62,13 +65,13 @@ As perguntas e respostas também estão repetidas no bloco `application/ld+json`
 
 **Fotos da máquina.** Ponha a foto nova em `materiais/fotos-originais/`, ajuste a lista `FOTOS` em `ferramentas/processar-fotos.py` e rode o script. Ele recorta o fundo, apaga etiquetas marcadas, monta a tela do sistema no visor e grava os arquivos em `site/img/maquina/`. As instruções estão no começo do script.
 
-**Depois de mudar o CSS ou o JavaScript**, aumente o número do `?v=2` (para `?v=3`, e assim por diante) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
+**Depois de mudar o CSS ou o JavaScript**, aumente o número do `?v=3` (para `?v=4`, e assim por diante) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
 
 ## Como as imagens foram feitas
 
 - **Fotos da máquina:** são as fotos reais enviadas. O fundo (mesa) foi recortado, a etiqueta "CAIXA 2" e os dois furinhos ao lado dela foram apagados, e a tela do sistema foi aplicada sobre o visor, que estava desligado nas fotos. O site avisa isso na seção da máquina.
 - **Telas do sistema e comprovante de fechamento:** capturas reais do BC Fichas 3.11.7, com dados de teste.
-- **Fichas de exemplo:** desenhadas em HTML seguindo quatro dos sete modelos reais do sistema. O nome do evento e a frase do rodapé mudam quando o visitante digita. No lugar do logotipo aparece "SEU LOGO".
+- **Fichas de exemplo:** os sete modelos reais do sistema, desenhados em HTML. O nome do evento (até 40 letras) e a frase do rodapé (até 80) mudam quando o visitante digita, com os mesmos limites do sistema. No lugar do logotipo aparece "SEU LOGO".
 
 ## De onde vieram as informações
 

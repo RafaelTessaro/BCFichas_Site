@@ -29,7 +29,7 @@
 <link rel="preload" as="image" type="image/webp" fetchpriority="high"
       imagesrcset="img/maquina/maquina-frente-520.webp 520w, img/maquina/maquina-frente-800.webp 800w, img/maquina/maquina-frente-1200.webp 1200w"
       imagesizes="(min-width: 1000px) 50vw, 92vw">
-<link rel="stylesheet" href="css/site.css?v=2">
+<link rel="stylesheet" href="css/site.css?v=3">
 
 <script type="application/ld+json">
 {
@@ -47,7 +47,7 @@
       "@id": "https://bcfichas.balancass.com/#servico",
       "name": "BC Fichas: locação de máquinas de fichas para eventos",
       "serviceType": "Locação de terminais emissores de fichas",
-      "description": "Locação por diária de máquinas de fichas para festas juninas, quermesses e eventos. A máquina vai programada com os produtos, os preços e o logotipo do evento, com manual, bobinas e treinamento da equipe.",
+      "description": "Locação por diária de máquinas de fichas para festas juninas, quermesses e eventos. A máquina vai programada com os produtos, os preços e o logotipo do evento, com manual e bobinas inclusos e treinamento da equipe, se precisar.",
       "url": "https://bcfichas.balancass.com/",
       "image": "https://bcfichas.balancass.com/img/compartilhar.jpg",
       "provider": {
@@ -71,7 +71,7 @@
         {
           "@type": "Question",
           "name": "Como funciona a locação?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A locação é por diária. Você informa a data, a cidade e como é o evento, e recebe o orçamento pelo WhatsApp. Depois envia a programação (produtos, preços, logotipo e rodapé das fichas) e a máquina já vai pronta." }
+          "acceptedAnswer": { "@type": "Answer", "text": "A locação é por diária. Você informa a cidade, a data e como é o evento, e recebe a proposta pelo WhatsApp. Com o orçamento aprovado, envia o cardápio com os preços, o logotipo e a frase do rodapé, e a máquina já vai programada." }
         },
         {
           "@type": "Question",
@@ -96,7 +96,7 @@
         {
           "@type": "Question",
           "name": "A máquina precisa de internet?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Não. A venda e a impressão das fichas funcionam sem internet." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Não. O registro da venda e a impressão das fichas funcionam sem internet. Só a maquininha de cartão depende da conexão dela." }
         },
         {
           "@type": "Question",
@@ -120,6 +120,8 @@
   <symbol id="i-desce" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
   <symbol id="i-mais" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5M11 8.5v5M8.5 11h5"/></g></symbol>
+  <symbol id="i-volta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
   <symbol id="i-pino" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
   <symbol id="i-hora" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
 </svg>
@@ -127,6 +129,7 @@
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- ============ Cabeçalho ============ -->
+<!-- "Solicitar orçamento" leva sempre ao formulário da página; "Falar no WhatsApp" abre a conversa direta. -->
 <header class="topo" id="topo">
   <div class="miolo topo__linha">
     <a class="marca" href="#inicio" aria-label="BC Fichas, início da página">
@@ -135,27 +138,28 @@
     </a>
 
     <nav class="topo__nav" aria-label="Seções da página">
+      <a href="#como-alugar">Como alugar</a>
       <a href="#maquina">A máquina</a>
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#como-funciona">Como usar</a>
       <a href="#fichas">As fichas</a>
       <a href="#caixa">Controle do caixa</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
 
-    <a class="btn btn--zap topo__cta" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener">
-      <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Solicitar orçamento
-    </a>
+    <a class="btn btn--zap topo__cta" href="#orcamento">Solicitar orçamento</a>
 
     <details class="menu">
       <summary class="menu__botao"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg><span>Menu</span></summary>
       <nav class="menu__painel" aria-label="Menu">
+        <a href="#como-alugar">Como alugar</a>
         <a href="#maquina">A máquina</a>
-        <a href="#como-funciona">Como funciona</a>
+        <a href="#como-funciona">Como usar no evento</a>
         <a href="#fichas">As fichas</a>
         <a href="#caixa">Controle do caixa</a>
         <a href="#duvidas">Dúvidas</a>
-        <a href="#orcamento">Solicitar orçamento</a>
-        <a class="menu__fone" href="tel:+551930239050"><svg class="i" aria-hidden="true"><use href="#i-fone"/></svg>(19) 3023-9050</a>
+        <a class="menu__destaque" href="#orcamento">Solicitar orçamento</a>
+        <a class="menu__destaque" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Falar no WhatsApp</a>
+        <a href="tel:+551930239050"><svg class="i" aria-hidden="true"><use href="#i-fone"/></svg>(19) 3023-9050</a>
       </nav>
     </details>
   </div>
@@ -169,14 +173,12 @@
     <div class="heroi__texto">
       <p class="rotulo">Locação por diária para festas e eventos</p>
       <h1 id="t-inicio">Máquinas de <span class="realce">fichas</span> para o caixa do seu evento.</h1>
-      <p class="lide">O operador toca nos produtos, recebe o pagamento e as fichas saem impressas na hora, uma para cada item. A locação é por diária, com manual e bobinas inclusos.</p>
+      <p class="lide">O operador registra a venda e imprime uma ficha para cada item. Locação por diária, com manual e bobinas inclusos.</p>
       <div class="acoes">
-        <a class="btn btn--zap btn--g" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener">
-          <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Solicitar orçamento
-        </a>
-        <a class="btn btn--linha btn--g" href="#como-funciona">Ver como funciona<svg class="i" aria-hidden="true"><use href="#i-desce"/></svg></a>
+        <a class="btn btn--zap btn--g" href="#orcamento">Solicitar orçamento</a>
+        <a class="btn btn--linha btn--g" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Falar no WhatsApp</a>
       </div>
-      <p class="heroi__contato">WhatsApp e telefone <a href="tel:+551930239050">(19) 3023-9050</a> · Rio Claro-SP</p>
+      <p class="heroi__contato">Telefone <a href="tel:+551930239050">(19) 3023-9050</a> · Rio Claro-SP</p>
     </div>
 
     <div class="heroi__visual">
@@ -206,13 +208,45 @@
   </div>
 </section>
 
+<!-- ============ Como alugar ============ -->
+<section class="alugar" id="como-alugar" aria-labelledby="t-alugar">
+  <div class="miolo">
+    <div class="alugar__c">
+      <h2 class="alugar__t" id="t-alugar">Como alugar</h2>
+      <ol class="alugar__passos" role="list">
+        <li>
+          <span class="marco" aria-hidden="true">1</span>
+          <div>
+            <h3>Conte sobre o evento</h3>
+            <p>Informe a cidade, a data ou o período e uma estimativa de público, se já souber.</p>
+          </div>
+        </li>
+        <li>
+          <span class="marco" aria-hidden="true">2</span>
+          <div>
+            <h3>Receba a proposta</h3>
+            <p>A gente verifica a disponibilidade e ajuda a definir a quantidade de máquinas.</p>
+          </div>
+        </li>
+        <li>
+          <span class="marco" aria-hidden="true">3</span>
+          <div>
+            <h3>Combine os detalhes</h3>
+            <p>Com o orçamento aprovado, você envia o cardápio com os preços, o logotipo e a frase do rodapé. A máquina já vai programada.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <!-- ============ A máquina ============ -->
 <section class="faixa faixa--papel dente-cima dente-baixo" id="maquina" aria-labelledby="t-maquina">
   <div class="miolo">
     <header class="cabeca">
       <p class="rotulo">O equipamento</p>
       <h2 id="t-maquina">Tela, impressora e gaveta em uma máquina só.</h2>
-      <p class="lide">Cada máquina é um caixa completo e já vai programada com os produtos e os preços do seu evento. É colocar no balcão e ligar na tomada: o sistema do caixa abre sozinho.</p>
+      <p class="lide">Tela de toque, impressora e gaveta integradas. Ao ligar o equipamento, o sistema inicia automaticamente.</p>
     </header>
 
     <div class="anatomia">
@@ -226,103 +260,103 @@
         <span class="marco" data-marco="3" style="--x:51%;--y:75%" aria-hidden="true">3</span>
       </figure>
 
-      <ol class="anatomia__lista" role="list">
-        <li data-marco="1">
-          <span class="marco" aria-hidden="true">1</span>
-          <div>
-            <h3>Impressora térmica</h3>
-            <p>Imprime as fichas em papel de 80 mm e faz o corte entre uma ficha e outra.</p>
-          </div>
-        </li>
-        <li data-marco="2">
-          <span class="marco" aria-hidden="true">2</span>
-          <div>
-            <h3>Tela de toque</h3>
-            <p>O operador vende tocando nos botões dos produtos. Quando precisa digitar, o teclado aparece na própria tela.</p>
-          </div>
-        </li>
-        <li data-marco="3">
-          <span class="marco" aria-hidden="true">3</span>
-          <div>
-            <h3>Gaveta de dinheiro</h3>
-            <p>Fica embaixo da tela e tem divisórias para notas e moedas.</p>
-          </div>
-        </li>
-      </ol>
+      <div class="anatomia__lado">
+        <ol class="anatomia__lista" role="list">
+          <li data-marco="1">
+            <span class="marco" aria-hidden="true">1</span>
+            <div>
+              <h3>Impressora térmica</h3>
+              <p>Emite as fichas em papel de 80 mm e faz o corte entre uma e outra.</p>
+            </div>
+          </li>
+          <li data-marco="2">
+            <span class="marco" aria-hidden="true">2</span>
+            <div>
+              <h3>Tela de toque</h3>
+              <p>O operador vende tocando nos botões dos produtos. Quando precisa digitar, o teclado aparece na própria tela.</p>
+            </div>
+          </li>
+          <li data-marco="3">
+            <span class="marco" aria-hidden="true">3</span>
+            <div>
+              <h3>Gaveta de dinheiro</h3>
+              <p>Fica embaixo da tela e tem divisórias para notas e moedas.</p>
+            </div>
+          </li>
+        </ol>
+
+        <ul class="galeria" role="list" aria-label="Mais fotos da máquina">
+          <li>
+            <a class="foto foto--escura" href="img/maquina/maquina-impressora-1100.webp" data-amplia data-legenda="Lado da impressora, com a saída das fichas.">
+              <img src="img/maquina/maquina-impressora-480.webp" width="480" height="469" loading="lazy" decoding="async"
+                   alt="A máquina vista pelo lado da impressora, com a saída das fichas em primeiro plano e a tela ligada ao fundo.">
+              <span class="foto__legenda">Saída das fichas</span>
+              <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="foto" href="img/maquina/impressora-aberta-560.webp" data-amplia data-legenda="Compartimento para troca da bobina.">
+              <img src="img/maquina/impressora-aberta-380.webp" width="380" height="560" loading="lazy" decoding="async"
+                   alt="Impressora da máquina com a tampa aberta, mostrando o compartimento da bobina de papel e as luzes Liga, Erro e Papel.">
+              <span class="foto__legenda">Compartimento para troca da bobina</span>
+              <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <ul class="fatos" role="list">
       <li>
-        <h3>Vai pronta para o seu evento</h3>
-        <p>Você envia os produtos, os preços e o logotipo. A máquina já vai programada.</p>
+        <h3>Pronta para o seu evento</h3>
+        <p>Já vai programada com o cardápio, os preços e o logotipo que você enviar.</p>
       </li>
       <li>
-        <h3>Funciona sem internet</h3>
-        <p>A venda e a impressão das fichas não dependem de conexão.</p>
+        <h3>Vende sem internet</h3>
+        <p>O registro da venda e a impressão das fichas não dependem de conexão.</p>
       </li>
       <li>
         <h3>Um caixa por máquina</h3>
         <p>Cada máquina tem o seu número de caixa, que sai nas fichas e nos relatórios.</p>
       </li>
-      <li>
-        <h3>Bobinas e manual inclusos</h3>
-        <p>A locação já vem com as bobinas de papel e o manual de uso.</p>
-      </li>
     </ul>
-
-    <div class="detalhes">
-      <figure class="detalhe detalhe--escuro">
-        <img src="img/maquina/maquina-impressora-760.webp"
-             srcset="img/maquina/maquina-impressora-480.webp 480w, img/maquina/maquina-impressora-760.webp 760w, img/maquina/maquina-impressora-1100.webp 1100w"
-             sizes="(min-width: 1000px) 34vw, 88vw" width="1100" height="1075" loading="lazy" decoding="async"
-             alt="A máquina vista pelo lado da impressora, com a saída das fichas em primeiro plano e a tela ligada ao fundo.">
-        <figcaption>A saída das fichas fica na frente da impressora.</figcaption>
-      </figure>
-      <figure class="detalhe detalhe--foto">
-        <img src="img/maquina/impressora-aberta-560.webp"
-             srcset="img/maquina/impressora-aberta-380.webp 380w, img/maquina/impressora-aberta-560.webp 560w"
-             sizes="(min-width: 1000px) 24vw, 88vw" width="560" height="826" loading="lazy" decoding="async"
-             alt="Impressora da máquina com a tampa aberta, mostrando o compartimento da bobina de papel e as luzes Liga, Erro e Papel.">
-        <figcaption>Com a tampa aberta: o lugar da bobina de papel.</figcaption>
-      </figure>
-    </div>
 
     <p class="nota">Fotos reais da máquina. A imagem que aparece no visor é a tela do sistema BC Fichas, aplicada sobre a foto.</p>
   </div>
 </section>
 
-<!-- ============ Como funciona ============ -->
+<!-- ============ Como usar no evento ============ -->
 <section class="faixa faixa--preto" id="como-funciona" aria-labelledby="t-como">
   <div class="miolo">
     <header class="cabeca">
-      <p class="rotulo">No caixa</p>
+      <p class="rotulo">Como usar no evento</p>
       <h2 id="t-como">Do pedido ao fechamento, em quatro passos.</h2>
     </header>
 
     <ol class="passos" role="list">
       <li class="passo">
-        <figure class="passo__img passo__img--tela">
-          <img src="img/sistema/tela-venda-640.webp" srcset="img/sistema/tela-venda-640.webp 640w, img/sistema/tela-venda-1024.webp 1024w"
-               sizes="(min-width: 1000px) 40vw, 86vw" width="1024" height="600" loading="lazy" decoding="async"
+        <a class="passo__img passo__img--tela" href="img/sistema/tela-venda-1024.webp" data-amplia data-legenda="Tela de venda do BC Fichas." aria-label="Ampliar a tela de venda">
+          <img src="img/sistema/tela-venda-640.webp" srcset="img/sistema/tela-venda-640.webp 640w, img/sistema/tela-venda-1024.webp 1024w" sizes="(min-width: 1100px) 22vw, (min-width: 640px) 42vw, 86vw" width="640" height="375" loading="lazy" decoding="async"
                alt="Tela de venda do BC Fichas: botões grandes e coloridos dos produtos, abas Comidas, Bebidas e Doces, e o pedido com o total à direita.">
-        </figure>
+          <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+        </a>
         <div class="passo__texto">
           <span class="passo__n" aria-hidden="true">1</span>
           <h3>Toque nos produtos</h3>
-          <p>O operador monta o pedido na tela. Cada produto é um botão grande, com cor ou foto, e o cardápio é separado em abas, como Comidas e Bebidas.</p>
+          <p>Cada produto é um botão grande, com cor ou foto. O cardápio fica separado em abas, como Comidas e Bebidas.</p>
         </div>
       </li>
 
       <li class="passo">
-        <figure class="passo__img passo__img--tela">
-          <img src="img/sistema/tela-pagamento-640.webp" srcset="img/sistema/tela-pagamento-640.webp 640w, img/sistema/tela-pagamento-1280.webp 1280w"
-               sizes="(min-width: 1000px) 40vw, 86vw" width="1280" height="800" loading="lazy" decoding="async"
+        <a class="passo__img passo__img--tela" href="img/sistema/tela-pagamento-1280.webp" data-amplia data-legenda="Tela de pagamento do BC Fichas." aria-label="Ampliar a tela de pagamento">
+          <img src="img/sistema/tela-pagamento-640.webp" srcset="img/sistema/tela-pagamento-640.webp 640w, img/sistema/tela-pagamento-1280.webp 1280w" sizes="(min-width: 1100px) 22vw, (min-width: 640px) 42vw, 86vw" width="640" height="400" loading="lazy" decoding="async"
                alt="Tela de pagamento do BC Fichas, com as opções Dinheiro, PIX, Débito e Crédito.">
-        </figure>
+          <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+        </a>
         <div class="passo__texto">
           <span class="passo__n" aria-hidden="true">2</span>
-          <h3>Escolha a forma de pagamento</h3>
-          <p>Dinheiro, PIX, débito ou crédito. No dinheiro, a tela calcula o troco. No cartão e no PIX, a cobrança é feita na sua maquininha e o caixa registra como foi pago.</p>
+          <h3>Escolha o pagamento</h3>
+          <p>Dinheiro, PIX, débito ou crédito. No dinheiro, a tela calcula o troco. No cartão e no PIX, a cobrança é feita na sua maquininha.</p>
         </div>
       </li>
 
@@ -352,19 +386,20 @@
         <div class="passo__texto">
           <span class="passo__n" aria-hidden="true">3</span>
           <h3>As fichas saem na hora</h3>
-          <p>A impressora solta uma ficha para cada item, com o corte entre uma e outra. O operador destaca e entrega ao cliente.</p>
+          <p>A impressora emite uma ficha por item, com o corte entre uma e outra. É só destacar e entregar.</p>
         </div>
       </li>
 
       <li class="passo">
-        <figure class="passo__img passo__img--papel">
-          <img src="img/sistema/fechamento-de-caixa.png" width="576" height="1123" loading="lazy" decoding="async"
-               alt="Comprovante de fechamento de caixa impresso pelo sistema, com as vendas por forma de pagamento, o total vendido e a conferência do dinheiro da gaveta.">
-        </figure>
+        <a class="passo__img passo__img--tela" href="img/sistema/tela-fechamento-1280.webp" data-amplia data-legenda="Tela de fechamento de caixa do BC Fichas." aria-label="Ampliar a tela de fechamento de caixa">
+          <img src="img/sistema/tela-fechamento-640.webp" srcset="img/sistema/tela-fechamento-640.webp 640w, img/sistema/tela-fechamento-1280.webp 1280w" sizes="(min-width: 1100px) 22vw, (min-width: 640px) 42vw, 86vw" width="640" height="400" loading="lazy" decoding="async"
+               alt="Tela de fechamento de caixa: total vendido, valores por forma de pagamento, dinheiro esperado na gaveta, conferência do valor contado e produtos vendidos.">
+          <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+        </a>
         <div class="passo__texto">
           <span class="passo__n" aria-hidden="true">4</span>
-          <h3>Feche o caixa com o relatório</h3>
-          <p>No fim, o fechamento mostra o total vendido por forma de pagamento, os produtos vendidos e a conferência do dinheiro da gaveta.</p>
+          <h3>Feche o caixa</h3>
+          <p>O fechamento mostra o total por forma de pagamento, os produtos vendidos e a conferência da gaveta.</p>
         </div>
       </li>
     </ol>
@@ -377,18 +412,24 @@
     <header class="cabeca">
       <p class="rotulo">As fichas</p>
       <h2 id="t-fichas">Fichas com o nome, o logotipo e o rodapé do seu evento.</h2>
-      <p class="lide">Cada ficha sai com o produto em letras grandes, o valor, a data e a hora, o número do pedido, a forma de pagamento e o número do caixa. O nome do evento, o logotipo e a frase do rodapé são os seus. São 7 modelos de ficha para escolher.</p>
+      <p class="lide">Cada ficha sai com o produto em letras grandes, o valor, a data e a hora, o número do pedido, a forma de pagamento e o número do caixa. São 7 modelos para escolher.</p>
     </header>
 
     <div class="monte" id="monte" role="group" aria-label="Monte a ficha do seu evento">
       <p class="monte__dica">Escreva o nome do seu evento e a frase do rodapé para ver como ficam nas fichas.</p>
       <div class="campo">
-        <label for="monte-evento">Nome do evento</label>
-        <input id="monte-evento" name="evento" type="text" maxlength="22" placeholder="FESTA JUNINA" enterkeyhint="done" spellcheck="false" autocomplete="off">
+        <div class="campo__topo">
+          <label for="monte-evento">Nome do evento</label>
+          <span class="contador" id="monte-evento-cont">até 40 letras</span>
+        </div>
+        <input id="monte-evento" name="evento" type="text" maxlength="40" placeholder="FESTA JUNINA" enterkeyhint="done" spellcheck="false" autocomplete="off" aria-describedby="monte-evento-cont">
       </div>
       <div class="campo">
-        <label for="monte-recado">Frase do rodapé <span>(opcional)</span></label>
-        <input id="monte-recado" name="recado" type="text" maxlength="80" placeholder="OBRIGADO E VOLTE SEMPRE!" enterkeyhint="done" spellcheck="false" autocomplete="off">
+        <div class="campo__topo">
+          <label for="monte-recado">Frase do rodapé <span>(opcional)</span></label>
+          <span class="contador" id="monte-recado-cont">até 80 letras</span>
+        </div>
+        <input id="monte-recado" name="recado" type="text" maxlength="80" placeholder="OBRIGADO E VOLTE SEMPRE!" enterkeyhint="done" spellcheck="false" autocomplete="off" aria-describedby="monte-recado-cont">
       </div>
       <fieldset class="chips">
         <legend>Produto de exemplo</legend>
@@ -399,82 +440,143 @@
       </fieldset>
     </div>
 
-    <div class="rolo" id="rolo" tabindex="0" role="group" aria-label="Exemplos de modelos de ficha. Deslize para ver todos.">
-      <!-- modelo com cabeçalho preto -->
-      <article class="ficha ficha--b" aria-label="Modelo de ficha com cabeçalho preto">
-        <div class="ficha__c">
-          <p class="f-faixa" data-evento>FESTA JUNINA</p>
-          <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
-          <p class="f-selo"><span data-valor>R$ 10,00</span></p>
-          <p class="f-par"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span></p>
-          <p class="f-par"><span>FORMA: DINHEIRO</span><span>CAIXA: 01</span></p>
-          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
-          <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
-        </div>
-      </article>
-
-      <!-- modelo clássico, com o logotipo ao lado do valor -->
-      <article class="ficha ficha--a" aria-label="Modelo de ficha com o logotipo ao lado do valor">
-        <div class="ficha__c">
-          <p class="f-evento" data-evento>FESTA JUNINA</p>
-          <p class="f-trio"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span><span>CAIXA: 01</span></p>
-          <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
-          <div class="f-linha">
-            <span class="f-logo">SEU<br>LOGO</span>
-            <p class="f-valor"><b data-valor>R$ 10,00</b><span>FORMA: PIX</span></p>
-          </div>
-          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
-          <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
-        </div>
-      </article>
-
-      <!-- modelo com o logotipo no alto -->
-      <article class="ficha ficha--d" aria-label="Modelo de ficha com o logotipo no alto">
-        <div class="ficha__c">
-          <span class="f-logo f-logo--centro">SEU LOGO</span>
-          <p class="f-evento" data-evento>FESTA JUNINA</p>
-          <hr class="f-pontilhado">
-          <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
-          <p class="f-preco" data-valor>R$ 10,00</p>
-          <hr class="f-pontilhado">
-          <p class="f-par"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span></p>
-          <p class="f-par"><span>FORMA: DÉBITO</span><span>CAIXA: 02</span></p>
-          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
-          <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
-        </div>
-      </article>
-
-      <!-- modelo compacto -->
-      <article class="ficha ficha--c" aria-label="Modelo de ficha compacto">
-        <div class="ficha__c">
-          <p class="f-evento" data-evento>FESTA JUNINA</p>
-          <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
-          <p class="f-resumo"><span data-valor>R$ 10,00</span> • PED: 9 • <span data-agora="curta">02/10 18:49</span> • CAIXA: 01</p>
-          <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
-          <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
-        </div>
-      </article>
+    <div class="rolo__topo">
+      <p class="rolo__titulo">Os 7 modelos de ficha</p>
+      <div class="rolo__setas">
+        <button class="rolo__seta" type="button" data-rolo="-1" aria-label="Modelos anteriores" aria-controls="rolo"><svg class="i" aria-hidden="true"><use href="#i-volta"/></svg></button>
+        <button class="rolo__seta" type="button" data-rolo="1" aria-label="Próximos modelos" aria-controls="rolo"><svg class="i" aria-hidden="true"><use href="#i-seta"/></svg></button>
+      </div>
     </div>
-    <p class="nota nota--verde">Quatro dos sete modelos. Exemplos ilustrativos: os produtos, os preços, o logotipo e o rodapé são os do seu evento. A linha com o telefone da BC Fichas sai em todas as fichas.</p>
+    <div class="rolo" id="rolo" tabindex="0" role="group" aria-label="Os sete modelos de ficha. Deslize ou use as setas para ver todos.">
+      <ul class="rolo__lista" role="list">
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 1</p>
+          <article class="ficha ficha--m1" aria-label="Modelo 1 de ficha">
+            <div class="ficha__c">
+            <p class="f-evento f-nome" data-evento>FESTA JUNINA</p>
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <div class="f-linha f-linha--inv">
+              <div class="f-info">
+                <p class="f-selo f-selo--esq"><span data-valor>R$ 10,00</span></p>
+                <p data-agora="longa">02/10/2026 18:49:53</p>
+                <p>PED: 9</p>
+                <p>FORMA: DINHEIRO</p>
+              </div>
+              <span class="f-logo">SEU<br>LOGO</span>
+            </div>
+            <p class="f-dir">CAIXA: 01</p>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 2</p>
+          <article class="ficha ficha--m2" aria-label="Modelo 2 de ficha">
+            <div class="ficha__c">
+            <div class="f-linha">
+              <span class="f-logo">SEU<br>LOGO</span>
+              <div class="f-centro">
+                <p class="f-evento f-nome" data-evento>FESTA JUNINA</p>
+                <p data-agora="longa">02/10/2026 18:49:53</p>
+                <p>PED: 9</p>
+              </div>
+            </div>
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <p class="f-preco f-preco--m" data-valor>R$ 10,00</p>
+            <p class="f-par"><span>FORMA: PIX</span><span>CAIXA: 01</span></p>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 3</p>
+          <article class="ficha ficha--m3" aria-label="Modelo 3 de ficha">
+            <div class="ficha__c">
+            <div class="f-linha f-linha--inv">
+              <div class="f-info">
+                <p class="f-valor-fino" data-valor>R$ 10,00</p>
+                <p data-agora="longa">02/10/2026 18:49:53</p>
+                <p>PED: 9</p>
+                <p>FORMA: DÉBITO</p>
+              </div>
+              <span class="f-logo">SEU<br>LOGO</span>
+            </div>
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <p class="f-par f-par--forte"><span class="f-nome" data-evento>FESTA JUNINA</span><span>CAIXA: 02</span></p>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 4</p>
+          <article class="ficha ficha--m4" aria-label="Modelo 4 de ficha">
+            <div class="ficha__c">
+            <p class="f-evento f-nome" data-evento>FESTA JUNINA</p>
+            <p class="f-trio"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span><span>CAIXA: 01</span></p>
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <div class="f-linha">
+              <span class="f-logo">SEU<br>LOGO</span>
+              <p class="f-valor"><b data-valor>R$ 10,00</b><span>FORMA: DINHEIRO</span></p>
+            </div>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 5</p>
+          <article class="ficha ficha--m5" aria-label="Modelo 5 de ficha">
+            <div class="ficha__c">
+            <span class="f-logo f-logo--centro">SEU LOGO</span>
+            <p class="f-evento f-nome" data-evento>FESTA JUNINA</p>
+            <hr class="f-pontilhado">
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <p class="f-preco" data-valor>R$ 10,00</p>
+            <hr class="f-pontilhado">
+            <p class="f-par"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span></p>
+            <p class="f-par"><span>FORMA: CRÉDITO</span><span>CAIXA: 02</span></p>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 6</p>
+          <article class="ficha ficha--m6" aria-label="Modelo 6 de ficha">
+            <div class="ficha__c">
+            <p class="f-evento f-nome" data-evento>FESTA JUNINA</p>
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <p class="f-resumo"><span data-valor>R$ 10,00</span> • PED: 9 • <span data-agora="curta">02/10 18:49</span> • CAIXA: 01</p>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+        <li class="rolo__item">
+          <p class="rolo__n">Modelo 7</p>
+          <article class="ficha ficha--m7" aria-label="Modelo 7 de ficha">
+            <div class="ficha__c">
+            <p class="f-faixa f-nome" data-evento>FESTA JUNINA</p>
+            <p class="f-produto" data-produto style="--tam:21.5">PASTEL</p>
+            <p class="f-selo"><span data-valor>R$ 10,00</span></p>
+            <p class="f-par"><span>PED: 9</span><span data-agora="longa">02/10/2026 18:49:53</span></p>
+            <p class="f-par"><span>FORMA: PIX</span><span>CAIXA: 01</span></p>
+            <p class="f-recado" data-recado>OBRIGADO E VOLTE SEMPRE!</p>
+            <p class="f-rodape">BC-FICHAS FONE: (19) 3023-9050</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <p class="nota nota--verde">Exemplos ilustrativos dos sete modelos: os produtos, os preços, o logotipo e o rodapé são os do seu evento. A linha com o telefone da BC Fichas sai em todas as fichas.</p>
 
-    <ul class="fatos fatos--verde" role="list">
-      <li>
-        <h3>Uma ficha por item</h3>
-        <p>Vendeu três pastéis, saem três fichas. A impressora corta uma da outra.</p>
-      </li>
-      <li>
-        <h3>Combos</h3>
-        <p>Um preço só que imprime várias fichas. Serve para um combo de bebidas ou um pacote de vales.</p>
-      </li>
-      <li>
-        <h3>Rodapé com a sua frase</h3>
-        <p>Um agradecimento ou um aviso do evento, impresso no pé de todas as fichas.</p>
-      </li>
-      <li>
-        <h3>Data, hora e caixa</h3>
-        <p>Toda ficha registra quando e em qual caixa foi vendida.</p>
-      </li>
-    </ul>
+    <div class="fichas__fim">
+      <p class="fichas__combo"><b>Combos e vales.</b> Um preço só que imprime várias fichas: serve para um combo de bebidas ou um pacote de vales.</p>
+      <a class="btn btn--tinta btn--g" href="#orcamento">Quero fichas para o meu evento<svg class="i" aria-hidden="true"><use href="#i-seta"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -517,8 +619,11 @@
     </div>
 
     <figure class="controle__papel">
-      <img src="img/sistema/fechamento-de-caixa.png" width="576" height="1123" loading="lazy" decoding="async"
-           alt="Comprovante de fechamento de caixa: vendas em dinheiro, débito, crédito e PIX, total vendido, devoluções, venda líquida, dinheiro esperado na gaveta, valor contado, sobra e produtos vendidos.">
+      <a class="controle__amplia" href="img/sistema/fechamento-de-caixa.png" data-amplia data-legenda="Comprovante de fechamento de caixa. Exemplo com dados de teste." aria-label="Ampliar o comprovante de fechamento de caixa">
+        <img src="img/sistema/fechamento-de-caixa.png" width="576" height="1123" loading="lazy" decoding="async"
+             alt="Comprovante de fechamento de caixa: vendas em dinheiro, débito, crédito e PIX, total vendido, devoluções, venda líquida, dinheiro esperado na gaveta, valor contado, sobra e produtos vendidos.">
+        <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+      </a>
       <figcaption>Fechamento de caixa impresso pelo sistema. Exemplo com dados de teste.</figcaption>
     </figure>
   </div>
@@ -536,7 +641,7 @@
     <div class="duvidas__lista">
       <details class="duvida">
         <summary><h3>Como funciona a locação?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>A locação é por diária. Você informa a data, a cidade e como é o evento, e recebe o orçamento pelo WhatsApp. Depois envia a programação (produtos, preços, logotipo e rodapé das fichas) e a máquina já vai pronta.</p>
+        <p>A locação é por diária. Você informa a cidade, a data e como é o evento, e recebe a proposta pelo WhatsApp. Com o orçamento aprovado, envia o cardápio com os preços, o logotipo e a frase do rodapé, e a máquina já vai programada.</p>
       </details>
       <details class="duvida">
         <summary><h3>O que está incluído?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -548,7 +653,7 @@
       </details>
       <details class="duvida">
         <summary><h3>Quantas máquinas eu preciso?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>Cada máquina funciona como um caixa. Conte pelo WhatsApp como é o seu evento para a gente separar as máquinas no orçamento.</p>
+        <p>Cada máquina corresponde a um caixa. Informe a duração, o público estimado e como será a venda. A gente ajuda a definir a quantidade de máquinas.</p>
       </details>
       <details class="duvida">
         <summary><h3>Quais formas de pagamento o caixa registra?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -560,7 +665,7 @@
       </details>
       <details class="duvida">
         <summary><h3>A máquina precisa de internet?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>Não. A venda e a impressão das fichas funcionam sem internet.</p>
+        <p>Não. O registro da venda e a impressão das fichas funcionam sem internet. Só a maquininha de cartão depende da conexão dela.</p>
       </details>
       <details class="duvida">
         <summary><h3>As fichas saem com o nome do meu evento?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -588,37 +693,13 @@
     <header class="cabeca pedido__cabeca">
       <p class="rotulo">Orçamento</p>
       <h2 id="t-orcamento">Conte como é o seu evento.</h2>
-      <p class="lide">Com a data, a cidade e o tamanho da festa, a gente prepara o orçamento. Preencha o que souber e envie pelo WhatsApp.</p>
+      <p class="lide">Preencha o que souber. A mensagem abre pronta no WhatsApp e você confere antes de enviar.</p>
     </header>
-
-    <ol class="contratar" role="list" aria-label="Como contratar">
-      <li>
-        <span class="marco" aria-hidden="true">1</span>
-        <div>
-          <h3>Peça o orçamento</h3>
-          <p>Informe a data, a cidade e como é o evento.</p>
-        </div>
-      </li>
-      <li>
-        <span class="marco" aria-hidden="true">2</span>
-        <div>
-          <h3>Envie a programação</h3>
-          <p>Produtos, preços, logotipo e a frase do rodapé das fichas.</p>
-        </div>
-      </li>
-      <li>
-        <span class="marco" aria-hidden="true">3</span>
-        <div>
-          <h3>A máquina vai pronta</h3>
-          <p>Programada para o seu evento, com manual e bobinas.</p>
-        </div>
-      </li>
-    </ol>
 
     <form class="ficha-form" id="orc" novalidate>
       <p class="ficha-form__faixa">Pedido de orçamento</p>
       <div class="ficha-form__campos">
-        <div class="campo">
+        <div class="campo campo--larga">
           <label for="orc-nome">Seu nome</label>
           <input id="orc-nome" name="nome" type="text" autocomplete="name" enterkeyhint="next">
         </div>
@@ -632,7 +713,7 @@
           </select>
         </div>
         <div class="campo">
-          <label for="orc-data">Data do evento</label>
+          <label for="orc-data">Data ou período do evento</label>
           <input id="orc-data" name="data" type="text" placeholder="Ex.: 13 e 14 de junho" autocomplete="off" enterkeyhint="next">
         </div>
         <div class="campo">
@@ -640,8 +721,12 @@
           <input id="orc-cidade" name="cidade" type="text" autocomplete="address-level2" enterkeyhint="next">
         </div>
         <div class="campo">
-          <label for="orc-caixas">Quantos caixas você imagina?</label>
-          <select id="orc-caixas" name="caixas">
+          <label for="orc-publico">Público estimado <span>(opcional)</span></label>
+          <input id="orc-publico" name="publico" type="text" placeholder="Ex.: 500 pessoas por dia" autocomplete="off" enterkeyhint="next">
+        </div>
+        <div class="campo campo--larga">
+          <label for="orc-maquinas">Quantidade de máquinas</label>
+          <select id="orc-maquinas" name="maquinas" aria-describedby="orc-maquinas-ajuda">
             <option value="">Ainda não sei</option>
             <option>1</option>
             <option>2</option>
@@ -649,6 +734,7 @@
             <option>4</option>
             <option>5 ou mais</option>
           </select>
+          <p class="campo__ajuda" id="orc-maquinas-ajuda">Cada máquina corresponde a um caixa.</p>
         </div>
         <div class="campo campo--larga">
           <label for="orc-obs">Quer contar mais alguma coisa? <span>(opcional)</span></label>
@@ -658,7 +744,9 @@
       <a class="btn btn--zap btn--g ficha-form__enviar" id="orc-enviar" href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener">
         <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Enviar pelo WhatsApp
       </a>
-      <p class="ficha-form__aviso">Abre o WhatsApp com a mensagem pronta. Você confere e envia.</p>
+      <button class="btn btn--borda ficha-form__copiar" id="orc-copiar" type="button" hidden>Copiar a mensagem</button>
+      <p class="ficha-form__status" id="orc-status" role="status" aria-live="polite"></p>
+      <p class="ficha-form__aviso">Abre o WhatsApp com a mensagem pronta. Você confere e envia. O site não guarda os dados que você escreve aqui.</p>
       <p class="f-rodape ficha-form__rodape">BC-FICHAS FONE: (19) 3023-9050</p>
     </form>
 
@@ -696,8 +784,9 @@
       <p>Locação de máquinas de fichas para festas juninas, quermesses e eventos.</p>
     </div>
     <nav class="rodape__nav" aria-label="Rodapé">
+      <a href="#como-alugar">Como alugar</a>
       <a href="#maquina">A máquina</a>
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#como-funciona">Como usar</a>
       <a href="#fichas">As fichas</a>
       <a href="#caixa">Controle do caixa</a>
       <a href="#duvidas">Dúvidas</a>
@@ -712,14 +801,21 @@
 
 <!-- ============ Barra fixa do celular ============ -->
 <div class="barra" id="barra" role="region" aria-label="Contato rápido">
-  <a class="btn btn--zap barra__zap" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener">
-    <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Solicitar orçamento
-  </a>
-  <a class="btn btn--linha barra__fone" href="tel:+551930239050" aria-label="Ligar para (19) 3023-9050">
-    <svg class="i" aria-hidden="true"><use href="#i-fone"/></svg>
+  <a class="btn btn--zap barra__orc" href="#orcamento">Solicitar orçamento</a>
+  <a class="btn btn--linha barra__zap" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>
   </a>
 </div>
 
-<script src="js/site.js?v=2" defer></script>
+<!-- ============ Ampliação de fotos, telas e comprovante ============ -->
+<dialog class="amplia" id="amplia" aria-labelledby="amplia-legenda">
+  <form class="amplia__topo" method="dialog">
+    <p id="amplia-legenda"></p>
+    <button class="btn btn--linha" type="submit">Fechar</button>
+  </form>
+  <div class="amplia__img" tabindex="0"><img id="amplia-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></div>
+</dialog>
+
+<script src="js/site.js?v=3" defer></script>
 </body>
 </html>
