@@ -17,7 +17,7 @@ Feitos em 19/11/2026, depois das mudanças pedidas na avaliação do site. Todas
 | Orçamento | Passou | A mensagem leva só o que foi preenchido; número (19) 3023-9050; "Copiar a mensagem" funciona; nenhum aviso de envio. |
 | Dúvidas e imagens ampliadas | Passou | Perguntas abrem e fecham pelo teclado com foco visível; as 6 imagens ampliáveis abrem com botão "Fechar", fecham com Esc e devolvem o foco. |
 | Movimento e zoom | Passou | Com movimento reduzido não há animação nem rolagem suave; com zoom de 200% (640 e 320 px úteis) não há rolagem lateral nem texto cortado. |
-| Publicação | Em parte | `bcfichas.vercel.app` respondeu (HTTP 200). `bcfichas.balancass.com` não respondeu a partir do ambiente de teste. Ver "Não verificado". |
+| Publicação | Em parte | Depois do envio, `bcfichas.vercel.app` já servia esta versão: página nova no ar, endereço inexistente mostra a página 404 do site, `/index.html` redireciona para `/`, a imagem de compartilhamento abre e os cabeçalhos de cache e segurança do `vercel.json` estão ativos. `bcfichas.balancass.com` não respondeu a partir do ambiente de teste. Ver "Não verificado". |
 
 ## Carregamento e estabilidade
 
