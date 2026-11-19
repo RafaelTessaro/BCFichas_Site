@@ -1,0 +1,14 @@
+{
+  "name": "BC Fichas",
+  "short_name": "BC Fichas",
+  "description": "Locação de máquinas de fichas para festas e eventos.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#070A08",
+  "theme_color": "#070A08",
+  "icons": [
+    { "src": "img/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "img/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
