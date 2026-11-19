@@ -2,20 +2,21 @@
 
 Situação em 19/11/2026. O site está completo e funcionando com o que estava confirmado nos materiais. O que segue depende de resposta ou de ação sua.
 
+O briefing usado foi o texto do pedido. Não chegou nenhum arquivo separado além das fotos; se existir um documento à parte, é só enviar para eu conferir o site com ele.
+
 ## 1. Para confirmar (informação)
 
 | # | Assunto | Como está no site | O que preciso saber |
 |---|---|---|---|
-| 1 | **Briefing** | O anexo não chegou à conversa. O site foi feito a partir dos três repositórios e das fotos. | Reenviar o briefing para eu conferir estrutura e textos com ele. |
-| 2 | **WhatsApp dos orçamentos** | (19) 3023-9050: o do site da Balanças e o impresso no pé das fichas. | É este o número que recebe os pedidos do BC Fichas? |
-| 3 | **Versão do sistema nas máquinas** | Os textos sobre o sistema (PIX, abas, 7 modelos de ficha, senha, estoque, devolução) vêm do BC Fichas 3.11.7. | As máquinas alugadas já saem com essa versão? |
-| 4 | **Maquininha de cartão** | Diz só que "a cobrança é feita na maquininha e o caixa registra a forma de pagamento". | Quem leva a maquininha: o cliente ou a BC Fichas? |
-| 5 | **Cidades atendidas** | "A BC Fichas fica em Rio Claro-SP. Consulte a disponibilidade." | Região atendida e como é a entrega, a retirada e a montagem. |
-| 6 | **Quantas máquinas** | "Conte como é o seu evento para a gente separar as máquinas no orçamento." | Está certo? Existe uma regra prática (ex.: por público)? |
-| 7 | **Programação das máquinas** | Não é citada. | A máquina vai com os produtos, preços e logotipo do evento já cadastrados? Vale dizer isso no site. |
-| 8 | **Horário e endereço** | Os da Balanças.com (seg. a sex. 8h–11h e 13h–18h; sáb. 8h–12h; Rua 13, 650). | Valem para o atendimento do BC Fichas? |
-| 9 | **Logotipo oficial** | Símbolo da ficha usado no sistema + o nome "BC Fichas". | Existe um logotipo oficial em arquivo? |
-| 10 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos na locação? Se sim, entram no site. |
+| 1 | **WhatsApp dos orçamentos** | (19) 3023-9050: o do site da Balanças e o impresso no pé das fichas. | É este o número que recebe os pedidos do BC Fichas? |
+| 2 | **Versão do sistema nas máquinas** | Os textos sobre o sistema (PIX, abas, 7 modelos de ficha, senha, estoque, devolução) vêm do BC Fichas 3.11.7. | As máquinas alugadas já saem com essa versão? |
+| 3 | **Maquininha de cartão** | Diz só que "a cobrança é feita na maquininha e o caixa registra a forma de pagamento". | Quem leva a maquininha: o cliente ou a BC Fichas? |
+| 4 | **Cidades atendidas** | "A BC Fichas fica em Rio Claro-SP. Consulte a disponibilidade." | Região atendida e como é a entrega, a retirada e a montagem. |
+| 5 | **Quantas máquinas** | "Conte como é o seu evento para a gente separar as máquinas no orçamento." | Está certo? Existe uma regra prática (ex.: por público)? |
+| 6 | **Programação das máquinas** | Não é citada. | A máquina vai com os produtos, preços e logotipo do evento já cadastrados? Vale dizer isso no site. |
+| 7 | **Horário e endereço** | Os da Balanças.com (seg. a sex. 8h–11h e 13h–18h; sáb. 8h–12h; Rua 13, 650). | Valem para o atendimento do BC Fichas? |
+| 8 | **Logotipo oficial** | Símbolo da ficha usado no sistema + o nome "BC Fichas". | Existe um logotipo oficial em arquivo? |
+| 9 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos na locação? Se sim, entram no site. |
 
 ## 2. Imagens
 
