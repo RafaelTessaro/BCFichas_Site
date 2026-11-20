@@ -11,8 +11,8 @@ O que faz, para cada foto configurada em FOTOS:
   6. põe uma sombra suave embaixo;
   7. grava em WebP com fundo transparente, em mais de uma largura.
 
-A foto de detalhe (impressora aberta) é um recorte retangular ("retangulo"),
-sem tirar o fundo: passa só pela limpeza.
+Uma entrada com "retangulo": (x0, y0, x1, y1) vira um recorte retangular, sem
+tirar o fundo, e passa só pela limpeza (serve para fotos de detalhe).
 
 Uso:
     pip install pillow numpy opencv-python-headless
@@ -76,12 +76,6 @@ FOTOS = {
         "limpeza": {},
         "tela": {"quad": [(885, 421), (1161, 240), (1245, 461), (996, 659)], "vidro": 0.10, "reflexo": 0.07},
         "larguras": [1100, 760, 480],
-    },
-    "impressora-aberta": {
-        "foto": "foto-01.jpg",
-        "retangulo": (482, 214, 1042, 1040),
-        "limpeza": {},
-        "larguras": [560, 380],
     },
 }
 

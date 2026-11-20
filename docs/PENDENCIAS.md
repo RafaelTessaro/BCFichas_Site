@@ -44,7 +44,7 @@ Situação em 20/11/2026, com as respostas e os pedidos do responsável já apli
 
 - **Tela montada nas fotos.** O visor estava desligado; a tela do sistema foi aplicada sobre a foto. O aviso que o site trazia sobre isso foi retirado a pedido do responsável. O ideal continua sendo fotografar a máquina **ligada**.
 - **Limpeza das fotos.** A poeira e os risquinhos das chapas foram retirados no tratamento das imagens. Fotos novas, com a máquina limpa de verdade e boa luz, ficariam ainda melhores.
-- **Foto ou vídeo da emissão das fichas.** A avaliação sugere trocar a foto da impressora aberta por isso. Hoje ela aparece pequena, numa galeria com ampliação. Se chegar um vídeo, ele entra com reprodução por toque e imagem de capa.
+- **Foto ou vídeo da emissão das fichas.** A foto da impressora aberta foi retirada a pedido do responsável. Uma foto ou um vídeo da ficha saindo ocuparia bem esse lugar; um vídeo entraria com reprodução por toque e imagem de capa.
 - **Outras fotos que fariam diferença:** a máquina em uso num evento e a gaveta com dinheiro.
 - **Fichas de exemplo:** os 7 modelos são ilustrações fiéis aos modelos reais do sistema, com "SEU LOGO" no lugar do logotipo e uma frase de exemplo no rodapé.
 
