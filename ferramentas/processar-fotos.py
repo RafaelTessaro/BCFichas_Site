@@ -5,9 +5,14 @@ O que faz, para cada foto configurada em FOTOS:
   1. recorta a máquina do fundo (usa a máscara de materiais/recortes/);
   2. tira o cabo de energia e o que sobrou do fundo (áreas em "excluir");
   3. apaga a etiqueta "CAIXA 2" e os dois furinhos ao lado dela ("retoques");
-  4. monta a tela real do sistema no visor, em perspectiva ("tela");
-  5. põe uma sombra suave embaixo;
-  6. grava em WebP com fundo transparente, em mais de uma largura.
+  4. limpa a máquina: tira poeira e risquinhos claros das chapas pretas, alisa
+     de leve e deixa o preto mais fundo e neutro ("limpeza");
+  5. monta a tela real do sistema no visor, em perspectiva ("tela");
+  6. põe uma sombra suave embaixo;
+  7. grava em WebP com fundo transparente, em mais de uma largura.
+
+A foto de detalhe (impressora aberta) é um recorte retangular ("retangulo"),
+sem tirar o fundo: passa só pela limpeza.
 
 Uso:
     pip install pillow numpy opencv-python-headless
@@ -44,6 +49,7 @@ FOTOS = {
             "poligonos": [[(912, 300), (930, 271), (1031, 298), (1014, 342), (990, 346), (925, 346)]],
             "circulos": [(892, 289, 7), (1121, 347, 6), (1137, 372, 9)],
         },
+        "limpeza": {"proteger": [[(590, 150), (700, 150), (700, 245), (590, 245)]]},
         "tela": {"quad": [(772, 311), (1139, 459), (962, 785), (654, 549)], "vidro": 0.34, "reflexo": 0.30},
         "larguras": [1200, 800, 520],
     },
@@ -55,6 +61,7 @@ FOTOS = {
             "poligonos": [[(998, 272), (1107, 267), (1107, 302), (999, 307)]],
             "circulos": [(965, 299, 8), (1222, 292, 8)],
         },
+        "limpeza": {"proteger": [[(600, 250), (670, 250), (670, 390), (600, 390)]]},
         "tela": {"quad": [(812, 351), (1251, 340), (1215, 590), (816, 604)], "vidro": 0.22, "reflexo": 0.10},
         "larguras": [1200, 800, 520],
     },
@@ -66,8 +73,15 @@ FOTOS = {
             "poligonos": [[(992, 269), (1060, 226), (1073, 251), (1005, 296)]],
             "circulos": [(977, 307, 7), (1140, 206, 7)],
         },
+        "limpeza": {},
         "tela": {"quad": [(885, 421), (1161, 240), (1245, 461), (996, 659)], "vidro": 0.10, "reflexo": 0.07},
         "larguras": [1100, 760, 480],
+    },
+    "impressora-aberta": {
+        "foto": "foto-01.jpg",
+        "retangulo": (482, 214, 1042, 1040),
+        "limpeza": {},
+        "larguras": [560, 380],
     },
 }
 
@@ -142,6 +156,62 @@ def retocar(foto: np.ndarray, cfg: dict) -> np.ndarray:
     novo = liso.copy()
     novo[by0:by1, bx0:bx1] += textura * cfg.get("grao", 1.0)
     return np.clip(foto * (1 - suave) + novo * suave, 0.0, 1.0)
+
+
+def _elipse(n: int) -> np.ndarray:
+    return cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (n, n))
+
+
+def limpar(foto: np.ndarray, alfa: np.ndarray, cfg: dict) -> np.ndarray:
+    """Deixa a máquina com cara de limpa, sem mudar o que ela é.
+
+    Tira pontinhos de poeira e risquinhos claros que estão sobre chapa escura e
+    plana, alisa de leve essas chapas e deixa o preto mais fundo e neutro.
+    Ficam como estão: bordas, etiquetas, letras, parafusos e o botão amarelo.
+    """
+    img8 = (np.clip(foto, 0, 1) * 255).astype(np.uint8)
+    lum = cv2.cvtColor(img8, cv2.COLOR_RGB2GRAY).astype(np.float32) / 255.0
+    aberto = cv2.morphologyEx(lum, cv2.MORPH_OPEN, _elipse(9))  # a foto sem os detalhes claros pequenos
+    claro = lum - aberto
+    base = cv2.GaussianBlur(aberto, (0, 0), 2.0)
+    gx = cv2.Sobel(base, cv2.CV_32F, 1, 0, ksize=3)
+    gy = cv2.Sobel(base, cv2.CV_32F, 0, 1, ksize=3)
+    plano = np.sqrt(gx * gx + gy * gy) < cfg.get("borda", 0.030)  # longe das dobras e bordas da chapa
+    dentro = cv2.erode((alfa > 0.9).astype(np.uint8), _elipse(11)) > 0
+    m = ((claro > cfg.get("limiar", 0.030)) & plano & dentro & (aberto < 0.42)).astype(np.uint8)
+    for poligono in cfg.get("proteger", []):
+        cv2.fillPoly(m, [np.array(poligono, dtype=np.int32)], 0)
+
+    sat = cv2.cvtColor(img8, cv2.COLOR_RGB2HSV)[..., 1]
+    n, rotulos, estat, _ = cv2.connectedComponentsWithStats(m, 8)
+    tirar = np.zeros_like(m)
+    for i in range(1, n):
+        x, y, w, h, area = estat[i]
+        if max(w, h) > 64 or area > 420:
+            continue  # grande demais para ser sujeira: é desenho da máquina
+        sel = rotulos[y : y + h, x : x + w] == i
+        brilho = lum[y : y + h, x : x + w][sel].max()
+        if brilho > 0.60:
+            continue  # letra, parafuso ou etiqueta
+        if brilho > 0.35 and sat[y : y + h, x : x + w][sel].mean() > 110:
+            continue  # botão amarelo
+        tirar[y : y + h, x : x + w][sel] = 1
+    tirar = cv2.dilate(tirar, _elipse(3))
+    limpo = cv2.inpaint(img8, tirar * 255, 3, cv2.INPAINT_TELEA)
+
+    # alisa de leve as chapas escuras (o aspecto empoeirado), sem mexer nas bordas
+    liso = cv2.bilateralFilter(limpo, 9, 26, 5).astype(np.float32) / 255.0
+    limpo = limpo.astype(np.float32) / 255.0
+    cinza = limpo.mean(axis=2)
+    peso = (np.clip((0.50 - cinza) / 0.20, 0, 1) * np.clip(alfa, 0, 1) * cfg.get("alisar", 0.55))[..., None]
+    saida = limpo * (1 - peso) + liso * peso
+
+    # preto mais fundo e mais neutro (as fotos puxam para o azul)
+    cinza = saida.mean(axis=2, keepdims=True)
+    neutro = np.clip((0.45 - cinza) / 0.25, 0, 1) * cfg.get("neutro", 0.35) * np.clip(alfa, 0, 1)[..., None]
+    saida = saida * (1 - neutro) + cinza * neutro
+    preto = cfg.get("preto", 0.022)
+    return np.clip((saida - preto) / (1 - preto), 0.0, 1.0)
 
 
 def montar_tela(foto: np.ndarray, cfg: dict) -> np.ndarray:
@@ -228,6 +298,16 @@ def gravar(rgba: np.ndarray, nome: str, larguras: list[int]) -> None:
         print(f"  {destino.relative_to(RAIZ)}  {largura_real}x{saida.height}  {destino.stat().st_size // 1024} KB")
 
 
+def gravar_retangulo(foto: np.ndarray, caixa: tuple, nome: str, larguras: list[int]) -> None:
+    x0, y0, x1, y1 = caixa
+    img = Image.fromarray((np.clip(foto[y0:y1, x0:x1], 0, 1) * 255 + 0.5).astype(np.uint8), "RGB")
+    for largura in larguras:
+        saida = img if largura >= img.width else img.resize((largura, round(img.height * largura / img.width)), Image.LANCZOS)
+        destino = SAIDA / f"{nome}-{largura}.webp"
+        saida.save(destino, "WEBP", quality=84, method=6)
+        print(f"  {destino.relative_to(RAIZ)}  {saida.width}x{saida.height}  {destino.stat().st_size // 1024} KB")
+
+
 def main() -> int:
     SAIDA.mkdir(parents=True, exist_ok=True)
     so = set(sys.argv[1:])
@@ -236,9 +316,16 @@ def main() -> int:
             continue
         print(nome)
         foto, masc = carregar(cfg["foto"])
+        if "retangulo" in cfg:
+            if "limpeza" in cfg:
+                foto = limpar(foto, np.ones_like(masc), cfg["limpeza"])
+            gravar_retangulo(foto, cfg["retangulo"], nome, cfg["larguras"])
+            continue
         alfa = limpar_mascara(masc, cfg.get("excluir", []))
         if "retoques" in cfg:
             foto = retocar(foto, cfg["retoques"])
+        if "limpeza" in cfg:
+            foto = limpar(foto, alfa, cfg["limpeza"])
         if "tela" in cfg:
             foto = montar_tela(foto, cfg["tela"])
         gravar(com_sombra(foto, alfa), nome, cfg["larguras"])

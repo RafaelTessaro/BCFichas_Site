@@ -1,6 +1,6 @@
 # Pendências
 
-Situação em 19/11/2026, com as respostas do responsável sobre as condições do aluguel já aplicadas. O briefing usado foi o texto do pedido; não chegou nenhum arquivo separado além das fotos e da avaliação do site.
+Situação em 20/11/2026, com as respostas e os pedidos do responsável já aplicados. O briefing usado foi o texto do pedido; não chegou nenhum arquivo separado além das fotos e da avaliação do site.
 
 ## 1. Para confirmar
 
@@ -17,7 +17,7 @@ Situação em 19/11/2026, com as respostas do responsável sobre as condições 
 - [ ] Enviar o `sitemap.xml` no Google Search Console.
 - [ ] **Site da Balanças.com:** a seção do BC Fichas ainda diz "Locação por diária" e "Manual e bobinas inclusos", e os links apontam para `bcfichas.com.br` (fora do ar). Vale alinhar com o que foi confirmado aqui.
 
-## 3. Confirmado em 19/11/2026 (já está no site)
+## 3. Confirmado pelo responsável (já está no site)
 
 | Assunto | Resposta | Onde aparece |
 |---|---|---|
@@ -35,12 +35,15 @@ Situação em 19/11/2026, com as respostas do responsável sobre as condições 
 | Maquininha de cartão | Por conta do cliente | "Como usar no evento" e dúvidas |
 | Programação | O cliente envia e a máquina já vai pronta | "Como alugar", seção da máquina e dúvidas |
 | Rodapé das fichas | É personalizável | Seção das fichas e dúvidas |
+| Textos retirados em 20/11 | Frase de apoio da abertura, estimativa de público, "o teclado aparece na tela", aviso sobre as fotos e a dúvida sobre devolução de fichas | Não aparecem mais |
+| Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu, seção de orçamento e contatos |
 | Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
 | Horário e endereço | Os da Balanças.com valem | Seção de orçamento |
 
 ## 4. Imagens
 
-- **Tela montada nas fotos.** O visor estava desligado; a tela do sistema foi aplicada sobre a foto, e o site avisa. O ideal é fotografar a máquina **ligada**.
+- **Tela montada nas fotos.** O visor estava desligado; a tela do sistema foi aplicada sobre a foto. O aviso que o site trazia sobre isso foi retirado a pedido do responsável. O ideal continua sendo fotografar a máquina **ligada**.
+- **Limpeza das fotos.** A poeira e os risquinhos das chapas foram retirados no tratamento das imagens. Fotos novas, com a máquina limpa de verdade e boa luz, ficariam ainda melhores.
 - **Foto ou vídeo da emissão das fichas.** A avaliação sugere trocar a foto da impressora aberta por isso. Hoje ela aparece pequena, numa galeria com ampliação. Se chegar um vídeo, ele entra com reprodução por toque e imagem de capa.
 - **Outras fotos que fariam diferença:** a máquina em uso num evento e a gaveta com dinheiro.
 - **Fichas de exemplo:** os 7 modelos são ilustrações fiéis aos modelos reais do sistema, com "SEU LOGO" no lugar do logotipo e uma frase de exemplo no rodapé.

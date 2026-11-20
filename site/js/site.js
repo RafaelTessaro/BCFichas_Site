@@ -159,7 +159,6 @@
       if (valor("tipo")) linhas.push("Evento: " + valor("tipo"));
       if (valor("data")) linhas.push("Data ou período: " + valor("data"));
       if (valor("cidade")) linhas.push("Cidade: " + valor("cidade"));
-      if (valor("publico")) linhas.push("Público estimado: " + valor("publico"));
       if (valor("maquinas")) linhas.push("Máquinas: " + valor("maquinas"));
       if (valor("obs")) linhas.push("Observações: " + valor("obs"));
       mensagemAtual = CONTATO.mensagem + (linhas.length ? "\n\n" + linhas.join("\n") : "");

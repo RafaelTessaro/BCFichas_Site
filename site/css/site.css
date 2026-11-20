@@ -167,7 +167,9 @@ p { text-wrap: pretty; }
   transition: color .15s ease;
 }
 .topo__nav a:hover { color: var(--branco); }
-.topo__cta { min-height: 44px; padding: 0 16px; font-size: 0.9375rem; }
+.topo__cta, .topo__zap { min-height: 44px; padding: 0 16px; font-size: 0.9375rem; }
+.topo__zap .i, .pedido__direto .btn .i { color: var(--verde); }
+.topo__cta + .topo__zap { margin-left: -12px; }
 
 .menu { display: none; }
 .menu__botao {
@@ -192,9 +194,9 @@ p { text-wrap: pretty; }
 .menu__painel a:last-child { border-bottom: 0; }
 .menu__painel .menu__destaque { color: var(--verde); }
 
-/* A navegação completa só aparece quando cabe inteira (1140 px ou mais).
+/* A navegação completa só aparece quando cabe inteira (1240 px ou mais).
    Abaixo disso entra o menu compacto: nunca fica uma largura sem menu de seções. */
-@media (max-width: 1139px) {
+@media (max-width: 1239px) {
   .topo__nav { display: none; }
   .topo__cta { margin-left: auto; }
   .menu { display: block; }
@@ -202,7 +204,7 @@ p { text-wrap: pretty; }
 }
 @media (max-width: 799px) {
   :root { --topo: 58px; }
-  .topo__cta { display: none; }
+  .topo__cta, .topo__zap { display: none; }
   .menu { margin-left: auto; }
   .marca__simbolo { width: 30px; height: 30px; }
   .marca__nome { font-size: 1.125rem; }
@@ -391,7 +393,6 @@ p { text-wrap: pretty; }
 .fatos--verde li { background: rgba(7, 10, 8, 0.1); }
 .fatos--verde p { color: var(--tinta); }
 
-#maquina .nota { margin-top: 18px; }
 
 /* ---------- Como usar no evento ---------- */
 .passos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
@@ -596,6 +597,8 @@ a.passo__img:hover img { scale: 1.03; }
 /* ---------- Orçamento ---------- */
 .pedido { display: grid; gap: clamp(36px, 6vw, 72px); align-items: start; }
 .pedido__cabeca { margin-bottom: 0; }
+.pedido__direto { display: grid; gap: 12px; justify-items: start; margin-top: 6px; padding-top: 20px; border-top: 1px dashed var(--fio-escuro); width: 100%; }
+.pedido__direto p { color: var(--claro); font-weight: 650; }
 @media (min-width: 960px) {
   .pedido { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); grid-template-rows: auto 1fr; column-gap: clamp(36px, 6vw, 72px); row-gap: 36px; }
   .pedido__cabeca { grid-column: 1; grid-row: 1; }
@@ -663,9 +666,9 @@ a.passo__img:hover img { scale: 1.03; }
   }
   .barra--fora { translate: 0 110%; visibility: hidden; }
   html { scroll-padding-bottom: 92px; }
-  .barra__orc { flex: 1; min-width: 0; min-height: 54px; padding: 0 12px; font-size: clamp(0.9375rem, 4.4vw, 1.0625rem); }
-  .barra__zap { flex: none; width: 54px; min-height: 54px; padding: 0; }
-  .barra__zap .i { width: 24px; height: 24px; color: var(--verde); }
+  .barra__orc { flex: 1.35; min-width: 0; min-height: 54px; padding: 0 10px; font-size: clamp(0.875rem, 4.1vw, 1.0625rem); }
+  .barra__zap { flex: 1; min-width: 0; min-height: 54px; padding: 0 10px; gap: 8px; font-size: clamp(0.875rem, 4.1vw, 1.0625rem); }
+  .barra__zap .i { width: 22px; height: 22px; color: var(--verde); }
   .rodape { padding-bottom: calc(40px + 78px + env(safe-area-inset-bottom, 0px)); }
 }
 

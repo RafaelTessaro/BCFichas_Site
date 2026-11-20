@@ -27,9 +27,9 @@
 
 <link rel="preload" href="fonts/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" type="image/webp" fetchpriority="high"
-      imagesrcset="img/maquina/maquina-frente-520.webp 520w, img/maquina/maquina-frente-800.webp 800w, img/maquina/maquina-frente-1200.webp 1200w"
+      imagesrcset="img/maquina/maquina-frente-520.webp?v=2 520w, img/maquina/maquina-frente-800.webp?v=2 800w, img/maquina/maquina-frente-1200.webp?v=2 1200w"
       imagesizes="(min-width: 1000px) 50vw, 92vw">
-<link rel="stylesheet" href="css/site.css?v=3">
+<link rel="stylesheet" href="css/site.css?v=4">
 
 <script type="application/ld+json">
 {
@@ -129,7 +129,8 @@
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- ============ Cabeçalho ============ -->
-<!-- "Solicitar orçamento" leva sempre ao formulário da página; "Falar no WhatsApp" abre a conversa direta. -->
+<!-- "Solicitar orçamento" leva sempre ao formulário da página; "Falar no WhatsApp" abre a conversa direta.
+     As duas opções aparecem lado a lado no cabeçalho, na abertura, na barra do celular e na seção de orçamento. -->
 <header class="topo" id="topo">
   <div class="miolo topo__linha">
     <a class="marca" href="#inicio" aria-label="BC Fichas, início da página">
@@ -147,6 +148,7 @@
     </nav>
 
     <a class="btn btn--zap topo__cta" href="#orcamento">Solicitar orçamento</a>
+    <a class="btn btn--linha topo__zap" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>WhatsApp</a>
 
     <details class="menu">
       <summary class="menu__botao"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg><span>Menu</span></summary>
@@ -173,7 +175,6 @@
     <div class="heroi__texto">
       <p class="rotulo">Aluguel para festas e eventos</p>
       <h1 id="t-inicio">Máquinas de <span class="realce">fichas</span> para o caixa do seu evento.</h1>
-      <p class="lide">O operador registra a venda e imprime uma ficha para cada item. A máquina vai programada com o cardápio e os preços do seu evento.</p>
       <div class="acoes">
         <a class="btn btn--zap btn--g" href="#orcamento">Solicitar orçamento</a>
         <a class="btn btn--linha btn--g" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Falar no WhatsApp</a>
@@ -185,8 +186,8 @@
       <div class="bilhete">
         <div class="bilhete__palco">
           <div class="bilhete__topo" aria-hidden="true"></div>
-          <img class="heroi__foto" src="img/maquina/maquina-frente-800.webp"
-               srcset="img/maquina/maquina-frente-520.webp 520w, img/maquina/maquina-frente-800.webp 800w, img/maquina/maquina-frente-1200.webp 1200w"
+          <img class="heroi__foto" src="img/maquina/maquina-frente-800.webp?v=2"
+               srcset="img/maquina/maquina-frente-520.webp?v=2 520w, img/maquina/maquina-frente-800.webp?v=2 800w, img/maquina/maquina-frente-1200.webp?v=2 1200w"
                sizes="(min-width: 1000px) 50vw, 92vw" width="1200" height="1050" fetchpriority="high" decoding="async"
                alt="Máquina de fichas da BC Fichas: terminal preto com a impressora à esquerda e a tela de toque mostrando os botões dos produtos e o total do pedido.">
           <div class="ficha ficha--c heroi__ficha" aria-hidden="true">
@@ -218,7 +219,7 @@
           <span class="marco" aria-hidden="true">1</span>
           <div>
             <h3>Conte sobre o evento</h3>
-            <p>Informe a cidade, a data ou o período e uma estimativa de público, se já souber.</p>
+            <p>Informe a cidade e a data ou o período do evento.</p>
           </div>
         </li>
         <li>
@@ -251,8 +252,8 @@
 
     <div class="anatomia">
       <figure class="anatomia__foto">
-        <img src="img/maquina/maquina-cima-800.webp"
-             srcset="img/maquina/maquina-cima-520.webp 520w, img/maquina/maquina-cima-800.webp 800w, img/maquina/maquina-cima-1200.webp 1172w"
+        <img src="img/maquina/maquina-cima-800.webp?v=2"
+             srcset="img/maquina/maquina-cima-520.webp?v=2 520w, img/maquina/maquina-cima-800.webp?v=2 800w, img/maquina/maquina-cima-1200.webp?v=2 1172w"
              sizes="(min-width: 1000px) 46vw, 92vw" width="1172" height="1080" loading="lazy" decoding="async"
              alt="A máquina vista de cima, com a gaveta de dinheiro aberta: impressora à esquerda, tela de toque à direita e gaveta com divisórias na frente.">
         <span class="marco" data-marco="1" style="--x:22%;--y:30%" aria-hidden="true">1</span>
@@ -273,7 +274,7 @@
             <span class="marco" aria-hidden="true">2</span>
             <div>
               <h3>Tela de toque</h3>
-              <p>O operador vende tocando nos botões dos produtos. Quando precisa digitar, o teclado aparece na própria tela.</p>
+              <p>O operador vende tocando nos botões dos produtos.</p>
             </div>
           </li>
           <li data-marco="3">
@@ -287,16 +288,16 @@
 
         <ul class="galeria" role="list" aria-label="Mais fotos da máquina">
           <li>
-            <a class="foto foto--escura" href="img/maquina/maquina-impressora-1100.webp" data-amplia data-legenda="Lado da impressora, com a saída das fichas.">
-              <img src="img/maquina/maquina-impressora-480.webp" width="480" height="469" loading="lazy" decoding="async"
+            <a class="foto foto--escura" href="img/maquina/maquina-impressora-1100.webp?v=2" data-amplia data-legenda="Lado da impressora, com a saída das fichas.">
+              <img src="img/maquina/maquina-impressora-480.webp?v=2" width="480" height="469" loading="lazy" decoding="async"
                    alt="A máquina vista pelo lado da impressora, com a saída das fichas em primeiro plano e a tela ligada ao fundo.">
               <span class="foto__legenda">Saída das fichas</span>
               <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
             </a>
           </li>
           <li>
-            <a class="foto" href="img/maquina/impressora-aberta-560.webp" data-amplia data-legenda="Compartimento para troca da bobina.">
-              <img src="img/maquina/impressora-aberta-380.webp" width="380" height="560" loading="lazy" decoding="async"
+            <a class="foto" href="img/maquina/impressora-aberta-560.webp?v=2" data-amplia data-legenda="Compartimento para troca da bobina.">
+              <img src="img/maquina/impressora-aberta-380.webp?v=2" width="380" height="560" loading="lazy" decoding="async"
                    alt="Impressora da máquina com a tampa aberta, mostrando o compartimento da bobina de papel e as luzes Liga, Erro e Papel.">
               <span class="foto__legenda">Compartimento para troca da bobina</span>
               <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
@@ -321,7 +322,6 @@
       </li>
     </ul>
 
-    <p class="nota">Fotos reais da máquina. A imagem que aparece no visor é a tela do sistema BC Fichas, aplicada sobre a foto.</p>
   </div>
 </section>
 
@@ -657,7 +657,7 @@
       </details>
       <details class="duvida">
         <summary><h3>Quantas máquinas eu preciso?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>Cada máquina corresponde a um caixa. Informe a duração, o público estimado e como será a venda. A gente ajuda a definir a quantidade de máquinas.</p>
+        <p>Cada máquina corresponde a um caixa. Conte a duração do evento e como será a venda. A gente ajuda a definir a quantidade de máquinas.</p>
       </details>
       <details class="duvida">
         <summary><h3>Quais formas de pagamento o caixa registra?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -680,10 +680,6 @@
         <p>Sim. O combo tem um preço só e imprime uma ficha para cada item que faz parte dele. Também dá para montar pacotes de vales.</p>
       </details>
       <details class="duvida">
-        <summary><h3>E se o cliente devolver fichas que não usou?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
-        <p>Se o seu evento aceitar devolução, essa função é liberada na máquina. O valor devolvido sai do caixa em dinheiro, com comprovante, e aparece separado no fechamento.</p>
-      </details>
-      <details class="duvida">
         <summary><h3>Tem suporte durante o evento?</h3><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
         <p>O suporte atende no horário de funcionamento da empresa (segunda a sexta, das 8h às 11h e das 13h às 18h; sábado, das 8h às 12h), pelo mesmo número: <a href="tel:+551930239050">(19) 3023-9050</a>.</p>
       </details>
@@ -702,6 +698,10 @@
       <p class="rotulo">Orçamento</p>
       <h2 id="t-orcamento">Conte como é o seu evento.</h2>
       <p class="lide">Preencha o que souber. A mensagem abre pronta no WhatsApp e você confere antes de enviar.</p>
+      <div class="pedido__direto">
+        <p>Prefere conversar? Não precisa preencher nada.</p>
+        <a class="btn btn--linha btn--g" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>Falar no WhatsApp</a>
+      </div>
     </header>
 
     <form class="ficha-form" id="orc" novalidate>
@@ -729,10 +729,6 @@
           <input id="orc-cidade" name="cidade" type="text" autocomplete="address-level2" enterkeyhint="next">
         </div>
         <div class="campo">
-          <label for="orc-publico">Público estimado <span>(opcional)</span></label>
-          <input id="orc-publico" name="publico" type="text" placeholder="Ex.: 500 pessoas por dia" autocomplete="off" enterkeyhint="next">
-        </div>
-        <div class="campo campo--larga">
           <label for="orc-maquinas">Quantidade de máquinas</label>
           <select id="orc-maquinas" name="maquinas" aria-describedby="orc-maquinas-ajuda">
             <option value="">Ainda não sei</option>
@@ -811,7 +807,7 @@
 <div class="barra" id="barra" role="region" aria-label="Contato rápido">
   <a class="btn btn--zap barra__orc" href="#orcamento">Solicitar orçamento</a>
   <a class="btn btn--linha barra__zap" data-zap href="https://wa.me/551930239050?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20BC%20Fichas%20e%20quero%20um%20or%C3%A7amento%20para%20o%20meu%20evento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>
+    <svg class="i" aria-hidden="true"><use href="#i-zap"/></svg>WhatsApp
   </a>
 </div>
 
@@ -824,6 +820,6 @@
   <div class="amplia__img" tabindex="0"><img id="amplia-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></div>
 </dialog>
 
-<script src="js/site.js?v=3" defer></script>
+<script src="js/site.js?v=4" defer></script>
 </body>
 </html>
