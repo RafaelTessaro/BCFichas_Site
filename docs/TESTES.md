@@ -1,6 +1,6 @@
 # Testes
 
-Refeitos em 20/11/2026, depois dos últimos ajustes (fotos limpas, textos e foto retirados e a opção de falar direto no WhatsApp). Todas as verificações abaixo foram executadas de verdade; o que não pôde ser testado está na última seção.
+Refeitos em 20/11/2026, depois dos últimos ajustes (fotos limpas, textos e fotos retirados e a opção de falar direto no WhatsApp). Todas as verificações abaixo foram executadas de verdade; o que não pôde ser testado está na última seção.
 
 **Como foi testado:** navegador Chromium controlado por roteiro (Playwright), abrindo a pasta `site/` num servidor local. O celular foi simulado (tamanho de tela, toque e proporção de um iPhone 13 e larguras de 360, 390 e 430 px). Não é o mesmo que um aparelho real.
 
@@ -10,12 +10,12 @@ Refeitos em 20/11/2026, depois dos últimos ajustes (fotos limpas, textos e foto
 |---|---|---|
 | 360, 390 e 430 px | Passou | Sem rolagem horizontal; título com 37 a 41 px, textos com 16 px ou mais e campos com 17 px; a máquina ocupa mais de 90% da largura. |
 | 799, 800, 960, 1024, 1039 e 1040 px | Passou | Em todas existe menu de seções e nada se sobrepõe no cabeçalho, agora com os botões de orçamento e de WhatsApp. Também conferido em 1239, 1240 e 1280 px, onde a navegação completa entra. |
-| 1280 e 1440 px | Passou | As 7 imagens carregam com resolução igual ou maior que o tamanho exibido; todas as seções alinham na mesma margem; parágrafos de apoio com cerca de 76 letras por linha. |
+| 1280 e 1440 px | Passou | As 6 imagens carregam com resolução igual ou maior que o tamanho exibido; todas as seções alinham na mesma margem; parágrafos de apoio com cerca de 76 letras por linha. |
 | Menu compacto | Passou | Abre e fecha por toque e por teclado (Enter, Esc com retorno do foco); escolher uma seção fecha o menu e leva até ela. |
 | Barra móvel e teclado virtual | Passou em parte | A barra mostra "Solicitar orçamento" e "WhatsApp", cabe em 320 px, some enquanto um campo está em foco e na seção de orçamento, e não cobre o fim do rodapé. O teclado virtual de um celular real não foi testado. |
 | Fichas | Passou | 7 modelos; nome com acentos e limite de 40 letras com contador; rodapé; troca de produto; setas, teclado e fim do carrossel; aviso de exemplo mantido. |
 | Orçamento | Passou | "Solicitar orçamento" leva ao formulário; há caminho direto para o WhatsApp no cabeçalho, no menu, na abertura, na barra, na seção de orçamento e nos contatos; a mensagem leva só o que foi preenchido; número (19) 3023-9050; "Copiar a mensagem" funciona; nenhum aviso de envio. |
-| Dúvidas e imagens ampliadas | Passou | Perguntas abrem e fecham pelo teclado com foco visível; as 5 imagens ampliáveis abrem com botão "Fechar", fecham com Esc e devolvem o foco. |
+| Dúvidas e imagens ampliadas | Passou | Perguntas abrem e fecham pelo teclado com foco visível; as 4 imagens ampliáveis abrem com botão "Fechar", fecham com Esc e devolvem o foco. |
 | Movimento e zoom | Passou | Com movimento reduzido não há animação nem rolagem suave; com zoom de 200% (640 e 320 px úteis) não há rolagem lateral nem texto cortado. |
 | Publicação | Em parte | Ver "Publicação" abaixo. |
 
@@ -93,11 +93,11 @@ Conferido em `bcfichas.vercel.app` logo depois do envio de 20/11/2026:
 
 ### Computador (1280 e 1440 px)
 
-- 1280px: todas as 7 imagens têm resolução igual ou maior que o tamanho exibido
+- 1280px: todas as 6 imagens têm resolução igual ou maior que o tamanho exibido
 - 1280px: sem rolagem horizontal
 - 1280px: todas as seções alinham na mesma margem (48px)
 - 1280px: parágrafos de apoio com cerca de 76 letras por linha, no máximo
-- 1440px: todas as 7 imagens têm resolução igual ou maior que o tamanho exibido
+- 1440px: todas as 6 imagens têm resolução igual ou maior que o tamanho exibido
 - 1440px: sem rolagem horizontal
 - 1440px: todas as seções alinham na mesma margem (120px)
 - 1440px: parágrafos de apoio com cerca de 76 letras por linha, no máximo
@@ -146,7 +146,7 @@ Conferido em `bcfichas.vercel.app` logo depois do envio de 20/11/2026:
 
 ### Imagens ampliadas
 
-- comprovante abre ampliado pelo teclado, com legenda, descrição e o foco no botão "Fechar" (5 imagens ampliáveis na página)
+- comprovante abre ampliado pelo teclado, com legenda, descrição e o foco no botão "Fechar" (4 imagens ampliáveis na página)
 - Esc fecha e o foco volta para a imagem que abriu
 - toque abre e o botão "Fechar" fecha
 

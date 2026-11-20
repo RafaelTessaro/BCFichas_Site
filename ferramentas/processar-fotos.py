@@ -65,18 +65,6 @@ FOTOS = {
         "tela": {"quad": [(812, 351), (1251, 340), (1215, 590), (816, 604)], "vidro": 0.22, "reflexo": 0.10},
         "larguras": [1200, 800, 520],
     },
-    "maquina-impressora": {
-        "foto": "foto-09.jpg",
-        "excluir": [[(1215, 180), (1600, 180), (1600, 440), (1358, 440)]],
-        "retoques": {
-            "ref": (1078, 212, 1124, 256),
-            "poligonos": [[(992, 269), (1060, 226), (1073, 251), (1005, 296)]],
-            "circulos": [(977, 307, 7), (1140, 206, 7)],
-        },
-        "limpeza": {},
-        "tela": {"quad": [(885, 421), (1161, 240), (1245, 461), (996, 659)], "vidro": 0.10, "reflexo": 0.07},
-        "larguras": [1100, 760, 480],
-    },
 }
 
 SUPER = 4  # superamostragem da montagem (bordas lisas)
