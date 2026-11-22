@@ -19,7 +19,8 @@ site/                       O SITE (é esta pasta que vai para o ar)
   index.html                a página
   404.html                  página de endereço não encontrado
   css/site.css  js/site.js
-  fonts/                    letra Mona Sans (licença livre, arquivo próprio: nada vem do Google)
+  fonts/                    letras Mona Sans (textos do site) e Arimo (fichas, onde não há Arial);
+                            licença livre, arquivos próprios: nada vem do Google
   img/maquina/              fotos da máquina já tratadas
   img/sistema/              telas reais do sistema e o comprovante de fechamento
   img/                      ícones e a imagem de compartilhamento (WhatsApp, Facebook)
@@ -61,17 +62,21 @@ Rode `python3 ferramentas/conferir.py`: ele avisa se sobrou algum link com o nú
 **Textos.** Estão todos em `site/index.html`, em português, na ordem em que aparecem na página.
 As perguntas e respostas também estão repetidas no bloco `application/ld+json` do começo do arquivo (é o que o Google lê): se mudar uma, mude a outra.
 
-**Produtos e preços das fichas de exemplo.** Em `site/index.html`, procure por `name="produto"`. Cada opção é `NOME|PREÇO`.
+**Produtos e preços das fichas de exemplo.** Em `site/index.html`, procure por `name="produto"`. Cada opção é `NOME|PREÇO`. São só demonstração: nunca entram na mensagem do orçamento.
+
+**Fichas de exemplo (os 7 modelos).** A prévia segue as regras do sistema que imprime (BC Fichas 3.11.7): a ficha é desenhada em "pontos" de impressão (576 de largura, 14 de margem) e o `site/js/site.js`, na parte 2, repete as regras de quebra de linha e de corte do sistema (`Layout.cs` e `RenderizadorFicha.cs` do projeto BC-Fichas-Pagamentos). Se o sistema mudar um modelo, um tamanho de letra ou um limite, mude três lugares: o desenho do modelo no `index.html` (procure por `data-modelo`), os tamanhos no `site.css` (bloco "Ficha") e, se a regra de corte mudar, o `site.js`. Cada modelo diz no HTML qual é a sua regra para o nome do evento: `data-linhas` (quantas linhas), `data-coluna` (nome ao lado do logotipo) ou `data-par` (nome ao lado do número do caixa).
+
+**Personalização no orçamento.** O nome do evento, o rodapé e o modelo escolhido no teste das fichas aparecem no bloco "Personalização das fichas" do formulário e entram na mensagem. Os dois lugares mostram sempre a mesma coisa; "Limpar personalização" esvazia os três sem mexer nos outros campos.
 
 **Fotos da máquina.** Ponha a foto nova em `materiais/fotos-originais/`, ajuste a lista `FOTOS` em `ferramentas/processar-fotos.py` e rode o script. Ele recorta o fundo, apaga etiquetas marcadas, limpa poeira e riscos, monta a tela do sistema no visor e grava os arquivos em `site/img/maquina/`. As instruções estão no começo do script.
 
-**Depois de mudar o CSS ou o JavaScript**, aumente o número do `?v=4` (para `?v=5`, e assim por diante) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
+**Depois de mudar o CSS ou o JavaScript**, aumente o número que vem depois de `?v=` (hoje `site.css?v=7` e `site.js?v=5`) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
 
 ## Como as imagens foram feitas
 
 - **Fotos da máquina:** são as fotos reais enviadas, tratadas por `ferramentas/processar-fotos.py`: o fundo (mesa) foi recortado; a etiqueta "CAIXA 2" e os dois furinhos ao lado dela foram apagados; a poeira e os risquinhos das chapas pretas foram limpos, com o preto mais fundo e neutro; e a tela do sistema foi aplicada sobre o visor, que estava desligado nas fotos. A pedido do responsável, o site não traz aviso sobre a montagem.
 - **Telas do sistema e comprovante de fechamento:** capturas reais do BC Fichas 3.11.7, com dados de teste.
-- **Fichas de exemplo:** os sete modelos reais do sistema, desenhados em HTML. O nome do evento (até 40 letras) e a frase do rodapé (até 80) mudam quando o visitante digita, com os mesmos limites do sistema. No lugar do logotipo aparece "SEU LOGO".
+- **Fichas de exemplo:** os sete modelos reais do sistema, desenhados em HTML com as medidas e os tamanhos de letra da impressão. O nome do evento (até 40 caracteres, em maiúsculas) e a frase do rodapé (até 80, como foi digitada) mudam quando o visitante escreve; onde a impressão cortaria o texto, a prévia mostra o corte e avisa. No lugar do logotipo aparece "SEU LOGO". A prévia ainda não foi comparada com uma ficha impressa.
 
 ## De onde vieram as informações
 
@@ -80,6 +85,7 @@ Só entrou no site o que está confirmado nos materiais do projeto:
 - textos do BC Fichas já publicados no site da Balanças.com (fichas com logo, combos, relatórios e sangrias). O que lá aparece como "locação por diária" e "bobinas inclusas" foi corrigido pelo responsável: o site fala em aluguel e em bobinas consignadas;
 - o README do sistema BC Fichas 3.11.7 (formas de pagamento, modelos de ficha, controle de caixa, senha, estoque, devolução) e o código (funciona sem internet);
 - os dados da empresa do site da Balanças.com (telefone, endereço, horário, razão social e CNPJ).
-- as respostas do responsável em 19/11/2026 (lista completa em `docs/PENDENCIAS.md`, item 3).
+- as respostas do responsável em 19 e 20/11/2026 (lista completa em `docs/PENDENCIAS.md`, item 4);
+- o código do sistema que imprime as fichas, para as regras da prévia (`docs/PENDENCIAS.md`, item 5).
 
 Não há preços, depoimentos nem números de clientes. O que precisa de confirmação está em [`docs/PENDENCIAS.md`](docs/PENDENCIAS.md).
