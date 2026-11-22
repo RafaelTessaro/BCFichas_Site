@@ -95,8 +95,8 @@ São números de laboratório, não de visitantes reais. Na Vercel há compress�
 
 ## Publicação
 
-- **`bcfichas.vercel.app`:** publica sozinho cada envio desta branch. A conferência desta versão no ar está em "Conferência no ar", logo abaixo.
-- **`bcfichas.balancass.com`:** conferido em 22/11/2026 no DNS público: o nome **não existe** (resposta NXDOMAIN). A zona `balancass.com` é atendida pela HostGator (`ns998.hostgator.com.br`), então o registro CNAME precisa ser criado no Editor de Zona do cPanel de lá, com o valor que a Vercel mostra em Settings → Domains. O erro `ERR_HTTP2_PROTOCOL_ERROR` visto na avaliação é consequência disso. O endereço indicado ao Google (canonical), a imagem de compartilhamento e o sitemap continuam apontando para o endereço oficial, como a avaliação recomenda.
+- **`bcfichas.vercel.app`:** publica sozinho cada envio desta branch. Conferido em 22/11/2026, logo depois do envio: a página, o `site.css`, o `site.js`, a letra das fichas e a página 404 servidos são idênticos, byte a byte, aos arquivos testados aqui; um endereço que não existe devolve a página 404 do site; as letras são servidas com cache de um ano.
+- **`bcfichas.balancass.com`:** conferido em 22/11/2026 no DNS público: o nome **não existe** (resposta NXDOMAIN). A zona `balancass.com` é atendida pela HostGator (`ns998.hostgator.com.br`), então o registro CNAME precisa ser criado no Editor de Zona do cPanel de lá, com o valor que a Vercel mostra em Settings → Domains. Enquanto o registro não existir, o endereço não abre para ninguém; isso explica a falha vista na avaliação, embora a causa exata da mensagem `ERR_HTTP2_PROTOCOL_ERROR` que apareceu lá não tenha sido verificada. O endereço indicado ao Google (canonical), a imagem de compartilhamento e o sitemap continuam apontando para o endereço oficial, como a avaliação recomenda.
 
 ## Evidências
 
