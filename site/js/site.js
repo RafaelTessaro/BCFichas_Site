@@ -394,7 +394,6 @@
     montarMensagem = function () {
       var linhas = [];
       if (valor("nome")) linhas.push("Nome: " + valor("nome"));
-      if (valor("tipo")) linhas.push("Tipo de evento: " + valor("tipo"));
       if (valor("data")) linhas.push("Data ou período: " + valor("data"));
       if (valor("cidade")) linhas.push("Cidade: " + valor("cidade"));
       if (valor("maquinas")) linhas.push("Máquinas: " + valor("maquinas"));

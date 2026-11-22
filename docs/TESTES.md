@@ -106,7 +106,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (124 verificações)
+## Detalhe do que passou (125 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -225,14 +225,15 @@ Imagens em `docs/previa/`:
 
 - "Solicitar orçamento" leva ao formulário nos 4 lugares em que aparece
 - "Falar no WhatsApp" abre a conversa com o número certo nos 5 lugares
-- há um caminho direto para o WhatsApp, sem formulário, no cabeçalho, no menu, na abertura, na barra do celular, na seção de orçamento e nos contatos
+- há um caminho direto para o WhatsApp, sem formulário, no cabeçalho, no menu, na abertura, na barra do celular e na seção de orçamento
+- na lista de contatos o WhatsApp não se repete: fica o botão "Falar no WhatsApp" em cima e, embaixo, só o telefone, o endereço e o horário
 - o botão da barra leva ao formulário e o cabeçalho fixo não cobre o título (título em 181px, cabeçalho termina em 59px)
 - sem preencher nada, a mensagem é só a saudação
 - o produto e os textos de exemplo não entram na mensagem nem no formulário
 - "Quero fichas para o meu evento" leva ao formulário com nome do evento, rodapé e modelo já no bloco "Personalização das fichas"
 - "Seu nome" e "Nome do evento" são campos separados
 - a mensagem leva só o que foi preenchido, com a personalização (nome nas fichas, rodapé e modelo), acentos e quebras de linha
-- produto de exemplo, preço e campos em branco ("Ainda não sei", tipo de evento) ficam fora da mensagem
+- produto de exemplo, preço e "Ainda não sei" ficam fora da mensagem; o campo "Tipo de evento" não existe mais
 - o link usa o número (19) 3023-9050
 - "Ainda não sei" continua valendo para a quantidade de máquinas e nenhum campo é obrigatório
 - mudar nome e modelo no formulário atualiza o teste das fichas (os dois lados mostram a mesma coisa)

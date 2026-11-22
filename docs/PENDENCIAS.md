@@ -14,6 +14,8 @@ Perguntas que a avaliação levantou e que só a empresa pode responder. Sem res
 | 4 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos no aluguel? Se sim, entram no site. |
 | 5 | **Frase de apoio da abertura** | "Organize as vendas do evento com fichas impressas na hora e relatórios por caixa." (sugestão da avaliação de 22/11) | Em 20/11 o responsável pediu para tirar a frase que havia nesse lugar. Esta é outra frase, mais curta; se preferir a abertura sem frase, é só avisar. |
 
+| 6 | **"Aluguel" ou "locação"** | O site fala em "aluguel" (decisão de 19/11). | Em 22/11 o responsável sugeriu "alocação" para soar mais profissional. "Alocação" quer dizer outra coisa (distribuir, destinar recursos); o termo formal para alugar equipamento é **"locação"**. Falta decidir entre manter "aluguel" ou passar para "locação" nos títulos. |
+
 A avaliação também pediu respostas sobre **retirada, entrega e devolução** e sobre **como o período do aluguel é calculado**. O responsável já decidiu, em 19/11, não publicar isso ("depende do lugar; na dúvida não precisa pôr"), então o site continua só com "consulte a disponibilidade". Se mudar de ideia, cabem em duas dúvidas curtas.
 
 ## 2. Publicação
@@ -49,14 +51,15 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Antecedência | Cardápio, preços, logotipo e rodapé com pelo menos uma semana | "Como alugar" e dúvidas |
 | Internet | Só a maquininha de cartão depende de conexão | Seção da máquina e dúvidas |
 | Endereço oficial | `bcfichas.balancass.com` | Endereço indicado ao Google, compartilhamento e sitemap |
-| WhatsApp dos orçamentos | (19) 3023-9050 | Formulário, "Falar no WhatsApp" e contatos |
+| WhatsApp dos orçamentos | (19) 3023-9050 | Formulário e botões "Falar no WhatsApp" |
 | Versão do sistema | As máquinas alugadas saem com a 3.11.7 | Textos sobre PIX, modelos de ficha, senha, estoque e devolução; regras da prévia das fichas |
 | Maquininha de cartão | Por conta do cliente | "Como usar no evento" e dúvidas |
 | Programação | O cliente envia e a máquina já vai pronta | "Como alugar", seção da máquina e dúvidas |
 | Rodapé das fichas | É personalizável | Seção das fichas, orçamento e dúvidas |
 | Textos retirados em 20/11 | Frase de apoio da abertura (ver item 5 acima), estimativa de público, "o teclado aparece na tela", aviso sobre as fotos e a dúvida sobre devolução de fichas | Não aparecem mais |
 | Fotos retiradas em 20/11 | Impressora aberta e saída das fichas | Não aparecem mais |
-| Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu, seção de orçamento e contatos |
+| Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu e seção de orçamento |
+| Retirado em 22/11 | Campo "Tipo de evento" do formulário e a linha de WhatsApp da lista de contatos (ficava repetida: já existe o botão "Falar no WhatsApp" logo acima; embaixo fica só o telefone) | Não aparecem mais |
 | Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
 | Horário e endereço | Os da Balanças.com valem | Seção de orçamento |
 
