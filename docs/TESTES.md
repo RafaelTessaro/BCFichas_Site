@@ -99,7 +99,24 @@ São números de laboratório, não de visitantes reais. Na Vercel há compress�
 ## Publicação
 
 - **`bcfichas.vercel.app`:** publica sozinho cada envio desta branch. Conferido em 22/11/2026, logo depois do envio: a página, o `site.css`, o `site.js`, a letra das fichas e a página 404 servidos são idênticos, byte a byte, aos arquivos testados aqui; um endereço que não existe devolve a página 404 do site; as letras são servidas com cache de um ano.
-- **`bcfichas.balancass.com`:** conferido em 22/11/2026 no DNS público: o nome **não existe** (resposta NXDOMAIN). A zona `balancass.com` é atendida pela HostGator (`ns998.hostgator.com.br`), então o registro CNAME precisa ser criado no Editor de Zona do cPanel de lá, com o valor que a Vercel mostra em Settings → Domains. Enquanto o registro não existir, o endereço não abre para ninguém; isso explica a falha vista na avaliação, embora a causa exata da mensagem `ERR_HTTP2_PROTOCOL_ERROR` que apareceu lá não tenha sido verificada. O endereço indicado ao Google (canonical), a imagem de compartilhamento e o sitemap continuam apontando para o endereço oficial, como a avaliação recomenda.
+- **`bcfichas.balancass.com`:** conferido em 23/11/2026 no DNS público: o nome **ainda não existe** (resposta NXDOMAIN). A zona `balancass.com` é atendida pela HostGator (`ns998.hostgator.com.br`). O responsável decidiu hospedar o site lá: ao criar o subdomínio no cPanel, o registro é criado sozinho. O endereço indicado ao Google (canonical), a imagem de compartilhamento e o sitemap já apontam para o endereço oficial.
+
+## Pacote para a HostGator (cPanel)
+
+Em 23/11/2026 o `site.zip` foi extraído num servidor Apache 2.4 de teste, com o `.htaccess` valendo como na hospedagem. O teste achou e corrigiu duas falhas do `.htaccess`: o JavaScript não saía comprimido nem ficava guardado por um dia (o Apache o serve como `text/javascript`, tipo que faltava nas regras).
+
+| Verificação | Resultado |
+|---|---|
+| `http://` e outros nomes de servidor vão para `https://bcfichas.balancass.com` | Passou |
+| A validação do cadeado (`.well-known`) não é redirecionada | Passou |
+| Página, CSS, JavaScript, sitemap e ícones comprimidos (página de 58 KB para 13 KB) | Passou |
+| Endereço que não existe devolve a página 404 do site, com o código 404 | Passou |
+| Cache: página sem guardar; CSS e JavaScript, 1 dia; fotos, 1 mês; letras, 1 ano | Passou |
+| `.htaccess` inacessível de fora e pastas sem listagem de arquivos | Passou |
+| Arquivos servidos idênticos aos do projeto | Passou |
+| Navegador (celular simulado): letras, 7 imagens visíveis, fichas e formulário funcionando; página 404 | Passou |
+
+Não foi testado na HostGator de verdade: depende de criar o subdomínio (`docs/PUBLICAR-NO-CPANEL.md`).
 
 ## Evidências
 
@@ -331,7 +348,7 @@ Imagens em `docs/previa/`:
 - **Ficha impressa de verdade:** a prévia segue o código do sistema, mas não foi posta lado a lado com uma ficha saída da impressora. Vale imprimir uma ficha com o nome e o rodapé do teste e comparar.
 - **Celular de verdade:** deslizar o carrossel com o dedo, o teclado virtual e a abertura do aplicativo do WhatsApp.
 - **Envio de mensagem:** o link foi conferido, mas nenhuma mensagem foi enviada.
-- **`bcfichas.balancass.com`:** o registro CNAME ainda não foi criado, então o endereço oficial, o HTTPS e os redirecionamentos não puderam ser testados.
+- **`bcfichas.balancass.com`:** o subdomínio ainda não foi criado, então o endereço oficial e o cadeado de lá não puderam ser testados. O pacote foi testado num Apache local (ver "Pacote para a HostGator").
 - **Imagem de compartilhamento** numa conversa real de WhatsApp ou Facebook (ela aponta para o endereço oficial, que precisa estar no ar).
 - **Google Search Console e indexação.**
 - **Leitor de tela real** (VoiceOver, TalkBack). A checagem automática do axe não encontrou problemas, mas não substitui esse teste.

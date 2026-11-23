@@ -19,10 +19,10 @@ A avaliação também pediu respostas sobre **retirada, entrega e devolução** 
 
 ## 2. Publicação
 
-- [ ] **Criar o CNAME de `bcfichas.balancass.com`.** Conferido em 22/11: o nome não existe no DNS (NXDOMAIN). A zona `balancass.com` está na HostGator, então o registro é criado no cPanel de lá (Editor de Zona), com o valor que a Vercel mostra em Settings → Domains. Passo a passo: `docs/PUBLICAR-NA-VERCEL.md`, item 2. Enquanto isso o site funciona em `bcfichas.vercel.app`, mas a imagem de compartilhamento e o endereço indicado ao Google apontam para o oficial.
+- [ ] **Criar o subdomínio `bcfichas.balancass.com` no cPanel da HostGator e enviar o `site.zip`.** Decisão de 23/11: o site fica hospedado na HostGator e o projeto da Vercel será apagado. Passo a passo: `docs/PUBLICAR-NO-CPANEL.md`. O endereço ainda não existe no DNS (conferido em 23/11). Enquanto isso o site funciona em `bcfichas.vercel.app`; só apague o projeto de lá depois de o endereço oficial abrir.
 - [ ] **Imprimir uma ficha de teste** com um nome de 40 caracteres e um rodapé de duas linhas e comparar com a prévia do site (a prévia segue o código do sistema, mas não foi comparada com o papel).
 - [ ] Testar num celular real: carrossel das fichas, escolha do modelo, formulário e abertura do WhatsApp.
-- [ ] **Indexação no Google**, depois que o endereço oficial abrir: redirecionar o endereço provisório para o oficial, verificar o site no Google Search Console, enviar o `sitemap.xml` e pedir a indexação. Passo a passo: `docs/PUBLICAR-NA-VERCEL.md`, item 4. O que dependia do site já está feito (título, descrição, dados da empresa, sitemap com imagens).
+- [ ] **Indexação no Google**, depois que o endereço oficial abrir: verificar o site no Google Search Console, enviar o `sitemap.xml` e pedir a indexação. Passo a passo: `docs/PUBLICAR-NO-CPANEL.md`, item 6. O que dependia do site já está feito (título, descrição, dados da empresa, sitemap com imagens).
 - [ ] Com o endereço oficial no ar, enviar o link numa conversa de WhatsApp e ver se a imagem aparece.
 - [ ] **Site da Balanças.com:** a seção do BC Fichas ainda diz "Locação por diária" e "Manual e bobinas inclusos", e os links apontam para `bcfichas.com.br` (fora do ar). Trocar o link para `https://bcfichas.balancass.com/` é o que mais ajuda o Google a achar o site novo; vale também alinhar os textos com o que foi confirmado aqui.
 

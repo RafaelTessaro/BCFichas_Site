@@ -1,5 +1,7 @@
 # Como colocar o site no ar (Vercel)
 
+> **Alternativa.** Em 23/11/2026 o responsável decidiu hospedar o site na HostGator e apagar o projeto da Vercel. O guia em uso é o [`PUBLICAR-NO-CPANEL.md`](PUBLICAR-NO-CPANEL.md); este fica guardado para o caso de a Vercel voltar a ser usada.
+
 O projeto já está preparado: o arquivo `vercel.json` diz à Vercel que o site é a pasta `site/`, sem etapa de montagem. Você só importa o repositório e aponta o endereço.
 
 ## 1. Publicar

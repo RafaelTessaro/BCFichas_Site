@@ -7,7 +7,7 @@ Endereço previsto: **https://bcfichas.balancass.com**
 
 | | |
 |---|---|
-| **Publicar** | [`docs/PUBLICAR-NA-VERCEL.md`](docs/PUBLICAR-NA-VERCEL.md) |
+| **Publicar** | [`docs/PUBLICAR-NO-CPANEL.md`](docs/PUBLICAR-NO-CPANEL.md) (HostGator). A Vercel ficou como alternativa: [`docs/PUBLICAR-NA-VERCEL.md`](docs/PUBLICAR-NA-VERCEL.md) |
 | **O que falta confirmar** | [`docs/PENDENCIAS.md`](docs/PENDENCIAS.md) |
 | **O que foi testado** | [`docs/TESTES.md`](docs/TESTES.md) |
 | **Mudar textos, número e fotos** | mais abaixo, em "Como mudar" |
@@ -25,15 +25,15 @@ site/                       O SITE (é esta pasta que vai para o ar)
   img/sistema/              telas reais do sistema e o comprovante de fechamento
   img/                      ícones e a imagem de compartilhamento (WhatsApp, Facebook)
   robots.txt  sitemap.xml  site.webmanifest  favicon.ico
-vercel.json                 configuração da Vercel (pasta do site, cache, cabeçalhos de segurança)
+vercel.json                 configuração da Vercel (só vale se o site for publicado lá)
 materiais/
   fotos-originais/          as 10 fotos da máquina como foram enviadas
   recortes/                 máscaras do recorte de cada foto
   telas-do-sistema/         capturas do sistema (vieram do projeto BC-Fichas-Pagamentos)
 ferramentas/
-  conferir.py               confere links, arquivos e o número do WhatsApp antes de publicar
+  conferir.py               confere links, arquivos e o número do WhatsApp; com --zip gera o site.zip
   processar-fotos.py        refaz as fotos do site a partir das originais
-hospedagem/cpanel/.htaccess só se um dia o site for para o cPanel (plano B)
+hospedagem/cpanel/.htaccess configuração da hospedagem na HostGator (vai dentro do site.zip)
 docs/                       guias
 ```
 
