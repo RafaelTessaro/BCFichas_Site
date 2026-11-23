@@ -64,7 +64,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Tira de fichas do passo 3 | Mostrar inteira, sem corte, com as linhas retas e sem parecer dois modelos (pedidos de 23/11) | "Como usar no evento", passo "As fichas saem na hora": duas fichas iguais, sem inclinação |
 | Retirado em 22/11 | Campo "Tipo de evento" do formulário e a linha de WhatsApp da lista de contatos (ficava repetida: já existe o botão "Falar no WhatsApp" logo acima; embaixo fica só o telefone) | Não aparecem mais |
 | Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
-| Horário e endereço | Os da Balanças.com valem | Seção de orçamento |
+| Horário e endereço | Os da Balanças.com valem. O endereço é um link: tocar nele abre o Google Maps (pedido de 23/11). | Seção de orçamento |
 
 ## 5. Tirado do código do sistema (não foi suposição)
 

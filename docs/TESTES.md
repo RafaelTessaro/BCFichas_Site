@@ -109,7 +109,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (159 verificações)
+## Detalhe do que passou (161 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -260,6 +260,8 @@ Imagens em `docs/previa/`:
 - "Limpar personalização" esvazia nome do evento, rodapé e modelo, nos dois lugares, e as fichas voltam ao exemplo
 - limpar a personalização não apaga os outros dados, e a mensagem volta a ter só nome, período e cidade
 - em nenhum momento a página diz que o orçamento foi enviado
+- 390px: tocar no endereço abre o Google Maps na Rua 13, 650, Boa Morte, Rio Claro-SP (CEP 13500-120), em outra aba; área de toque com 78px de altura
+- 1280px: tocar no endereço abre o Google Maps na Rua 13, 650, Boa Morte, Rio Claro-SP (CEP 13500-120), em outra aba; área de toque com 78px de altura
 
 ### Dúvidas
 

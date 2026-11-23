@@ -658,6 +658,10 @@ a.passo__img:hover img { scale: 1.03; }
 .contatos a { font-size: 1.25rem; font-weight: 750; font-stretch: 106%; text-decoration: none; }
 .contatos a:hover { color: var(--verde); }
 .contatos p { color: var(--claro); }
+/* o endereço é um link para o mapa: mesmo jeito do texto, com o convite "Abrir no mapa" embaixo */
+.contatos a.contatos__mapa { display: inline-block; font-size: 1rem; font-weight: 500; font-stretch: 100%; color: var(--claro); }
+.contatos__mapa small { display: block; margin-top: 4px; font-size: 0.875rem; font-weight: 700; color: var(--verde); text-decoration: underline; text-underline-offset: 3px; }
+.contatos a.contatos__mapa:hover { color: var(--branco); }
 
 .ficha-form {
   position: relative; background: var(--branco); color: var(--tinta);
