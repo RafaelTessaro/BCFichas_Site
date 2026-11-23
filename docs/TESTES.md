@@ -36,7 +36,7 @@ Refeitos em 23/11/2026, depois da segunda avaliação (prévia das fichas fiel �
 | 1280 e 1440 px | Passou | As 6 imagens carregam com resolução igual ou maior que o tamanho exibido; todas as seções alinham na mesma margem; parágrafos de apoio com cerca de 76 letras por linha. |
 | Menu compacto | Passou | Abre e fecha por toque e por teclado (Enter, Esc com retorno do foco); escolher uma seção fecha o menu e leva até ela. |
 | Barra móvel e teclado virtual | Passou em parte | A barra some enquanto um campo está em foco e na seção de orçamento, e não cobre o fim do rodapé. O teclado virtual de um celular real não foi testado. |
-| Fichas | Passou | Prévia com as regras do sistema nos 7 modelos: textos curtos, com acentos e no limite (40 e 79 caracteres do teste da avaliação); cortes mostrados e avisados; nada passa da margem. |
+| Fichas | Passou | Prévia com as regras do sistema nos 7 modelos: textos curtos, com acentos e no limite (40 e 79 caracteres do teste da avaliação); cortes mostrados e avisados; nada passa da margem. Os campos "Nome do evento" e "Frase do rodapé" ficam um em cima do outro em todas as larguras (360 a 1440 px). Nos modelos 1 a 5 o logotipo de exemplo (símbolo em preto com "SEU LOGO") cabe no espaço que o sistema reserva. |
 | Escolha do modelo | Passou | Um modelo por vez, por toque e por teclado; acionar de novo desfaz. |
 | Orçamento | Passou | Personalização levada ao formulário e à mensagem; edição nos dois sentidos; "Limpar personalização"; cópia igual ao link; nenhum aviso de envio. |
 | Dúvidas e imagens ampliadas | Passou | Perguntas abrem e fecham pelo teclado com foco visível; as 4 imagens ampliáveis abrem com botão "Fechar", fecham com Esc e devolvem o foco. |
@@ -109,7 +109,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (141 verificações)
+## Detalhe do que passou (149 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -217,6 +217,14 @@ Imagens em `docs/previa/`:
 - deslizando até o fim, o modelo 7 aparece inteiro e a seta "próximos" desativa
 - o carrossel rola por dentro, sem criar rolagem lateral na página
 - o aviso de exemplo continua embaixo das fichas
+- 360px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 327px de largura
+- 390px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 354px de largura
+- 768px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 520px de largura
+- 1024px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 480px de largura e o produto de exemplo ao lado
+- 1280px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 480px de largura e o produto de exemplo ao lado
+- 1440px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 480px de largura e o produto de exemplo ao lado
+- 390px: exemplo de logotipo nos modelos 1 a 5: símbolo da BC Fichas em preto com "SEU LOGO", dentro do espaço que o sistema reserva (170x110, 150x96, 170x110, 170x110, 300x150 pontos)
+- 1280px: exemplo de logotipo nos modelos 1 a 5: símbolo da BC Fichas em preto com "SEU LOGO", dentro do espaço que o sistema reserva (170x110, 150x96, 170x110, 170x110, 300x150 pontos)
 
 ### Escolha do modelo
 

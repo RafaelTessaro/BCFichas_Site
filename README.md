@@ -70,13 +70,13 @@ As perguntas e respostas também estão repetidas no bloco `application/ld+json`
 
 **Fotos da máquina.** Ponha a foto nova em `materiais/fotos-originais/`, ajuste a lista `FOTOS` em `ferramentas/processar-fotos.py` e rode o script. Ele recorta o fundo, apaga etiquetas marcadas, limpa poeira e riscos, monta a tela do sistema no visor e grava os arquivos em `site/img/maquina/`. As instruções estão no começo do script.
 
-**Depois de mudar o CSS ou o JavaScript**, aumente o número que vem depois de `?v=` (hoje `site.css?v=10` e `site.js?v=6`) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
+**Depois de mudar o CSS ou o JavaScript**, aumente o número que vem depois de `?v=` (hoje `site.css?v=12` e `site.js?v=6`) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
 
 ## Como as imagens foram feitas
 
 - **Fotos da máquina:** são as fotos reais enviadas, tratadas por `ferramentas/processar-fotos.py`: o fundo (mesa) foi recortado; a etiqueta "CAIXA 2" e os dois furinhos ao lado dela foram apagados; a poeira e os risquinhos das chapas pretas foram limpos, com o preto mais fundo e neutro; e a tela do sistema foi aplicada sobre o visor, que estava desligado nas fotos. A pedido do responsável, o site não traz aviso sobre a montagem.
 - **Telas do sistema e comprovante de fechamento:** capturas reais do BC Fichas 3.11.7, com dados de teste.
-- **Fichas de exemplo:** os sete modelos reais do sistema, desenhados em HTML com as medidas e os tamanhos de letra da impressão. O nome do evento (até 40 caracteres, em maiúsculas) e a frase do rodapé (até 80, como foi digitada) mudam quando o visitante escreve; onde a impressão cortaria o texto, a prévia mostra o corte e avisa. No lugar do logotipo aparece "SEU LOGO". A prévia ainda não foi comparada com uma ficha impressa.
+- **Fichas de exemplo:** os sete modelos reais do sistema, desenhados em HTML com as medidas e os tamanhos de letra da impressão. O nome do evento (até 40 caracteres, em maiúsculas) e a frase do rodapé (até 80, como foi digitada) mudam quando o visitante escreve; onde a impressão cortaria o texto, a prévia mostra o corte e avisa. No lugar do logotipo aparece um exemplo: o símbolo da BC Fichas em preto e branco, com "SEU LOGO" escrito. A prévia ainda não foi comparada com uma ficha impressa.
 
 ## De onde vieram as informações
 

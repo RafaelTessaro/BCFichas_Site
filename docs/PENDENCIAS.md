@@ -34,7 +34,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | **Fotos melhores da máquina** | Uma sessão simples com a máquina limpa e **ligada**, luz difusa e o mesmo enquadramento: três quartos com a tela legível e uma ficha ao lado; detalhe da impressão e das fichas. |
 | **Vídeo curto de uma venda** | 15 a 25 segundos: tocar nos produtos, registrar o pagamento, retirar as fichas. Entra com imagem de capa, botão "Ver a máquina funcionando" e carregamento só quando a pessoa tocar. |
 | **Uso em eventos** | Fotos de eventos atendidos (com autorização de imagem) e depoimentos reais, com nome e tipo de evento. |
-| **Logotipo na prévia** | A avaliação cita como opcional deixar o visitante pôr o próprio logotipo na prévia. Não foi feito; a prioridade era a escolha do modelo e a continuidade do orçamento. |
+| **Logotipo do próprio visitante na prévia** | A avaliação cita como opcional deixar o visitante pôr o próprio logotipo na prévia. Não foi feito; hoje a prévia mostra um logotipo de exemplo ("SEU LOGO"). |
 
 ## 4. Confirmado pelo responsável (já está no site)
 
@@ -57,6 +57,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Textos retirados em 20/11 | Frase de apoio da abertura (ver item 5 acima), estimativa de público, "o teclado aparece na tela", aviso sobre as fotos e a dúvida sobre devolução de fichas | Não aparecem mais |
 | Fotos retiradas em 20/11 | Impressora aberta e saída das fichas | Não aparecem mais |
 | Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu e seção de orçamento |
+| Campos do teste das fichas | "Nome do evento" em cima e "Frase do rodapé" embaixo, como na ficha (sugestão do responsável, 23/11) | Seção das fichas |
 | Tira de fichas do passo 3 | Mostrar inteira, sem corte, com as linhas retas e sem parecer dois modelos (pedidos de 23/11) | "Como usar no evento", passo "As fichas saem na hora": duas fichas iguais, sem inclinação |
 | Retirado em 22/11 | Campo "Tipo de evento" do formulário e a linha de WhatsApp da lista de contatos (ficava repetida: já existe o botão "Falar no WhatsApp" logo acima; embaixo fica só o telefone) | Não aparecem mais |
 | Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
@@ -75,7 +76,7 @@ A segunda avaliação pediu que a prévia das fichas fosse conferida com o siste
 
 - **Tela montada nas fotos.** O visor estava desligado; a tela do sistema foi aplicada sobre a foto. O aviso que o site trazia sobre isso foi retirado a pedido do responsável. O ideal continua sendo fotografar a máquina **ligada**.
 - **Limpeza das fotos.** A poeira e os risquinhos das chapas foram retirados no tratamento das imagens.
-- **Fichas de exemplo:** os 7 modelos são desenhados com as medidas do sistema, com "SEU LOGO" no lugar do logotipo. O espaço real do logotipo depende do formato da imagem enviada.
+- **Fichas de exemplo:** os 7 modelos são desenhados com as medidas do sistema. No lugar do logotipo aparece o símbolo da BC Fichas em preto e branco, com "SEU LOGO" escrito, para dar uma ideia de como a ficha fica (pedido de 23/11). O espaço real do logotipo depende do formato da imagem enviada.
 
 ## 7. Ficou de fora de propósito
 

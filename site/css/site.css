@@ -459,14 +459,23 @@ a.passo__img:hover img { scale: 1.03; }
 .f-par--forte { font-weight: 700; font-size: calc(24 * var(--u)); }
 .f-resumo { font-size: calc(21 * var(--u)); text-align: center; white-space: pre; }
 .f-linha { display: flex; align-items: center; gap: calc(14 * var(--u)); margin-top: calc(4 * var(--u)); }
+/* Exemplo de logotipo: o símbolo da BC Fichas em preto e branco, como sai na impressão, com "SEU LOGO"
+   no lugar do nome. O espaço é o que o sistema reserva em cada modelo (170×110, 150×96 e 300×150 pontos). */
 .f-logo {
-  flex: none; display: grid; place-items: center; text-align: center;
-  width: calc(170 * var(--u)); height: calc(110 * var(--u));
-  border: calc(3 * var(--u)) dashed #000; border-radius: calc(8 * var(--u));
-  font-weight: 700; font-size: calc(22 * var(--u)); line-height: 1.1; letter-spacing: 0.04em;
+  flex: none; display: grid; justify-items: center; align-content: center; gap: calc(6 * var(--u));
+  width: calc(170 * var(--u)); height: calc(110 * var(--u)); color: #000;
 }
-.f-logo--m2 { width: calc(150 * var(--u)); height: calc(96 * var(--u)); }
-.f-logo--m5 { align-self: center; width: calc(300 * var(--u)); height: calc(150 * var(--u)); margin: calc(4 * var(--u)) 0 calc(6 * var(--u)); font-size: calc(28 * var(--u)); }
+.f-logo__simbolo { display: block; width: calc(72 * var(--u)); height: calc(64 * var(--u)); }
+.f-logo__nome {
+  font-family: var(--f-texto); font-weight: 850; font-stretch: 118%; font-size: calc(22 * var(--u));
+  line-height: 1; letter-spacing: -0.02em; white-space: nowrap;
+}
+.f-logo--m2 { width: calc(150 * var(--u)); height: calc(96 * var(--u)); gap: calc(5 * var(--u)); }
+.f-logo--m2 .f-logo__simbolo { width: calc(61 * var(--u)); height: calc(54 * var(--u)); }
+.f-logo--m2 .f-logo__nome { font-size: calc(19 * var(--u)); }
+.f-logo--m5 { align-self: center; width: calc(300 * var(--u)); height: calc(150 * var(--u)); margin: calc(4 * var(--u)) 0 calc(6 * var(--u)); gap: calc(8 * var(--u)); }
+.f-logo--m5 .f-logo__simbolo { width: calc(108 * var(--u)); height: calc(96 * var(--u)); }
+.f-logo--m5 .f-logo__nome { font-size: calc(30 * var(--u)); }
 .f-info { flex: 1; min-width: 0; display: flex; flex-direction: column; font-size: calc(22 * var(--u)); line-height: 1.27; }
 .f-info--centro { align-items: center; text-align: center; }
 .f-tarja {
@@ -495,13 +504,16 @@ a.passo__img:hover img { scale: 1.03; }
 .monte__aviso { grid-column: 1 / -1; font-size: 0.9375rem; font-weight: 650; }
 .monte__aviso:empty { display: none; }
 .monte__dica { font-weight: 650; max-width: 52ch; }
+/* Os dois campos ficam um em cima do outro, na ordem da ficha: o nome do evento no alto, o rodapé embaixo.
+   Em telas largas o produto de exemplo vai para a coluna do lado. */
 @media (min-width: 700px) {
-  .monte { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .monte__dica, .monte .chips { grid-column: 1 / -1; }
+  .monte .campo { max-width: 520px; }
 }
-@media (min-width: 1100px) {
-  .monte { grid-template-columns: minmax(0, 300px) minmax(0, 340px) minmax(0, 1fr); column-gap: 24px; }
-  .monte .chips { grid-column: auto; }
+@media (min-width: 900px) {
+  .monte { grid-template-columns: minmax(0, 480px) minmax(0, 1fr); column-gap: 40px; align-items: start; }
+  .monte__dica { grid-column: 1 / -1; }
+  .monte .campo { grid-column: 1; max-width: none; }
+  .monte .chips { grid-column: 2; grid-row: 2 / span 2; }
 }
 .campo { display: grid; gap: 8px; min-width: 0; align-content: start; }
 .campo label, .chips legend { font-size: 0.9375rem; font-weight: 700; padding: 0; }
