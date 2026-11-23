@@ -23,9 +23,10 @@ A avaliação também pediu respostas sobre **retirada, entrega e devolução** 
 - [ ] **Apagar o projeto na Vercel.** Já pode: o endereço oficial está funcionando. Depois disso `bcfichas.vercel.app` deixa de existir, e as atualizações passam a ser só pelo `site.zip`.
 - [ ] **Imprimir uma ficha de teste** com um nome de 40 caracteres e um rodapé de duas linhas e comparar com a prévia do site (a prévia segue o código do sistema, mas não foi comparada com o papel).
 - [ ] Testar num celular real: carrossel das fichas, escolha do modelo, formulário e abertura do WhatsApp.
-- [ ] **Indexação no Google:** criar a propriedade de domínio `balancass.com` no Google Search Console (vale para os dois sites), colar o registro TXT no Editor de Zona do cPanel, enviar os dois `sitemap.xml` e pedir a indexação. Passo a passo para quem nunca fez: `docs/PUBLICAR-NO-CPANEL.md`, item 6. O que dependia dos sites já está feito.
+- [x] **Indexação no Google configurada em 23/11/2026:** registro TXT de verificação criado no DNS (conferido no DNS público, junto com o registro do e-mail, que continua lá), propriedade de domínio `balancass.com` no Google Search Console, os dois `sitemap.xml` enviados e a indexação pedida, segundo o responsável. Os sitemaps apareciam como "Não foi possível buscar" logo após o envio, sem data de leitura; os dois arquivos respondem normalmente, inclusive para pedidos identificados como Googlebot.
+- [ ] **Acompanhar o Google:** em alguns dias, ver no Search Console se os sitemaps passaram para "Processado" e pesquisar `site:bcfichas.balancass.com`. Se o status não mudar em três ou quatro dias, remover e reenviar os sitemaps.
 - [ ] Com o endereço oficial no ar, enviar o link numa conversa de WhatsApp e ver se a imagem aparece.
-- [ ] **Site da Balanças.com: enviar o `atualizacao.zip`.** A troca foi preparada em 23/11 no projeto da Balanças (ramo `claude/loving-feynman-pulfbk`): a seção BC Fichas aponta para `https://bcfichas.balancass.com/` e deixa de dizer "por diária" e "bobinas inclusas". Falta extrair o `atualizacao.zip` na `public_html` (guia de publicação da Balanças, item 6).
+- [x] **Site da Balanças.com atualizado em 23/11/2026:** a seção BC Fichas aponta para `https://bcfichas.balancass.com/` e não diz mais "por diária" nem "bobinas inclusas" (conferido no ar; os arquivos servidos são os do pacote).
 
 ## 3. Depende de material novo
 
