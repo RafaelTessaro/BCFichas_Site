@@ -293,6 +293,8 @@ p { text-wrap: pretty; }
   font-size: clamp(0.75rem, 0.62rem + 0.5vw, 0.9375rem); line-height: 1.25; font-weight: 520;
 }
 .bilhete__canhoto li + li { border-left: 2px dashed rgba(7, 10, 8, 0.3); }
+/* item só com o título (sem a segunda linha) fica centralizado na altura dos outros */
+@media (min-width: 560px) { .bilhete__canhoto li { display: grid; align-content: center; } }
 .bilhete__canhoto b { display: block; font-weight: 850; font-stretch: 108%; text-transform: uppercase; letter-spacing: 0.01em; }
 @media (max-width: 559px) {
   .bilhete__canhoto { grid-template-columns: minmax(0, 1fr); padding: 14px 22px 12px; }

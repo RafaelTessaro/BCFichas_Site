@@ -43,7 +43,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Nome do serviço | "Locação" nos títulos, sem dizer "por diária" (decisão de 23/11; antes era "aluguel"). O verbo "alugar" continua nas frases ("Como alugar", "quem aluga") e "aluguel" aparece na descrição que o Google lê, para o site ser achado nas duas buscas. "Alocação" não foi usada: quer dizer outra coisa. | Título da página, abertura, dúvidas, rodapé e imagem de compartilhamento |
 | Entrega e retirada | Depende do lugar; não entra no site | Só "consulte a disponibilidade", nas dúvidas |
 | Bobinas | Consignadas: o cliente só paga as que usar | Abertura ("você paga só as que usar") e "O que está incluído?" |
-| Treinamento | Dado na empresa | Abertura e dúvidas |
+| Treinamento | Há treinamento, e ele está incluído. O site não diz onde é dado (pedido de 23/11; antes dizia "na nossa empresa"). | Abertura ("Treinamento") e dúvidas "O que está incluído?" e "Quem opera as máquinas na festa?" |
 | Quem opera | A equipe de quem aluga | Dúvidas |
 | Suporte | No horário de funcionamento, pelo mesmo número | Dúvidas e contatos |
 | Antecedência | Cardápio, preços, logotipo e rodapé com pelo menos uma semana | "Como alugar" e dúvidas |

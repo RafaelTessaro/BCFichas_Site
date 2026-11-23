@@ -109,7 +109,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (140 verificações)
+## Detalhe do que passou (141 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -287,6 +287,7 @@ Imagens em `docs/previa/`:
 ### Textos
 
 - "Locação" nos títulos (abertura, dúvidas e rodapé); o verbo "alugar" continua nas frases; nenhuma "alocação"
+- treinamento sem dizer onde é dado: na abertura só "Treinamento"; nas dúvidas "O que está incluído?" e "Quem opera as máquinas na festa?" continuam dizendo que há treinamento
 
 ### Indexação (o que o Google lê)
 
