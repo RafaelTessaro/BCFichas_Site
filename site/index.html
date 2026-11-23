@@ -32,7 +32,7 @@
 <link rel="preload" as="image" type="image/webp" fetchpriority="high"
       imagesrcset="img/maquina/maquina-frente-520.webp?v=2 520w, img/maquina/maquina-frente-800.webp?v=2 800w, img/maquina/maquina-frente-1200.webp?v=2 1200w"
       imagesizes="(min-width: 1000px) 50vw, 92vw">
-<link rel="stylesheet" href="css/site.css?v=12">
+<link rel="stylesheet" href="css/site.css?v=14">
 <noscript><style>:root { --f-ficha: "Ficha", Arial, "Liberation Sans", "Helvetica Neue", Helvetica, sans-serif; }</style></noscript>
 
 <script type="application/ld+json">
@@ -140,6 +140,11 @@
           "@type": "Question",
           "name": "As fichas saem com o nome do meu evento?",
           "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todas as fichas saem com o nome do evento. O logotipo aparece nos modelos 1 a 5. O rodapé também é seu: uma frase que sai no pé de todas as fichas." }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá para pôr imagens nos botões dos produtos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Cada botão da tela de venda pode mostrar a imagem do produto, o que ajuda quem opera o caixa a localizar o item mais rápido. Sem imagem, o botão fica com uma cor." }
         }
       ]
     }
@@ -313,7 +318,7 @@
             <span class="marco" aria-hidden="true">2</span>
             <div>
               <h3>Tela de toque</h3>
-              <p>O operador vende tocando nos botões dos produtos.</p>
+              <p>O operador vende tocando nos botões dos produtos, que podem ter cor ou imagem.</p>
             </div>
           </li>
           <li data-marco="3">
@@ -363,7 +368,7 @@
         <div class="passo__texto">
           <span class="passo__n" aria-hidden="true">1</span>
           <h3>Toque nos produtos</h3>
-          <p>Cada produto é um botão grande, com cor ou foto. O cardápio fica separado em abas, como Comidas e Bebidas.</p>
+          <p>Cada produto é um botão grande, com cor ou com a imagem do produto. O cardápio fica separado em abas, como Comidas e Bebidas.</p>
         </div>
       </li>
 
@@ -417,6 +422,18 @@
         </div>
       </li>
     </ol>
+
+    <div class="destaque">
+      <a class="passo__img passo__img--tela destaque__img" href="img/sistema/tela-venda-imagens-960.webp" data-amplia data-legenda="Tela de venda com imagens nos botões dos produtos." aria-label="Ampliar a tela de venda com imagens nos botões">
+        <img src="img/sistema/tela-venda-imagens-640.webp" srcset="img/sistema/tela-venda-imagens-640.webp 640w, img/sistema/tela-venda-imagens-960.webp 960w" sizes="(min-width: 760px) 420px, 86vw" width="640" height="400" loading="lazy" decoding="async"
+             alt="Tela de venda do BC Fichas com imagens nos botões: cada produto aparece com a sua figura, o nome e o preço, e o pedido com o total fica à direita.">
+        <svg class="i foto__lupa" aria-hidden="true"><use href="#i-lupa"/></svg>
+      </a>
+      <div class="destaque__texto">
+        <h3>Botões com a imagem do produto</h3>
+        <p>Além da cor, cada botão pode mostrar a imagem do produto. Fica mais fácil para quem opera o caixa localizar o item na hora da venda.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -467,7 +484,8 @@
       <ul class="rolo__lista" role="list">
         <li class="rolo__item" data-modelo="1">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 1</p>
+            <p class="rolo__n" id="rolo-n-1">Modelo 1</p>
+            <button class="rolo__escolher" id="rolo-e-1" type="button" data-escolher="1" aria-pressed="false" aria-labelledby="rolo-e-1 rolo-n-1" hidden>Escolher</button>
             <p class="rolo__desc">Valor na tarja preta. Com logotipo.</p>
           </div>
           <article class="ficha ficha--m1" aria-label="Modelo 1 de ficha">
@@ -489,11 +507,11 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="1" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
         <li class="rolo__item" data-modelo="2">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 2</p>
+            <p class="rolo__n" id="rolo-n-2">Modelo 2</p>
+            <button class="rolo__escolher" id="rolo-e-2" type="button" data-escolher="2" aria-pressed="false" aria-labelledby="rolo-e-2 rolo-n-2" hidden>Escolher</button>
             <p class="rolo__desc">Logotipo no topo, ao lado do nome do evento.</p>
           </div>
           <article class="ficha ficha--m2" aria-label="Modelo 2 de ficha">
@@ -514,11 +532,11 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="2" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
         <li class="rolo__item" data-modelo="3">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 3</p>
+            <p class="rolo__n" id="rolo-n-3">Modelo 3</p>
+            <button class="rolo__escolher" id="rolo-e-3" type="button" data-escolher="3" aria-pressed="false" aria-labelledby="rolo-e-3 rolo-n-3" hidden>Escolher</button>
             <p class="rolo__desc">Valor grande no topo. Com logotipo.</p>
           </div>
           <article class="ficha ficha--m3" aria-label="Modelo 3 de ficha">
@@ -539,11 +557,11 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="3" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
         <li class="rolo__item" data-modelo="4">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 4</p>
+            <p class="rolo__n" id="rolo-n-4">Modelo 4</p>
+            <button class="rolo__escolher" id="rolo-e-4" type="button" data-escolher="4" aria-pressed="false" aria-labelledby="rolo-e-4 rolo-n-4" hidden>Escolher</button>
             <p class="rolo__desc">Logotipo e valor embaixo.</p>
           </div>
           <article class="ficha ficha--m4" aria-label="Modelo 4 de ficha">
@@ -563,11 +581,11 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="4" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
         <li class="rolo__item" data-modelo="5">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 5</p>
+            <p class="rolo__n" id="rolo-n-5">Modelo 5</p>
+            <button class="rolo__escolher" id="rolo-e-5" type="button" data-escolher="5" aria-pressed="false" aria-labelledby="rolo-e-5 rolo-n-5" hidden>Escolher</button>
             <p class="rolo__desc">Completa, com o logotipo grande.</p>
           </div>
           <article class="ficha ficha--m5" aria-label="Modelo 5 de ficha">
@@ -585,11 +603,11 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="5" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
         <li class="rolo__item" data-modelo="6">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 6</p>
+            <p class="rolo__n" id="rolo-n-6">Modelo 6</p>
+            <button class="rolo__escolher" id="rolo-e-6" type="button" data-escolher="6" aria-pressed="false" aria-labelledby="rolo-e-6 rolo-n-6" hidden>Escolher</button>
             <p class="rolo__desc">Compacta, gasta menos papel. Sem logotipo e sem forma de pagamento.</p>
           </div>
           <article class="ficha ficha--m6" aria-label="Modelo 6 de ficha">
@@ -602,11 +620,11 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="6" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
         <li class="rolo__item" data-modelo="7">
           <div class="rolo__cab">
-            <p class="rolo__n">Modelo 7</p>
+            <p class="rolo__n" id="rolo-n-7">Modelo 7</p>
+            <button class="rolo__escolher" id="rolo-e-7" type="button" data-escolher="7" aria-pressed="false" aria-labelledby="rolo-e-7 rolo-n-7" hidden>Escolher</button>
             <p class="rolo__desc">Faixa preta e valor em destaque. Sem logotipo.</p>
           </div>
           <article class="ficha ficha--m7" aria-label="Modelo 7 de ficha">
@@ -622,7 +640,6 @@
             </div>
           </article>
           <p class="rolo__aviso" data-aviso hidden></p>
-          <button class="btn btn--borda rolo__escolher" type="button" data-escolher="7" aria-pressed="false" hidden>Escolher este modelo</button>
         </li>
       </ul>
     </div>
@@ -750,6 +767,10 @@
           <details class="duvida">
             <summary><h4>As fichas saem com o nome do meu evento?</h4><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
             <p>Sim. Todas as fichas saem com o nome do evento. O logotipo aparece nos modelos 1 a 5. O rodapé também é seu: uma frase que sai no pé de todas as fichas.</p>
+          </details>
+          <details class="duvida">
+            <summary><h4>Dá para pôr imagens nos botões dos produtos?</h4><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
+            <p>Sim. Cada botão da tela de venda pode mostrar a imagem do produto, o que ajuda quem opera o caixa a localizar o item mais rápido. Sem imagem, o botão fica com uma cor.</p>
           </details>
           <details class="duvida">
             <summary><h4>Dá para vender combos e vales?</h4><svg class="i" aria-hidden="true"><use href="#i-mais"/></svg></summary>
@@ -908,6 +929,6 @@
   <div class="amplia__img" tabindex="0"><img id="amplia-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></div>
 </dialog>
 
-<script src="js/site.js?v=6" defer></script>
+<script src="js/site.js?v=7" defer></script>
 </body>
 </html>

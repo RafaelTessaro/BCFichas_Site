@@ -13,6 +13,7 @@ Perguntas que a avaliação levantou e que só a empresa pode responder. Sem res
 | 3 | **Quantidade de máquinas** | "Verificamos a disponibilidade e ajudamos a definir a quantidade de máquinas para o evento." (texto sugerido pelas avaliações) | É assim que funciona? Existe uma regra prática? |
 | 4 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos no aluguel? Se sim, entram no site. |
 | 5 | **Frase de apoio da abertura** | "Organize as vendas do evento com fichas impressas na hora e relatórios por caixa." (sugestão da avaliação de 22/11) | Em 20/11 o responsável pediu para tirar a frase que havia nesse lugar. Esta é outra frase, mais curta; se preferir a abertura sem frase, é só avisar. |
+| 6 | **Imagens nos botões dos produtos** | O site diz que cada botão pode mostrar a imagem do produto e mostra uma tela real do sistema (pedido de 23/11). | Quem fornece as imagens: o cliente envia junto com o cardápio, ou a BC Fichas já tem as figuras? Com a resposta, isso entra em "Como alugar" e nas dúvidas. A tela usada é a do cardápio padrão do sistema e mostra nomes de marcas de cerveja (Heineken, Original, Brahma, Império); se preferir, dá para trocar por outra captura. |
 
 A avaliação também pediu respostas sobre **retirada, entrega e devolução** e sobre **como o período do aluguel é calculado**. O responsável já decidiu, em 19/11, não publicar isso ("depende do lugar; na dúvida não precisa pôr"), então o site continua só com "consulte a disponibilidade". Se mudar de ideia, cabem em duas dúvidas curtas.
 
@@ -57,6 +58,8 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Textos retirados em 20/11 | Frase de apoio da abertura (ver item 5 acima), estimativa de público, "o teclado aparece na tela", aviso sobre as fotos e a dúvida sobre devolução de fichas | Não aparecem mais |
 | Fotos retiradas em 20/11 | Impressora aberta e saída das fichas | Não aparecem mais |
 | Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu e seção de orçamento |
+| Imagens nos botões | A tela de venda aceita a imagem de cada produto, o que ajuda o operador a localizar o item (pedido de 23/11) | "Como usar no evento" (destaque abaixo dos passos e passo 1), seção da máquina e dúvidas |
+| Botões de escolha do modelo | Alinhados (pedido de 23/11): foram para a linha do nome de cada modelo | Seção das fichas |
 | Campos do teste das fichas | "Nome do evento" em cima e "Frase do rodapé" embaixo, como na ficha (sugestão do responsável, 23/11) | Seção das fichas |
 | Tira de fichas do passo 3 | Mostrar inteira, sem corte, com as linhas retas e sem parecer dois modelos (pedidos de 23/11) | "Como usar no evento", passo "As fichas saem na hora": duas fichas iguais, sem inclinação |
 | Retirado em 22/11 | Campo "Tipo de evento" do formulário e a linha de WhatsApp da lista de contatos (ficava repetida: já existe o botão "Falar no WhatsApp" logo acima; embaixo fica só o telefone) | Não aparecem mais |

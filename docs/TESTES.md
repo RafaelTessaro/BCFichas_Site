@@ -8,7 +8,7 @@ Refeitos em 23/11/2026, depois da segunda avaliação (prévia das fichas fiel �
 
 | Critério | Situação | Como foi conferido |
 |---|---|---|
-| Os sete modelos acessíveis por toque, mouse e teclado | Atende | Setas, deslizar e setas do teclado rolam o carrossel; "Escolher este modelo" funciona por toque e por Enter/Espaço. |
+| Os sete modelos acessíveis por toque, mouse e teclado | Atende | Setas, deslizar e setas do teclado rolam o carrossel; o botão "Escolher", ao lado do nome de cada modelo, funciona por toque e por Enter/Espaço. |
 | Nome e rodapé não perdem conteúdo em silêncio; a prévia corresponde ao impresso | Atende, com uma ressalva | A prévia usa as medidas, os tamanhos de letra e as regras de quebra e corte do sistema 3.11.7. Onde a impressão corta, a prévia mostra o corte com "…" e avisa. Ressalva: não foi comparada com uma ficha impressa de verdade (ver "Não verificado"). |
 | Limites, contadores e avisos claros e ligados aos campos | Atende | "até 40 caracteres" / "até 80 caracteres"; o aviso de corte fica junto dos campos, ligado a eles e anunciado por leitores de tela. |
 | Diferenças de logotipo e forma de pagamento descritas corretamente | Atende | Cada modelo traz a sua descrição; logotipo só nos modelos 1 a 5; forma de pagamento em todos menos o 6, como no sistema. |
@@ -37,13 +37,13 @@ Refeitos em 23/11/2026, depois da segunda avaliação (prévia das fichas fiel �
 | Menu compacto | Passou | Abre e fecha por toque e por teclado (Enter, Esc com retorno do foco); escolher uma seção fecha o menu e leva até ela. |
 | Barra móvel e teclado virtual | Passou em parte | A barra some enquanto um campo está em foco e na seção de orçamento, e não cobre o fim do rodapé. O teclado virtual de um celular real não foi testado. |
 | Fichas | Passou | Prévia com as regras do sistema nos 7 modelos: textos curtos, com acentos e no limite (40 e 79 caracteres do teste da avaliação); cortes mostrados e avisados; nada passa da margem. Os campos "Nome do evento" e "Frase do rodapé" ficam um em cima do outro em todas as larguras (360 a 1440 px). Nos modelos 1 a 5 o logotipo de exemplo (símbolo em preto com "SEU LOGO") cabe no espaço que o sistema reserva. |
-| Escolha do modelo | Passou | Um modelo por vez, por toque e por teclado; acionar de novo desfaz. |
+| Escolha do modelo | Passou | Um modelo por vez, por toque e por teclado; acionar de novo desfaz. O botão "Escolher" fica na linha do nome de cada modelo: os sete ficam alinhados entre si, e o alto das sete fichas também, em 360, 390, 768, 1280 e 1440 px (antes os botões ficavam embaixo das fichas, cada um numa altura). |
 | Orçamento | Passou | Personalização levada ao formulário e à mensagem; edição nos dois sentidos; "Limpar personalização"; cópia igual ao link; nenhum aviso de envio. |
 | Dúvidas e imagens ampliadas | Passou | Perguntas abrem e fecham pelo teclado com foco visível; as 4 imagens ampliáveis abrem com botão "Fechar", fecham com Esc e devolvem o foco. |
 | Movimento e zoom | Passou | Com movimento reduzido não há animação nem rolagem suave; com zoom de 200% (640 e 320 px úteis) não há rolagem lateral nem texto cortado. |
 | Acessibilidade automática | Passou | axe: 0 problemas no celular e no computador. |
 | HTML | Passou | Sem erros de estrutura no `index.html` e no `404.html` (foi corrigida uma marcação sobrando na página 404). Continuam os mesmos 16 avisos de estilo da versão anterior, que são escolhas do projeto (lista marcada como lista, telefone sem espaço especial e formulário que envia por link). |
-| Como usar no evento | Passou | O passo "As fichas saem na hora" mostra duas fichas do mesmo modelo e com o mesmo tamanho de letra (Pastel e Caldo, o pedido da tela do passo 1), inteiras e retas dentro do quadro, em 360, 390, 700, 1280 e 1440 px. Antes a tira saía cortada; depois, inclinada, ficava com as linhas internas irregulares e misturava tamanhos de letra. As linhas das fichas têm agora pelo menos 1 pixel. |
+| Como usar no evento | Passou | O passo "As fichas saem na hora" mostra duas fichas do mesmo modelo e com o mesmo tamanho de letra (Pastel e Caldo, o pedido da tela do passo 1), inteiras e retas dentro do quadro, em 360, 390, 700, 1280 e 1440 px. Antes a tira saía cortada; depois, inclinada, ficava com as linhas internas irregulares e misturava tamanhos de letra. As linhas das fichas têm agora pelo menos 1 pixel. Abaixo dos quatro passos entrou o destaque "Botões com a imagem do produto", com uma tela real do sistema, ampliável. |
 | Textos | Passou | "Locação" na abertura, nas dúvidas e no rodapé; o verbo "alugar" continua nas frases; nenhuma ocorrência de "alocação". |
 | Indexação | Passou no que depende do site | Título (63 caracteres) e descrição (161) com "locação" e "aluguel"; endereço oficial indicado ao Google; um único título principal; todas as imagens com descrição; dados estruturados de site, página, serviço, empresa (telefone, endereço, horário) e dúvidas, estas iguais às respostas visíveis; sitemap com imagens; `robots.txt` liberando tudo; Lighthouse SEO 100. O que depende do endereço oficial e das contas do Google está em `docs/PUBLICAR-NA-VERCEL.md`, item 4. |
 | Publicação | Em parte | Ver "Publicação" abaixo. |
@@ -109,7 +109,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (149 verificações)
+## Detalhe do que passou (157 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -174,11 +174,11 @@ Imagens em `docs/previa/`:
 
 ### Computador (1280 e 1440 px)
 
-- 1280px: todas as 6 imagens têm resolução igual ou maior que o tamanho exibido
+- 1280px: todas as 7 imagens têm resolução igual ou maior que o tamanho exibido
 - 1280px: sem rolagem horizontal
 - 1280px: todas as seções alinham na mesma margem (48px)
 - 1280px: parágrafos de apoio com cerca de 76 letras por linha, no máximo
-- 1440px: todas as 6 imagens têm resolução igual ou maior que o tamanho exibido
+- 1440px: todas as 7 imagens têm resolução igual ou maior que o tamanho exibido
 - 1440px: sem rolagem horizontal
 - 1440px: todas as seções alinham na mesma margem (120px)
 - 1440px: parágrafos de apoio com cerca de 76 letras por linha, no máximo
@@ -228,9 +228,14 @@ Imagens em `docs/previa/`:
 
 ### Escolha do modelo
 
-- toque em "Escolher este modelo" marca o modelo 3 (botão "Modelo escolhido", contorno na ficha) e leva a escolha ao formulário
+- toque em "Escolher", ao lado do nome do modelo 3, marca o modelo (botão "Escolhido", contorno na ficha) e leva a escolha ao formulário
 - pelo teclado (Enter) a escolha passa para o modelo 5: só um modelo fica escolhido por vez
 - acionar de novo o botão desfaz a escolha
+- 360px: botões de escolha alinhados entre si, na linha do nome de cada modelo, com 44px de altura e nome completo para leitores de tela ("Escolher Modelo 1"…); o alto das 7 fichas também fica alinhado
+- 390px: botões de escolha alinhados entre si, na linha do nome de cada modelo, com 44px de altura e nome completo para leitores de tela ("Escolher Modelo 1"…); o alto das 7 fichas também fica alinhado
+- 768px: botões de escolha alinhados entre si, na linha do nome de cada modelo, com 44px de altura e nome completo para leitores de tela ("Escolher Modelo 1"…); o alto das 7 fichas também fica alinhado
+- 1280px: botões de escolha alinhados entre si, na linha do nome de cada modelo, com 44px de altura e nome completo para leitores de tela ("Escolher Modelo 1"…); o alto das 7 fichas também fica alinhado
+- 1440px: botões de escolha alinhados entre si, na linha do nome de cada modelo, com 44px de altura e nome completo para leitores de tela ("Escolher Modelo 1"…); o alto das 7 fichas também fica alinhado
 
 ### Orçamento
 
@@ -264,10 +269,11 @@ Imagens em `docs/previa/`:
 
 ### Imagens ampliadas
 
-- comprovante abre ampliado pelo teclado, com legenda, descrição e o foco no botão "Fechar" (4 imagens ampliáveis na página)
+- comprovante abre ampliado pelo teclado, com legenda, descrição e o foco no botão "Fechar" (5 imagens ampliáveis na página)
 - Esc fecha e o foco volta para a imagem que abriu
 - a tela de venda abre ampliada, fecha com Esc e devolve o foco ao link que abriu
 - toque abre e o botão "Fechar" fecha
+- a tela com imagens nos botões abre ampliada (960 px), com legenda, fecha com Esc e devolve o foco
 
 ### Movimento reduzido
 
@@ -291,6 +297,8 @@ Imagens em `docs/previa/`:
 - 700px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 21px em cima e 21px embaixo)
 - 1280px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
 - 1440px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
+- 390px: imagem do produto em destaque logo abaixo dos quatro passos (tela real com imagens nos botões), citada também no passo 1, na seção da máquina e nas dúvidas
+- 1280px: imagem do produto em destaque logo abaixo dos quatro passos (tela real com imagens nos botões), citada também no passo 1, na seção da máquina e nas dúvidas
 
 ### Textos
 
@@ -305,7 +313,7 @@ Imagens em `docs/previa/`:
 - um único título principal ("Máquinas de fichas para o caixa do seu evento.") e todas as imagens com descrição
 - dados estruturados: site, página, serviço ("locação", com "aluguel" como nome alternativo), empresa e dúvidas
 - empresa com telefone, endereço em Rio Claro-SP e horário de atendimento
-- as 7 perguntas dos dados estruturados são iguais, palavra por palavra, às respostas visíveis na página
+- as 8 perguntas dos dados estruturados são iguais, palavra por palavra, às respostas visíveis na página
 - compartilhamento (WhatsApp, Facebook): título, descrição e imagem com "locação"
 - sitemap com a página e as imagens principais; robots.txt libera tudo e aponta para o sitemap
 

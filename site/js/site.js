@@ -279,7 +279,7 @@
       item.classList.toggle("escolhido", sim);
       if (botao) {
         botao.setAttribute("aria-pressed", sim ? "true" : "false");
-        escrever(botao, sim ? "Modelo escolhido" : "Escolher este modelo");
+        escrever(botao, sim ? "Escolhido" : "Escolher");
       }
     });
     if (orcModelo) orcModelo.value = n;
