@@ -37,7 +37,7 @@ MASCARAS = RAIZ / "materiais" / "recortes"
 TELAS = RAIZ / "materiais" / "telas-do-sistema"
 SAIDA = RAIZ / "site" / "img" / "maquina"
 
-TELA_VENDA = "13-venda-1024x600.png"
+TELA_VENDA = "16-venda-com-imagens-1024x600.png"  # tela real com imagens nos botões (ver ferramentas/tela-do-site)
 
 # quad = cantos do vidro do visor na foto original: sup-esq, sup-dir, inf-dir, inf-esq
 FOTOS = {

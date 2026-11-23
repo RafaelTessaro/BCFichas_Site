@@ -43,7 +43,7 @@ Refeitos em 23/11/2026, depois da segunda avaliação (prévia das fichas fiel �
 | Movimento e zoom | Passou | Com movimento reduzido não há animação nem rolagem suave; com zoom de 200% (640 e 320 px úteis) não há rolagem lateral nem texto cortado. |
 | Acessibilidade automática | Passou | axe: 0 problemas no celular e no computador. |
 | HTML | Passou | Sem erros de estrutura no `index.html` e no `404.html` (foi corrigida uma marcação sobrando na página 404). Continuam os mesmos 16 avisos de estilo da versão anterior, que são escolhas do projeto (lista marcada como lista, telefone sem espaço especial e formulário que envia por link). |
-| Como usar no evento | Passou | O passo "As fichas saem na hora" mostra duas fichas do mesmo modelo e com o mesmo tamanho de letra (Pastel e Caldo, o pedido da tela do passo 1), inteiras e retas dentro do quadro, em 360, 390, 700, 1280 e 1440 px. Antes a tira saía cortada; depois, inclinada, ficava com as linhas internas irregulares e misturava tamanhos de letra. As linhas das fichas têm agora pelo menos 1 pixel. Abaixo dos quatro passos entrou o destaque "Botões com a imagem do produto", com uma tela real do sistema, ampliável. |
+| Como usar no evento | Passou | O passo "As fichas saem na hora" mostra duas fichas do mesmo modelo e com o mesmo tamanho de letra (Pastel e Caldo, o pedido da tela do passo 1), inteiras e retas dentro do quadro, em 360, 390, 700, 1280 e 1440 px. Antes a tira saía cortada; depois, inclinada, ficava com as linhas internas irregulares e misturava tamanhos de letra. As linhas das fichas têm agora pelo menos 1 pixel. Abaixo dos quatro passos entrou o destaque "Botões com a imagem do produto", com uma tela gerada pelo próprio sistema (12 produtos genéricos, sem marcas), ampliável; a mesma tela aparece no visor das fotos da máquina. |
 | Textos | Passou | "Locação" na abertura, nas dúvidas e no rodapé; o verbo "alugar" continua nas frases; nenhuma ocorrência de "alocação". |
 | Indexação | Passou no que depende do site | Título (63 caracteres) e descrição (161) com "locação" e "aluguel"; endereço oficial indicado ao Google; um único título principal; todas as imagens com descrição; dados estruturados de site, página, serviço, empresa (telefone, endereço, horário) e dúvidas, estas iguais às respostas visíveis; sitemap com imagens; `robots.txt` liberando tudo; Lighthouse SEO 100. O que depende do endereço oficial e das contas do Google está em `docs/PUBLICAR-NA-VERCEL.md`, item 4. |
 | Publicação | Em parte | Ver "Publicação" abaixo. |
@@ -109,7 +109,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (157 verificações)
+## Detalhe do que passou (159 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -273,7 +273,7 @@ Imagens em `docs/previa/`:
 - Esc fecha e o foco volta para a imagem que abriu
 - a tela de venda abre ampliada, fecha com Esc e devolve o foco ao link que abriu
 - toque abre e o botão "Fechar" fecha
-- a tela com imagens nos botões abre ampliada (960 px), com legenda, fecha com Esc e devolve o foco
+- a tela com imagens nos botões abre ampliada (1024 px), com legenda, fecha com Esc e devolve o foco
 
 ### Movimento reduzido
 
@@ -298,7 +298,9 @@ Imagens em `docs/previa/`:
 - 1280px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
 - 1440px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
 - 390px: imagem do produto em destaque logo abaixo dos quatro passos (tela real com imagens nos botões), citada também no passo 1, na seção da máquina e nas dúvidas
+- 390px: a tela em destaque é a de 12 produtos genéricos, sem marcas, e as fotos da máquina carregam a versão nova (?v=3), com a mesma tela no visor
 - 1280px: imagem do produto em destaque logo abaixo dos quatro passos (tela real com imagens nos botões), citada também no passo 1, na seção da máquina e nas dúvidas
+- 1280px: a tela em destaque é a de 12 produtos genéricos, sem marcas, e as fotos da máquina carregam a versão nova (?v=3), com a mesma tela no visor
 
 ### Textos
 
