@@ -28,6 +28,8 @@ Como o DNS do `balancass.com` já fica na HostGator, o cPanel cria sozinho o reg
 3. Se estiver vermelho ou sem cadeado, marque a caixinha dele e clique em **Executar AutoSSL**. Costuma levar de alguns minutos a uma ou duas horas.
 4. Para conferir, abra `https://bcfichas.balancass.com` no navegador: deve aparecer o cadeado, mesmo com a página vazia.
 
+Em 23/11/2026 o cadeado já estava valendo assim que o subdomínio foi criado: o servidor usa um certificado de `*.balancass.com`, que cobre o `bcfichas`. O aviso ⚠ na coluna "Forçar redirecionamento HTTPS" da lista de domínios pode ser ignorado, e a chave pode ficar desligada: o redirecionamento é feito pelo `.htaccess` do site.
+
 **Só passe para o item 3 com o cadeado ativo.** O site manda todo mundo para o endereço com `https`; sem cadeado, ele não abre.
 
 ## 3. Enviar o site
@@ -94,6 +96,7 @@ Se uma atualização **retirar** arquivos (uma foto que deixou de ser usada, por
 
 | O que aparece | Causa provável | O que fazer |
 |---|---|---|
+| Erro "You must specify a subdomain" ao criar o domínio | A tela **Criar um novo domínio** não mostra o campo "Subdomain" depois de desmarcar a caixa (aconteceu em 23/11/2026) | Crie pela tela **Subdomínios** (subdomínio `bcfichas`, domínio `balancass.com`), ou peça ao suporte da HostGator. Não marque a caixa "Share document root" para contornar |
 | O endereço abre o site da Balanças | A caixa "Compartilhar a raiz do documento" ficou marcada | Apague o subdomínio em **Domínios** e crie de novo, com a caixa desmarcada |
 | "Sua conexão não é particular" ou o site não abre depois de extrair | O cadeado ainda não estava ativo | Rode o AutoSSL (item 2) e espere. Para ver o site enquanto isso, renomeie o `.htaccess` para `htaccess.txt` e volte ao nome original quando o cadeado ativar |
 | Página sem cores, só texto | Os arquivos foram para dentro de uma subpasta | Mova tudo para a pasta do subdomínio (item 3, passo 6) |
@@ -112,4 +115,4 @@ O `site.zip` foi extraído num servidor Apache 2.4 de teste, com o `.htaccess` v
 - o `.htaccess` não pode ser lido de fora e as pastas não mostram a lista de arquivos;
 - os arquivos servidos são idênticos aos do projeto, e o site abriu num navegador com as letras, as 7 imagens visíveis, as fichas e o formulário funcionando.
 
-Não foi testado na HostGator de verdade: isso depende de criar o subdomínio.
+Em 23/11/2026 o pacote foi enviado para a HostGator e o site passou a abrir em `https://bcfichas.balancass.com`; o que foi conferido no ar está em `docs/TESTES.md`, seção "Publicação".

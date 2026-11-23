@@ -99,7 +99,15 @@ São números de laboratório, não de visitantes reais. Na Vercel há compress�
 ## Publicação
 
 - **`bcfichas.vercel.app`:** publica sozinho cada envio desta branch. Conferido em 22/11/2026, logo depois do envio: a página, o `site.css`, o `site.js`, a letra das fichas e a página 404 servidos são idênticos, byte a byte, aos arquivos testados aqui; um endereço que não existe devolve a página 404 do site; as letras são servidas com cache de um ano.
-- **`bcfichas.balancass.com`:** conferido em 23/11/2026 no DNS público: o nome **ainda não existe** (resposta NXDOMAIN). A zona `balancass.com` é atendida pela HostGator (`ns998.hostgator.com.br`). O responsável decidiu hospedar o site lá: ao criar o subdomínio no cPanel, o registro é criado sozinho. O endereço indicado ao Google (canonical), a imagem de compartilhamento e o sitemap já apontam para o endereço oficial.
+- **`bcfichas.balancass.com`: no ar desde 23/11/2026**, hospedado na HostGator. Conferido logo depois do envio do `site.zip`:
+  - o endereço aponta para o servidor da HostGator e o cadeado é válido (certificado Let's Encrypt de `*.balancass.com`, até 10/01/2027);
+  - `http://` vai para `https://`, e `/index.html` vai para `/`;
+  - os 33 arquivos servidos são idênticos, byte a byte, aos do projeto;
+  - página, CSS e JavaScript saem comprimidos; cache de 1 dia para CSS e JavaScript, 1 mês para fotos e 1 ano para letras;
+  - um endereço que não existe devolve a página 404 do site; o `.htaccess` não pode ser lido e as pastas não listam arquivos; o `site.zip` não ficou no servidor;
+  - a imagem de compartilhamento abre para navegadores e para os robôs do WhatsApp, do Facebook e do Google;
+  - a bateria completa rodou contra o endereço oficial: 160 de 161 verificações passaram. A que falhou (sitemap e robots) falhou por causa do intermediário de rede do ambiente de teste, que recusou um dos pedidos (`x-deny-reason: resolve_no_records`); o mesmo pedido feito pelo navegador e pelo `curl` funciona, e o conteúdo do `sitemap.xml` e do `robots.txt` no ar está correto;
+  - Lighthouse no endereço oficial (celular simulado, duas execuções): desempenho 96 e 97, acessibilidade 100, boas práticas 100, SEO 100; primeira imagem em 1,1 a 1,3 s, maior elemento em 2,5 a 2,7 s, deslocamento de layout 0, primeira carga de 292 KB.
 
 ## Pacote para a HostGator (cPanel)
 
@@ -116,7 +124,7 @@ Em 23/11/2026 o `site.zip` foi extraído num servidor Apache 2.4 de teste, com o
 | Arquivos servidos idênticos aos do projeto | Passou |
 | Navegador (celular simulado): letras, 7 imagens visíveis, fichas e formulário funcionando; página 404 | Passou |
 
-Não foi testado na HostGator de verdade: depende de criar o subdomínio (`docs/PUBLICAR-NO-CPANEL.md`).
+Depois disso o pacote foi enviado para a HostGator e conferido no ar (ver "Publicação").
 
 ## Evidências
 
@@ -348,7 +356,6 @@ Imagens em `docs/previa/`:
 - **Ficha impressa de verdade:** a prévia segue o código do sistema, mas não foi posta lado a lado com uma ficha saída da impressora. Vale imprimir uma ficha com o nome e o rodapé do teste e comparar.
 - **Celular de verdade:** deslizar o carrossel com o dedo, o teclado virtual e a abertura do aplicativo do WhatsApp.
 - **Envio de mensagem:** o link foi conferido, mas nenhuma mensagem foi enviada.
-- **`bcfichas.balancass.com`:** o subdomínio ainda não foi criado, então o endereço oficial e o cadeado de lá não puderam ser testados. O pacote foi testado num Apache local (ver "Pacote para a HostGator").
-- **Imagem de compartilhamento** numa conversa real de WhatsApp ou Facebook (ela aponta para o endereço oficial, que precisa estar no ar).
+- **Imagem de compartilhamento** numa conversa real de WhatsApp ou Facebook. O arquivo abre para os robôs dessas redes, mas a prévia dentro de uma conversa só dá para ver enviando o link.
 - **Google Search Console e indexação.**
 - **Leitor de tela real** (VoiceOver, TalkBack). A checagem automática do axe não encontrou problemas, mas não substitui esse teste.
