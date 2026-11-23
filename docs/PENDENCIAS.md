@@ -57,7 +57,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Textos retirados em 20/11 | Frase de apoio da abertura (ver item 5 acima), estimativa de público, "o teclado aparece na tela", aviso sobre as fotos e a dúvida sobre devolução de fichas | Não aparecem mais |
 | Fotos retiradas em 20/11 | Impressora aberta e saída das fichas | Não aparecem mais |
 | Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu e seção de orçamento |
-| Tira de fichas do passo 3 | Mostrar inteira, sem corte (pedido de 23/11) | "Como usar no evento", passo "As fichas saem na hora" |
+| Tira de fichas do passo 3 | Mostrar inteira, sem corte, com as linhas retas e sem parecer dois modelos (pedidos de 23/11) | "Como usar no evento", passo "As fichas saem na hora": duas fichas iguais, sem inclinação |
 | Retirado em 22/11 | Campo "Tipo de evento" do formulário e a linha de WhatsApp da lista de contatos (ficava repetida: já existe o botão "Falar no WhatsApp" logo acima; embaixo fica só o telefone) | Não aparecem mais |
 | Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
 | Horário e endereço | Os da Balanças.com valem | Seção de orçamento |

@@ -43,7 +43,7 @@ Refeitos em 23/11/2026, depois da segunda avaliação (prévia das fichas fiel �
 | Movimento e zoom | Passou | Com movimento reduzido não há animação nem rolagem suave; com zoom de 200% (640 e 320 px úteis) não há rolagem lateral nem texto cortado. |
 | Acessibilidade automática | Passou | axe: 0 problemas no celular e no computador. |
 | HTML | Passou | Sem erros de estrutura no `index.html` e no `404.html` (foi corrigida uma marcação sobrando na página 404). Continuam os mesmos 16 avisos de estilo da versão anterior, que são escolhas do projeto (lista marcada como lista, telefone sem espaço especial e formulário que envia por link). |
-| Como usar no evento | Passou | As 3 fichas do passo "As fichas saem na hora" aparecem inteiras dentro do quadro em 360, 390, 700, 1280 e 1440 px (antes a tira saía cortada em cima e esmaecida embaixo). |
+| Como usar no evento | Passou | O passo "As fichas saem na hora" mostra duas fichas do mesmo modelo e com o mesmo tamanho de letra (Pastel e Caldo, o pedido da tela do passo 1), inteiras e retas dentro do quadro, em 360, 390, 700, 1280 e 1440 px. Antes a tira saía cortada; depois, inclinada, ficava com as linhas internas irregulares e misturava tamanhos de letra. As linhas das fichas têm agora pelo menos 1 pixel. |
 | Textos | Passou | "Locação" na abertura, nas dúvidas e no rodapé; o verbo "alugar" continua nas frases; nenhuma ocorrência de "alocação". |
 | Indexação | Passou no que depende do site | Título (63 caracteres) e descrição (161) com "locação" e "aluguel"; endereço oficial indicado ao Google; um único título principal; todas as imagens com descrição; dados estruturados de site, página, serviço, empresa (telefone, endereço, horário) e dúvidas, estas iguais às respostas visíveis; sitemap com imagens; `robots.txt` liberando tudo; Lighthouse SEO 100. O que depende do endereço oficial e das contas do Google está em `docs/PUBLICAR-NA-VERCEL.md`, item 4. |
 | Publicação | Em parte | Ver "Publicação" abaixo. |
@@ -278,11 +278,11 @@ Imagens em `docs/previa/`:
 
 ### Como usar no evento
 
-- 360px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 18px em cima e 18px embaixo)
-- 390px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 19px em cima e 19px embaixo)
-- 700px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 16px em cima e 16px embaixo)
-- 1280px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 15px em cima e 15px embaixo)
-- 1440px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 15px em cima e 15px embaixo)
+- 360px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 23px em cima e 23px embaixo)
+- 390px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 25px em cima e 25px embaixo)
+- 700px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 21px em cima e 21px embaixo)
+- 1280px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
+- 1440px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
 
 ### Textos
 

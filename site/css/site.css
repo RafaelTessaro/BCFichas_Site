@@ -402,8 +402,8 @@ p { text-wrap: pretty; }
 }
 .passo__img--tela img { width: 88%; border-radius: 6px; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06); transition: scale .3s ease; }
 a.passo__img:hover img { scale: 1.03; }
-/* a tira de fichas aparece inteira dentro do quadro, sem corte */
-.tira { width: 47%; rotate: -2.5deg; filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.5)); }
+/* a tira de fichas aparece inteira e reta dentro do quadro: duas fichas do mesmo modelo, com o mesmo tamanho de letra */
+.tira { width: 66%; filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.5)); }
 .tira .ficha + .ficha { border-top: 2px dashed #9aa39c; }
 .passo__texto {
   display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 12px; align-items: center; align-content: start;
@@ -449,7 +449,7 @@ a.passo__img:hover img { scale: 1.03; }
 .f-produto { font-weight: 700; font-size: calc(var(--t, 124) * var(--u)); line-height: 1.09; text-align: center; }
 .f-recado { margin-top: calc(6 * var(--u)); font-weight: 700; font-size: calc(22 * var(--u)); text-align: center; }
 .f-rodape {
-  margin-top: calc(4 * var(--u)); padding-top: calc(2 * var(--u)); border-top: calc(2 * var(--u)) solid #000;
+  margin-top: calc(4 * var(--u)); padding-top: calc(2 * var(--u)); border-top: max(1px, calc(2 * var(--u))) solid #000;
   font-weight: 700; font-size: calc(32 * var(--u)); text-align: center;
 }
 .f-trio, .f-par { display: flex; justify-content: space-between; gap: calc(12 * var(--u)); font-size: calc(22 * var(--u)); line-height: 1.3; }
@@ -484,7 +484,7 @@ a.passo__img:hover img { scale: 1.03; }
   margin: calc(-8 * var(--u)) calc(-14 * var(--u)) calc(8 * var(--u)); padding: calc(8 * var(--u)) calc(14 * var(--u));
   background: #000; color: #fff; font-weight: 700; font-size: calc(30 * var(--u)); text-align: center;
 }
-.f-pontilhado { border: 0; border-top: calc(2 * var(--u)) dashed #000; margin: calc(5 * var(--u)) 0; }
+.f-pontilhado { border: 0; border-top: max(1px, calc(2 * var(--u))) dashed #000; margin: calc(5 * var(--u)) 0; }
 .f-dir { text-align: right; font-size: calc(22 * var(--u)); }
 .f-esp { height: calc(8 * var(--u)); }
 
