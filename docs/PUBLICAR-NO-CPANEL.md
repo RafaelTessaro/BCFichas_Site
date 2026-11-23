@@ -59,25 +59,65 @@ Só depois de o item 4 estar todo conferido. Enquanto o endereço oficial não a
 
 ## 6. Aparecer no Google (indexação)
 
-**Já está pronto no site:** título e descrição com "locação" e "aluguel", o endereço oficial indicado ao Google, os dados da empresa (telefone, endereço, mapa e horário), o `sitemap.xml` com a página e as imagens principais, o `robots.txt` liberando tudo, imagens com descrição e página leve no celular.
+**Já está pronto nos dois sites:** `sitemap.xml`, `robots.txt` liberando as páginas, título e descrição, endereço oficial indicado ao Google e, no BC Fichas, os dados da empresa (telefone, endereço, mapa e horário). Falta só **avisar o Google que os sites são seus**. Isso se faz uma vez, no **Google Search Console**, e serve para o `balancass.com` e para o `bcfichas.balancass.com` ao mesmo tempo.
 
-**Depois que o endereço abrir:**
+### 6.1. Criar a propriedade no Search Console
 
-1. **Google Search Console** (`search.google.com/search-console`):
-   - se o `balancass.com` já está lá como propriedade de **domínio**, o `bcfichas.balancass.com` já está incluído; pule para o envio do sitemap;
-   - se não, **Adicionar propriedade → Prefixo do URL →** `https://bcfichas.balancass.com/`. Na verificação, o jeito mais simples com cPanel é **Arquivo HTML**: baixe o arquivo que o Google oferece, envie para a pasta do subdomínio pelo Gerenciador de arquivos e clique em **Verificar**. Não apague esse arquivo depois;
-   - em **Sitemaps**, envie `sitemap.xml`;
-   - em **Inspeção de URL**, cole `https://bcfichas.balancass.com/` e clique em **Solicitar indexação**.
-2. **Link no site da Balanças.com.** É o que mais acelera: o Google já conhece o `balancass.com`, e um link de lá leva o robô até o site novo. Hoje a seção do BC Fichas de lá aponta para `bcfichas.com.br`, que está fora do ar; troque para `https://bcfichas.balancass.com/`.
-3. **Perfil da Empresa no Google** (o cartão da Balanças.com no Google Maps), se houver: acrescente "Locação de máquinas de fichas" nos serviços, com o link do site.
-4. (Opcional) **Bing Webmaster Tools** (`bing.com/webmasters`): dá para importar tudo do Search Console em um clique.
+1. Abra `search.google.com/search-console` e entre com uma conta do Google da empresa (a mesma do Perfil da Empresa, se houver).
+2. Clique em **Adicionar propriedade**. Aparecem dois quadros: escolha o da esquerda, **Domínio**.
+3. Escreva `balancass.com` (sem `https://` e sem `www`) e clique em **Continuar**.
+4. O Google mostra um **registro TXT**, um texto que começa com `google-site-verification=`. Clique em **Copiar** e deixe essa tela aberta.
 
-**Para conferir depois:**
+### 6.2. Colar o registro no cPanel
 
-- alguns dias depois, pesquise `site:bcfichas.balancass.com` no Google: a página deve aparecer;
-- em `search.google.com/test/rich-results`, cole o endereço: os dados da empresa e do serviço devem aparecer sem erro.
+1. No cPanel, seção **Domínios**, abra **Zone Editor** (Editor de Zona).
+2. Na linha do `balancass.com`, clique em **Gerenciar**.
+3. Clique na seta ao lado de **Adicionar registro** e escolha **Adicionar registro "TXT"**.
+4. Preencha:
+   - **Nome:** `balancass.com.` (com o ponto no fim; se o cPanel completar sozinho, deixe)
+   - **TTL:** deixe o que vier
+   - **Tipo:** TXT
+   - **Registro:** cole o texto copiado do Google
+5. Clique em **Salvar registro**.
+
+> **Atenção:** é para **adicionar** um registro novo. Já existe um registro TXT no domínio que começa com `v=spf1`: ele cuida do e-mail da empresa. **Não edite nem apague esse.**
+
+### 6.3. Verificar
+
+1. Volte à tela do Search Console e clique em **Verificar**.
+2. Se aparecer que não encontrou o registro, espere de 10 minutos a algumas horas e clique de novo. O registro pode demorar para se espalhar.
+
+Com a propriedade de domínio verificada, o Google passa a mostrar os dados do `balancass.com`, do `bcfichas.balancass.com` e de qualquer outro endereço do domínio.
+
+### 6.4. Enviar os sitemaps
+
+1. No menu da esquerda do Search Console, abra **Sitemaps**.
+2. Em **Adicionar um novo sitemap**, escreva o endereço inteiro e clique em **Enviar**, um de cada vez:
+   - `https://balancass.com/sitemap.xml`
+   - `https://bcfichas.balancass.com/sitemap.xml`
+3. Na lista abaixo, a situação deve passar para **Processado** (pode levar algumas horas).
+
+### 6.5. Pedir a indexação
+
+1. Na barra de cima do Search Console (**Inspecionar qualquer URL**), cole `https://bcfichas.balancass.com/` e aperte Enter.
+2. Clique em **Solicitar indexação** e espere a confirmação (um ou dois minutos).
+3. Repita com `https://balancass.com/`. Se o Google disser que a página já está indexada, não precisa pedir de novo.
+
+### 6.6. O que mais ajuda
+
+1. **Link no site da Balanças.com.** O Google já conhece o `balancass.com`, e um link de lá leva o robô até o site novo. A troca está preparada no projeto da Balanças (`atualizacao.zip`): a seção BC Fichas passa a apontar para `https://bcfichas.balancass.com/`.
+2. **Perfil da Empresa no Google** (o cartão da Balanças.com no Google Maps), se houver: acrescente "Locação de máquinas de fichas" nos serviços, com o link do site.
+3. (Opcional) **Bing Webmaster Tools** (`bing.com/webmasters`): dá para importar tudo do Search Console em um clique.
+
+### 6.7. Acompanhar
+
+- Alguns dias depois, pesquise `site:bcfichas.balancass.com` no Google: a página deve aparecer.
+- No Search Console, o relatório **Páginas** (em Indexação) mostra o que entrou e o que ficou de fora, com o motivo.
+- Em `search.google.com/test/rich-results`, cole o endereço do BC Fichas: os dados da empresa e do serviço devem aparecer sem erro.
 
 A entrada no Google costuma levar de alguns dias a algumas semanas. A posição nas buscas depende da concorrência e do tempo de vida do site; não há como garantir primeiro lugar.
+
+> **Se não quiser mexer no DNS:** dá para verificar cada site separadamente. Em **Adicionar propriedade**, escolha **Prefixo do URL**, escreva o endereço completo (`https://bcfichas.balancass.com/`) e, na verificação, use **Arquivo HTML**: baixe o arquivo que o Google oferece e envie para a pasta do site pelo Gerenciador de arquivos. Repita para `https://balancass.com/`. Não apague esses arquivos depois.
 
 ## 7. Atualizar o site depois
 
