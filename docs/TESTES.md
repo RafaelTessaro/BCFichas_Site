@@ -1,6 +1,6 @@
 # Testes
 
-Refeitos em 22/11/2026, depois da segunda avaliação (prévia das fichas fiel à impressão, escolha de modelo e personalização no orçamento). Todas as verificações abaixo foram executadas de verdade; o que não pôde ser testado está na última seção.
+Refeitos em 23/11/2026, depois da segunda avaliação (prévia das fichas fiel à impressão, escolha de modelo e personalização no orçamento) e dos pedidos seguintes do responsável (campo "Tipo de evento" e WhatsApp repetido retirados, "locação" nos títulos, tira de fichas do passo 3 inteira e preparo para a indexação). Todas as verificações abaixo foram executadas de verdade; o que não pôde ser testado está na última seção.
 
 **Como foi testado:** navegador Chromium controlado por roteiro (Playwright), abrindo a pasta `site/` num servidor local. Celulares e tablets foram simulados (tamanho de tela, toque e proporção). Não é o mesmo que um aparelho real.
 
@@ -43,6 +43,9 @@ Refeitos em 22/11/2026, depois da segunda avaliação (prévia das fichas fiel �
 | Movimento e zoom | Passou | Com movimento reduzido não há animação nem rolagem suave; com zoom de 200% (640 e 320 px úteis) não há rolagem lateral nem texto cortado. |
 | Acessibilidade automática | Passou | axe: 0 problemas no celular e no computador. |
 | HTML | Passou | Sem erros de estrutura no `index.html` e no `404.html` (foi corrigida uma marcação sobrando na página 404). Continuam os mesmos 16 avisos de estilo da versão anterior, que são escolhas do projeto (lista marcada como lista, telefone sem espaço especial e formulário que envia por link). |
+| Como usar no evento | Passou | As 3 fichas do passo "As fichas saem na hora" aparecem inteiras dentro do quadro em 360, 390, 700, 1280 e 1440 px (antes a tira saía cortada em cima e esmaecida embaixo). |
+| Textos | Passou | "Locação" na abertura, nas dúvidas e no rodapé; o verbo "alugar" continua nas frases; nenhuma ocorrência de "alocação". |
+| Indexação | Passou no que depende do site | Título (63 caracteres) e descrição (161) com "locação" e "aluguel"; endereço oficial indicado ao Google; um único título principal; todas as imagens com descrição; dados estruturados de site, página, serviço, empresa (telefone, endereço, horário) e dúvidas, estas iguais às respostas visíveis; sitemap com imagens; `robots.txt` liberando tudo; Lighthouse SEO 100. O que depende do endereço oficial e das contas do Google está em `docs/PUBLICAR-NA-VERCEL.md`, item 4. |
 | Publicação | Em parte | Ver "Publicação" abaixo. |
 
 ## Prévia das fichas: o que significa "fiel"
@@ -106,7 +109,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (125 verificações)
+## Detalhe do que passou (140 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -272,6 +275,30 @@ Imagens em `docs/previa/`:
 
 - axe no celular: 0 problemas
 - axe no computador: 0 problemas
+
+### Como usar no evento
+
+- 360px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 18px em cima e 18px embaixo)
+- 390px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 19px em cima e 19px embaixo)
+- 700px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 16px em cima e 16px embaixo)
+- 1280px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 15px em cima e 15px embaixo)
+- 1440px: as 3 fichas do passo "As fichas saem na hora" aparecem inteiras (folga de 15px em cima e 15px embaixo)
+
+### Textos
+
+- "Locação" nos títulos (abertura, dúvidas e rodapé); o verbo "alugar" continua nas frases; nenhuma "alocação"
+
+### Indexação (o que o Google lê)
+
+- título com a busca principal na frente e 63 caracteres: "Locação de máquinas de fichas para festas e eventos | BC Fichas"
+- descrição com "locação" e "aluguel", 161 caracteres
+- endereço oficial indicado ao Google (canonical), página liberada para indexação e idioma pt-BR
+- um único título principal ("Máquinas de fichas para o caixa do seu evento.") e todas as imagens com descrição
+- dados estruturados: site, página, serviço ("locação", com "aluguel" como nome alternativo), empresa e dúvidas
+- empresa com telefone, endereço em Rio Claro-SP e horário de atendimento
+- as 7 perguntas dos dados estruturados são iguais, palavra por palavra, às respostas visíveis na página
+- compartilhamento (WhatsApp, Facebook): título, descrição e imagem com "locação"
+- sitemap com a página e as imagens principais; robots.txt libera tudo e aponta para o sitemap
 
 ### Geral
 

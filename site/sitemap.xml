@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://bcfichas.balancass.com/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
+    <image:image>
+      <image:loc>https://bcfichas.balancass.com/img/maquina/maquina-frente-1200.webp?v=2</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://bcfichas.balancass.com/img/maquina/maquina-cima-1200.webp?v=2</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://bcfichas.balancass.com/img/sistema/tela-venda-1024.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://bcfichas.balancass.com/img/compartilhar.jpg?v=2</image:loc>
+    </image:image>
   </url>
 </urlset>

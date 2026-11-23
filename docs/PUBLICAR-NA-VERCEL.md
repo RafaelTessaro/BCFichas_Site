@@ -38,9 +38,33 @@ Se o DNS do domínio não estiver na HostGator (Cloudflare, Registro.br), o regi
 - [ ] Na seção das fichas, escreva o nome de um evento: as fichas mudam.
 - [ ] Um endereço que não existe (ex.: `/teste`) mostra a página **"Esta página não existe"**.
 - [ ] Mande o link do site para alguém no WhatsApp: aparece a imagem com a máquina e o título.
-- [ ] (Recomendado) **Google Search Console** → adicionar `bcfichas.balancass.com` → *Sitemaps* → enviar `sitemap.xml`.
+- [ ] Siga o item 4, abaixo, para o site aparecer no Google.
 
-## 4. Atualizar o site
+## 4. Aparecer no Google (indexação)
+
+**O que já está pronto no site:** título e descrição com "locação" e "aluguel" (as duas buscas), o endereço oficial indicado ao Google, os dados da empresa (telefone, endereço e horário) em formato que o Google lê, o `sitemap.xml` com a página e as imagens principais, o `robots.txt` liberando tudo, imagens com descrição e página leve no celular.
+
+**O que só dá para fazer depois que `bcfichas.balancass.com` abrir** (depende das suas contas):
+
+1. **Mandar o endereço provisório para o oficial.** Enquanto os dois abrirem o mesmo site, o Google pode ficar em dúvida sobre qual mostrar. Com o oficial funcionando, `bcfichas.vercel.app` deve redirecionar para ele. Há dois jeitos: avisar para ativarmos o redirecionamento no `vercel.json`, ou, na Vercel, **Settings → Domains → Edit** em `bcfichas.vercel.app` → **Redirect to** `bcfichas.balancass.com`. Não faça isso antes de o oficial abrir, senão o site sai do ar.
+2. **Google Search Console** (`search.google.com/search-console`):
+   - se o `balancass.com` já está lá como propriedade de **domínio**, o `bcfichas.balancass.com` já está incluído; pule para o envio do sitemap;
+   - se não, **Adicionar propriedade → Prefixo do URL →** `https://bcfichas.balancass.com/`. Na verificação, escolha **Tag HTML**: o Google mostra uma linha `<meta name="google-site-verification" ...>`. Envie essa linha para ser colocada no site (ou cole no `<head>` do `site/index.html`) e clique em **Verificar**;
+   - em **Sitemaps**, envie `sitemap.xml`;
+   - em **Inspeção de URL**, cole `https://bcfichas.balancass.com/` e clique em **Solicitar indexação**.
+3. **Link no site da Balanças.com.** É o que mais acelera: o Google já conhece o `balancass.com`, e um link de lá leva o robô até o site novo. Hoje a seção do BC Fichas de lá aponta para `bcfichas.com.br`, que está fora do ar; troque para `https://bcfichas.balancass.com/`.
+4. **Perfil da Empresa no Google** (o cartão da Balanças.com no Google Maps), se houver: acrescente "Locação de máquinas de fichas" nos serviços, com o link do site.
+5. (Opcional) **Bing Webmaster Tools** (`bing.com/webmasters`): dá para importar tudo do Search Console em um clique.
+
+**Para conferir depois:**
+
+- alguns dias depois, pesquise `site:bcfichas.balancass.com` no Google: a página deve aparecer;
+- em `search.google.com/test/rich-results`, cole o endereço: os dados da empresa e do serviço devem aparecer sem erro;
+- mande o link numa conversa de WhatsApp: aparece a imagem com a máquina e "Locação para festas juninas, quermesses e eventos".
+
+A entrada no Google costuma levar de alguns dias a algumas semanas. A posição nas buscas depende da concorrência e do tempo de vida do site; não há como garantir primeiro lugar.
+
+## 5. Atualizar o site
 
 Toda mudança enviada ao GitHub no ramo de produção vai para o ar sozinha, em cerca de um minuto. Mudanças em outros ramos ganham um endereço de prévia, sem mexer no site publicado.
 
@@ -50,7 +74,7 @@ Antes de enviar, rode:
 python3 ferramentas/conferir.py
 ```
 
-**Cache.** As fotos ficam guardadas no navegador do visitante por 30 dias. Se trocar uma foto mantendo o mesmo nome de arquivo, mude o nome (ou acrescente `?v=2` no `index.html`). O mesmo vale para `site.css` e `site.js`: aumente o número do `?v=4`.
+**Cache.** As fotos ficam guardadas no navegador do visitante por 30 dias. Se trocar uma foto mantendo o mesmo nome de arquivo, mude o nome (ou acrescente `?v=2` no `index.html`). O mesmo vale para `site.css` e `site.js`: aumente o número que vem depois de `?v=`.
 
 ## Plano B: cPanel
 

@@ -1,6 +1,6 @@
 # Site do BC Fichas
 
-Site de uma página do **BC Fichas**: aluguel de máquinas de fichas para festas juninas, quermesses e eventos.
+Site de uma página do **BC Fichas**: locação (aluguel) de máquinas de fichas para festas juninas, quermesses e eventos.
 O objetivo é o organizador entender o serviço e pedir o orçamento pelo WhatsApp.
 
 Endereço previsto: **https://bcfichas.balancass.com**
@@ -70,7 +70,7 @@ As perguntas e respostas também estão repetidas no bloco `application/ld+json`
 
 **Fotos da máquina.** Ponha a foto nova em `materiais/fotos-originais/`, ajuste a lista `FOTOS` em `ferramentas/processar-fotos.py` e rode o script. Ele recorta o fundo, apaga etiquetas marcadas, limpa poeira e riscos, monta a tela do sistema no visor e grava os arquivos em `site/img/maquina/`. As instruções estão no começo do script.
 
-**Depois de mudar o CSS ou o JavaScript**, aumente o número que vem depois de `?v=` (hoje `site.css?v=7` e `site.js?v=6`) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
+**Depois de mudar o CSS ou o JavaScript**, aumente o número que vem depois de `?v=` (hoje `site.css?v=8` e `site.js?v=6`) nas linhas de `site.css` e `site.js` do `index.html` e do `404.html`, para o navegador de quem já visitou buscar a versão nova.
 
 ## Como as imagens foram feitas
 
@@ -82,7 +82,7 @@ As perguntas e respostas também estão repetidas no bloco `application/ld+json`
 
 Só entrou no site o que está confirmado nos materiais do projeto:
 
-- textos do BC Fichas já publicados no site da Balanças.com (fichas com logo, combos, relatórios e sangrias). O que lá aparece como "locação por diária" e "bobinas inclusas" foi corrigido pelo responsável: o site fala em aluguel e em bobinas consignadas;
+- textos do BC Fichas já publicados no site da Balanças.com (fichas com logo, combos, relatórios e sangrias). O que lá aparece como "locação por diária" e "bobinas inclusas" foi corrigido pelo responsável: o site fala em locação (sem "por diária") e em bobinas consignadas;
 - o README do sistema BC Fichas 3.11.7 (formas de pagamento, modelos de ficha, controle de caixa, senha, estoque, devolução) e o código (funciona sem internet);
 - os dados da empresa do site da Balanças.com (telefone, endereço, horário, razão social e CNPJ).
 - as respostas do responsável em 19 e 20/11/2026 (lista completa em `docs/PENDENCIAS.md`, item 4);

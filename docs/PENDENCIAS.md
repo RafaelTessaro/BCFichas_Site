@@ -1,6 +1,6 @@
 # Pendências
 
-Situação em 22/11/2026, depois da segunda avaliação do site (`BC_Fichas_Reavaliacao_e_Guia_2026-11-22.md`). O briefing usado foi o texto do pedido; além dele chegaram as fotos e as duas avaliações.
+Situação em 23/11/2026, depois da segunda avaliação do site (`BC_Fichas_Reavaliacao_e_Guia_2026-11-22.md`). O briefing usado foi o texto do pedido; além dele chegaram as fotos e as duas avaliações.
 
 ## 1. Para responder
 
@@ -14,8 +14,6 @@ Perguntas que a avaliação levantou e que só a empresa pode responder. Sem res
 | 4 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos no aluguel? Se sim, entram no site. |
 | 5 | **Frase de apoio da abertura** | "Organize as vendas do evento com fichas impressas na hora e relatórios por caixa." (sugestão da avaliação de 22/11) | Em 20/11 o responsável pediu para tirar a frase que havia nesse lugar. Esta é outra frase, mais curta; se preferir a abertura sem frase, é só avisar. |
 
-| 6 | **"Aluguel" ou "locação"** | O site fala em "aluguel" (decisão de 19/11). | Em 22/11 o responsável sugeriu "alocação" para soar mais profissional. "Alocação" quer dizer outra coisa (distribuir, destinar recursos); o termo formal para alugar equipamento é **"locação"**. Falta decidir entre manter "aluguel" ou passar para "locação" nos títulos. |
-
 A avaliação também pediu respostas sobre **retirada, entrega e devolução** e sobre **como o período do aluguel é calculado**. O responsável já decidiu, em 19/11, não publicar isso ("depende do lugar; na dúvida não precisa pôr"), então o site continua só com "consulte a disponibilidade". Se mudar de ideia, cabem em duas dúvidas curtas.
 
 ## 2. Publicação
@@ -23,9 +21,9 @@ A avaliação também pediu respostas sobre **retirada, entrega e devolução** 
 - [ ] **Criar o CNAME de `bcfichas.balancass.com`.** Conferido em 22/11: o nome não existe no DNS (NXDOMAIN). A zona `balancass.com` está na HostGator, então o registro é criado no cPanel de lá (Editor de Zona), com o valor que a Vercel mostra em Settings → Domains. Passo a passo: `docs/PUBLICAR-NA-VERCEL.md`, item 2. Enquanto isso o site funciona em `bcfichas.vercel.app`, mas a imagem de compartilhamento e o endereço indicado ao Google apontam para o oficial.
 - [ ] **Imprimir uma ficha de teste** com um nome de 40 caracteres e um rodapé de duas linhas e comparar com a prévia do site (a prévia segue o código do sistema, mas não foi comparada com o papel).
 - [ ] Testar num celular real: carrossel das fichas, escolha do modelo, formulário e abertura do WhatsApp.
+- [ ] **Indexação no Google**, depois que o endereço oficial abrir: redirecionar o endereço provisório para o oficial, verificar o site no Google Search Console, enviar o `sitemap.xml` e pedir a indexação. Passo a passo: `docs/PUBLICAR-NA-VERCEL.md`, item 4. O que dependia do site já está feito (título, descrição, dados da empresa, sitemap com imagens).
 - [ ] Com o endereço oficial no ar, enviar o link numa conversa de WhatsApp e ver se a imagem aparece.
-- [ ] Enviar o `sitemap.xml` no Google Search Console.
-- [ ] **Site da Balanças.com:** a seção do BC Fichas ainda diz "Locação por diária" e "Manual e bobinas inclusos", e os links apontam para `bcfichas.com.br` (fora do ar). Vale alinhar com o que foi confirmado aqui.
+- [ ] **Site da Balanças.com:** a seção do BC Fichas ainda diz "Locação por diária" e "Manual e bobinas inclusos", e os links apontam para `bcfichas.com.br` (fora do ar). Trocar o link para `https://bcfichas.balancass.com/` é o que mais ajuda o Google a achar o site novo; vale também alinhar os textos com o que foi confirmado aqui.
 
 ## 3. Depende de material novo
 
@@ -42,7 +40,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 
 | Assunto | Resposta | Onde aparece |
 |---|---|---|
-| Nome do serviço | "Aluguel", sem dizer "por diária" | Título da página, abertura, dúvidas, rodapé e imagem de compartilhamento |
+| Nome do serviço | "Locação" nos títulos, sem dizer "por diária" (decisão de 23/11; antes era "aluguel"). O verbo "alugar" continua nas frases ("Como alugar", "quem aluga") e "aluguel" aparece na descrição que o Google lê, para o site ser achado nas duas buscas. "Alocação" não foi usada: quer dizer outra coisa. | Título da página, abertura, dúvidas, rodapé e imagem de compartilhamento |
 | Entrega e retirada | Depende do lugar; não entra no site | Só "consulte a disponibilidade", nas dúvidas |
 | Bobinas | Consignadas: o cliente só paga as que usar | Abertura ("você paga só as que usar") e "O que está incluído?" |
 | Treinamento | Dado na empresa | Abertura e dúvidas |
@@ -59,6 +57,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 | Textos retirados em 20/11 | Frase de apoio da abertura (ver item 5 acima), estimativa de público, "o teclado aparece na tela", aviso sobre as fotos e a dúvida sobre devolução de fichas | Não aparecem mais |
 | Fotos retiradas em 20/11 | Impressora aberta e saída das fichas | Não aparecem mais |
 | Contato direto | Falar no WhatsApp sem passar pelo formulário | Cabeçalho, abertura, barra do celular, menu e seção de orçamento |
+| Tira de fichas do passo 3 | Mostrar inteira, sem corte (pedido de 23/11) | "Como usar no evento", passo "As fichas saem na hora" |
 | Retirado em 22/11 | Campo "Tipo de evento" do formulário e a linha de WhatsApp da lista de contatos (ficava repetida: já existe o botão "Falar no WhatsApp" logo acima; embaixo fica só o telefone) | Não aparecem mais |
 | Logotipo | Manter o símbolo da ficha com o nome | Cabeçalho, rodapé e ícones |
 | Horário e endereço | Os da Balanças.com valem | Seção de orçamento |
