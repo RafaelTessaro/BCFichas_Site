@@ -55,10 +55,10 @@
   });
 
   /* As regras abaixo são as do sistema que imprime as fichas (BC Fichas 3.11.7,
-     Layout.cs e RenderizadorFicha.cs): ficha de 576 pontos de largura, 14 de
-     margem, letra Arial, tamanhos em pontos. Texto que não cabe é cortado com
+     Layout.cs e RenderizadorFicha.cs): ficha de 576 pontos de largura, com a
+     moldura padrão e 20 de margem, letra Arial, tamanhos em pontos. Texto que não cabe é cortado com
      "…" no mesmo lugar em que a impressora cortaria, e o site avisa. */
-  var LARGURA_UTIL = 576 - 2 * 14;
+  var LARGURA_UTIL = 576 - 2 * 20; /* com a moldura, que é o padrão do sistema, a margem é de 20 pontos */
   var FAMILIA = 'Arial, "Liberation Sans", "Helvetica Neue", Helvetica, sans-serif'; /* ganha a "Ficha" em ativarLetra() */
   var medidor = document.createElement("canvas").getContext("2d");
   if (medidor && "fontKerning" in medidor) medidor.fontKerning = "none"; /* como a impressora mede */

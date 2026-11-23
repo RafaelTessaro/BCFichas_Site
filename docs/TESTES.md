@@ -60,6 +60,8 @@ Com os textos usados na avaliação:
 | Rodapé "Obrigado pela presença! Sua participação ajuda os projetos da nossa comunidade." (79 caracteres) | Sai inteiro, em duas linhas, nos 7 modelos. Antes a prévia cortava esse texto sem necessidade. |
 | Rodapé de 80 caracteres todo em maiúsculas | Passa de duas linhas e é cortado; o site pede para encurtar a frase. |
 
+**Comparação com o sistema (23/11/2026).** O próprio BC Fichas 3.11.7 foi posto para gerar as fichas dos 7 modelos em 4 situações (exemplo, nome e rodapé longos, produto de duas palavras e produto comprido), e cada imagem foi posta lado a lado com a prévia do site na mesma escala. Resultado: os cortes do nome e as quebras do rodapé caem nos mesmos pontos, letra por letra, e a altura de cada ficha difere em no máximo 5 pontos em 576 (menos de 1,5%). A comparação mostrou uma diferença, já corrigida: **o sistema imprime por padrão uma moldura em volta da ficha**, com margem de 20 pontos em vez de 14, e a prévia não tinha a moldura. Com a margem certa, o modelo 3 passou a cortar o nome uma letra antes, como no sistema.
+
 Outras diferenças corrigidas: o rodapé sai como foi digitado (a prévia antiga passava tudo para maiúsculas; o sistema só faz isso com o nome do evento) e os contadores falam em "caracteres".
 
 Onde não há Arial (celulares Android, por exemplo) o site usa a letra Arimo, que tem as mesmas larguras. Ela é baixada só depois que a página termina de carregar.
@@ -134,7 +136,7 @@ Imagens em `docs/previa/`:
 - `estados-celular.jpg` (os mesmos quatro estados no celular);
 - `previa-computador.jpg` e `previa-celular.jpg` (página inteira).
 
-## Detalhe do que passou (161 verificações)
+## Detalhe do que passou (163 verificações)
 
 ### Celular (360, 390 e 430 px)
 
@@ -250,6 +252,8 @@ Imagens em `docs/previa/`:
 - 1440px: "Nome do evento" e "Frase do rodapé" um em cima do outro, na ordem da ficha, com 480px de largura e o produto de exemplo ao lado
 - 390px: exemplo de logotipo nos modelos 1 a 5: símbolo da BC Fichas em preto com "SEU LOGO", dentro do espaço que o sistema reserva (170x110, 150x96, 170x110, 170x110, 300x150 pontos)
 - 1280px: exemplo de logotipo nos modelos 1 a 5: símbolo da BC Fichas em preto com "SEU LOGO", dentro do espaço que o sistema reserva (170x110, 150x96, 170x110, 170x110, 300x150 pontos)
+- os 7 modelos trazem a moldura padrão do sistema (traço de 2.0 pontos a 3.0 da beirada) e margem de 19.0 pontos
+- o nome de 40 caracteres é cortado nos mesmos pontos das fichas geradas pelo próprio sistema (conferido imagem a imagem nos 7 modelos)
 
 ### Escolha do modelo
 
@@ -319,11 +323,11 @@ Imagens em `docs/previa/`:
 
 ### Como usar no evento
 
-- 360px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 23px em cima e 23px embaixo)
-- 390px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 25px em cima e 25px embaixo)
-- 700px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 21px em cima e 21px embaixo)
-- 1280px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
-- 1440px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
+- 360px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 22px em cima e 22px embaixo)
+- 390px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 24px em cima e 24px embaixo)
+- 700px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 20px em cima e 20px embaixo)
+- 1280px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 18px em cima e 18px embaixo)
+- 1440px: passo "As fichas saem na hora" com 2 fichas (PASTEL + CALDO) inteiras, retas e do mesmo modelo e tamanho de letra (folga de 19px em cima e 19px embaixo)
 - 390px: imagem do produto em destaque logo abaixo dos quatro passos (tela real com imagens nos botões), citada também no passo 1, na seção da máquina e nas dúvidas
 - 390px: a tela em destaque é a de 12 produtos genéricos, sem marcas, e as fotos da máquina carregam a versão nova (?v=3), com a mesma tela no visor
 - 1280px: imagem do produto em destaque logo abaixo dos quatro passos (tela real com imagens nos botões), citada também no passo 1, na seção da máquina e nas dúvidas
@@ -353,7 +357,7 @@ Imagens em `docs/previa/`:
 
 ## Não verificado
 
-- **Ficha impressa de verdade:** a prévia segue o código do sistema, mas não foi posta lado a lado com uma ficha saída da impressora. Vale imprimir uma ficha com o nome e o rodapé do teste e comparar.
+- **Ficha em papel:** a prévia foi comparada com as imagens que o sistema gera para a impressora (ver "Prévia das fichas"), não com uma ficha já impressa. A impressora térmica pode mudar o contraste e o recorte do papel; vale imprimir uma ficha com o nome e o rodapé do teste e olhar.
 - **Celular de verdade:** deslizar o carrossel com o dedo, o teclado virtual e a abertura do aplicativo do WhatsApp.
 - **Envio de mensagem:** o link foi conferido, mas nenhuma mensagem foi enviada.
 - **Imagem de compartilhamento** numa conversa real de WhatsApp ou Facebook. O arquivo abre para os robôs dessas redes, mas a prévia dentro de uma conversa só dá para ver enviando o link.

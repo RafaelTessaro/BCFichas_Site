@@ -455,7 +455,13 @@ a.passo__img:hover img { scale: 1.03; }
   font-family: var(--f-ficha); font-weight: 400; line-height: 1.15;
   font-kerning: none; /* a impressora mede as letras sem ajuste entre pares; a prévia faz igual */
 }
-.ficha__c { display: flex; flex-direction: column; padding: calc(8 * var(--u)) calc(14 * var(--u)) calc(4 * var(--u)); }
+/* A moldura é o padrão do sistema: um traço de 3 pontos a 3 da beirada do papel. Com ela a margem do texto
+   passa de 14 para 20 pontos (3 de folga + 3 de traço + 14 por dentro) e sobram 8 em cima e 8 embaixo. */
+.ficha__c {
+  display: flex; flex-direction: column;
+  margin: calc(3 * var(--u)); border: max(1px, calc(3 * var(--u))) solid #000;
+  padding: calc(2 * var(--u)) calc(14 * var(--u)) calc(2 * var(--u));
+}
 .ficha p, .ficha .f-l { white-space: nowrap; }
 .ficha .f-l { display: block; }
 .f-evento { font-weight: 700; font-size: calc(var(--t, 28) * var(--u)); text-align: center; }
@@ -503,10 +509,14 @@ a.passo__img:hover img { scale: 1.03; }
   background: #000; color: #fff; font-weight: 700; font-size: calc(46 * var(--u)); line-height: 1.15;
 }
 .f-faixa {
-  margin: calc(-8 * var(--u)) calc(-14 * var(--u)) calc(8 * var(--u)); padding: calc(8 * var(--u)) calc(14 * var(--u));
+  margin: calc(-2 * var(--u)) calc(-14 * var(--u)) calc(8 * var(--u)); padding: calc(8 * var(--u)) calc(14 * var(--u)); /* a faixa encosta na moldura */
   background: #000; color: #fff; font-weight: 700; font-size: calc(30 * var(--u)); text-align: center;
 }
 .f-pontilhado { border: 0; border-top: max(1px, calc(2 * var(--u))) dashed #000; margin: calc(5 * var(--u)) 0; }
+/* modelo 5: os espaços em volta das duas linhas tracejadas e a altura do nome, como no sistema */
+.ficha--m5 .f-evento { line-height: 1.23; }
+.ficha--m5 .f-pontilhado { margin: calc(8 * var(--u)) 0 calc(10 * var(--u)); }
+.ficha--m5 .f-pontilhado ~ .f-pontilhado { margin: calc(10 * var(--u)) 0 calc(4 * var(--u)); }
 .f-dir { text-align: right; font-size: calc(22 * var(--u)); }
 .f-esp { height: calc(8 * var(--u)); }
 

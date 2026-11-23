@@ -14,6 +14,7 @@ Perguntas que a avaliação levantou e que só a empresa pode responder. Sem res
 | 4 | **Painel no celular e maquininha integrada** | Ficaram de fora (versões "Rede" e "Cartão" do sistema). | Já são oferecidos no aluguel? Se sim, entram no site. |
 | 5 | **Frase de apoio da abertura** | "Organize as vendas do evento com fichas impressas na hora e relatórios por caixa." (sugestão da avaliação de 22/11) | Em 20/11 o responsável pediu para tirar a frase que havia nesse lugar. Esta é outra frase, mais curta; se preferir a abertura sem frase, é só avisar. |
 | 6 | **Imagens nos botões dos produtos** | O site diz que cada botão pode mostrar a imagem do produto e mostra uma tela do sistema com 12 produtos genéricos (pedidos de 23/11). | Quem fornece as imagens: o cliente envia junto com o cardápio, ou a BC Fichas já tem as figuras? Com a resposta, isso entra em "Como alugar" e nas dúvidas. |
+| 7 | **Moldura das fichas** | A prévia mostra a ficha com moldura, que é o padrão do sistema (e é como as fichas aparecem agora também no site da Balanças). | As máquinas alugadas saem com a moldura ligada? Se saem sem, a prévia volta ao desenho sem moldura. |
 
 A avaliação também pediu respostas sobre **retirada, entrega e devolução** e sobre **como o período do aluguel é calculado**. O responsável já decidiu, em 19/11, não publicar isso ("depende do lugar; na dúvida não precisa pôr"), então o site continua só com "consulte a disponibilidade". Se mudar de ideia, cabem em duas dúvidas curtas.
 
@@ -21,7 +22,7 @@ A avaliação também pediu respostas sobre **retirada, entrega e devolução** 
 
 - [x] **Site no ar em `https://bcfichas.balancass.com`**, hospedado na HostGator, desde 23/11/2026 (conferência em `docs/TESTES.md`, "Publicação").
 - [ ] **Apagar o projeto na Vercel.** Já pode: o endereço oficial está funcionando. Depois disso `bcfichas.vercel.app` deixa de existir, e as atualizações passam a ser só pelo `site.zip`.
-- [ ] **Imprimir uma ficha de teste** com um nome de 40 caracteres e um rodapé de duas linhas e comparar com a prévia do site (a prévia segue o código do sistema, mas não foi comparada com o papel).
+- [ ] **Imprimir uma ficha de teste** com um nome de 40 caracteres e um rodapé de duas linhas e olhar ao lado da prévia do site. A prévia já foi comparada com as imagens que o sistema gera para a impressora (iguais nos 7 modelos); falta só o papel.
 - [ ] Testar num celular real: carrossel das fichas, escolha do modelo, formulário e abertura do WhatsApp.
 - [x] **Indexação no Google configurada em 23/11/2026:** registro TXT de verificação criado no DNS (conferido no DNS público, junto com o registro do e-mail, que continua lá), propriedade de domínio `balancass.com` no Google Search Console, os dois `sitemap.xml` enviados e a indexação pedida, segundo o responsável. Os sitemaps apareciam como "Não foi possível buscar" logo após o envio, sem data de leitura; os dois arquivos respondem normalmente, inclusive para pedidos identificados como Googlebot.
 - [ ] **Acompanhar o Google:** em alguns dias, ver no Search Console se os sitemaps passaram para "Processado" e pesquisar `site:bcfichas.balancass.com`. Se o status não mudar em três ou quatro dias, remover e reenviar os sitemaps.
@@ -72,6 +73,7 @@ Itens da avaliação de 22/11 que não foram feitos porque precisam de material 
 
 A segunda avaliação pediu que a prévia das fichas fosse conferida com o sistema que imprime. As regras abaixo vieram do código do BC Fichas 3.11.7 (`Layout.cs`, `RenderizadorFicha.cs` e `Configuracao.cs`):
 
+- ficha com moldura por padrão (traço de 3 pontos) e margem de 20 pontos;
 - nome do evento com até 40 caracteres, gravado em maiúsculas; rodapé com até 80, impresso como foi digitado, em até duas linhas;
 - o nome ocupa uma linha nos modelos 1, 2, 3, 4 e 6 (o que não cabe é cortado com "…") e duas linhas nos modelos 5 e 7;
 - logotipo nos modelos 1 a 5; o modelo 6 (compacto) não mostra a forma de pagamento;
